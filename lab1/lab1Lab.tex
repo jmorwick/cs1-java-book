@@ -1,0 +1,307 @@
+You will be working with a partner for each of your lab exercises. Typically I 
+will assign the partners. For the first lab, I will assign you to work with 
+the person sitting closest to you. Make sure both your name and your partner's
+name are on your lab sheet. 
+
+\subsection{Part 1 -- Writing a Basic Algorithm}
+
+For the first portion of the lab, you will develop a ``drawing algorithm''. I have
+handed out cards to each of you with a drawing on one side. Do not look at your 
+partner's card! Turn away from your partner and view the drawing on your card. 
+
+\begin{exer}
+You will need to develop written instructions for duplicating the drawing on 
+the card below. Only use simple instructions relating to drawing single lines,
+simple shapes (such as squares, rectangles) or curves. You may approximate the
+length of the lines or give them a relative length to work with. You can also 
+give relative instructions for where lines should be placed. For example, you 
+could say to draw a horizontal line approximately 5 inches long, then a vertical 
+line centred just above it approximately twice as long.
+
+You may also use more abstract instructions, such as asking them to duplicate a 
+portion of the drawing, repeat drawing a shape several times, etc. 
+
+Don't include any instructions that rely on knowledge of non-abstract objects.
+For example, don't tell them to draw a dog, don't tell them the drawing should 
+``look like a house'', etc.. Avoid using any nouns that don't relate to abstract
+shapes. 
+
+\evallineten
+
+\end{exer}
+
+Once everyone is finished drawing, exchange lab sheets with your partner. 
+\newpage
+\begin{exer}
+Once you have your partner's lab sheet, follow your partners written instructions and
+attempt to draw the shape. Do not ask them for help, and do not provide them 
+with verbal assistance for your algorithm!
+
+Your Drawing:\\[4in]
+\end{exer}
+
+Once you're both finished, exchange papers again. Show your partner the card I 
+gave you. 
+
+\begin{exer}Discuss the experience with your partner and make some notes about how
+you might improve your algorithm below:
+
+\evallinefive
+\end{exer}
+
+\initialbox
+
+\subsection{Part 2 -- Evaluating Expressions}
+
+Before we are able to implement algorithms in Java, such as the one you wrote
+in part 1, we first need to become familiar with the most basic building block
+of a program: expressions. 
+
+Watch me start up the JShell REPL on the overhead projector, then start it up 
+yourself. Let me know if you need help.
+
+When you're working with the REPL, don't clear your work or exit the REPL. I 
+will want to take a look at what you've done in the REPL to confirm that you're
+completing the exercises correctly. 
+
+
+\begin{eval}
+Once you have the REPL started, predict what values the following expressions will evaluate to, then type them in to the REPL and record the 
+exact verbatim result you receive. Make sure each result makes sense to you. If the result didn't meet your expectations, experiment with similar expressions or ask the instructor for help.
+\begin{sevalenum}
+\item $5 + 10$
+
+\evalline
+
+\item $2.0 - 5.0$
+
+\evalline
+
+\item $10 / 2 + 3$
+
+\evalline
+
+\item $7 * (15 \% 4)$
+
+\evalline
+\end{sevalenum}
+\end{eval}
+
+Now let's try some more complex expressions. 
+
+\begin{eval}
+For the following complex expression, evaluate it one sub-expression at a time. Start 
+with the inner-most expression and simplify it (for instance, rewrite the (2+3) as 5). 
+Do this on each line until you arrive at the result. Once you're finished, enter the
+expression in to the REPL to check your work. Follow order of operations!
+\begin{sevalenum}
+\item $-(100 \% ((2+3) * 6) - 9)$
+
+\evallinefive
+
+\end{sevalenum}
+\end{eval}
+
+Now let's try some expressions with some potentially unexpected results
+
+\begin{eval}
+Enter each of the expressions below in to the REPL. On the following line, record the 
+result from the REPL. Then, on the line following that, explain why you got that 
+result. Many of these expressions will result in an error or something else you didn't expect! If you're unsure how to explain it, refer back to the prelab and/or ask the instructor for help. 
+\begin{sevalenum}
+\item 20 / (2 * 2 - 4)
+
+\evallinetwo
+
+\item (5 + ( 9  / 3 )
+
+\evallinetwo
+
+\item 2.8F1
+
+\evallinetwo
+
+\item 2147483647 + 200
+
+\evallinetwo
+
+\item 5.00000000000000000000000000000000099999
+
+\evallinetwo
+
+\item 0.7 + 0.1
+
+\evallinetwo
+
+\end{sevalenum}
+\end{eval}
+
+
+Now let's develop some expressions. 
+
+\begin{exer}
+Develop an expression that determines the result of squaring the number 12.
+Once you've tested it to confirm it's working in the REPL, write out the 
+expression you used below.
+
+\evalline
+\end{exer}
+
+
+\begin{exer}
+Now develop another expression that yields the exact same result but does not 
+use multiplication and does not ``hardcode'' the solution (the only literal 
+subexpression you should use is 12). Again, once you've confirmed it's working,
+write out the expression below:
+
+\evalline
+\end{exer}
+
+
+\begin{exer}
+Now develop a series of experimental expressions to test the associative and commutative properties from algebra. If you don't remember these, google them! Try some expressions out and write down the ones you feel prove these properties. 
+\evallinefour
+\end{exer}
+\initialbox
+
+\subsection{Part 3 -- Developing Statements}
+
+Like your drawing algorithm, computer programs also consist of simple, abstract 
+instructions. These instructions are called statements. Each statement directs
+the computer to do something. We'll first work with some statements that 
+create new variables. 
+
+\begin{exer}
+In the REPL, define a new variable of type int with the name myInt. 
+We can now try a new type of expression: a variable expression. Type the name of the variable you just defined in to the REPL. What does it evaluate to?
+
+\evalline
+
+This is the default value for an integer.
+
+\end{exer}
+
+
+\begin{exer}
+Now define another variable of type double with the name y. What value is it initialized to?  
+
+
+\evalline
+
+
+Is it any different from the last value? Explain. (be careful here)
+
+\evallinetwo
+
+\end{exer}
+
+Now let's try assigning some basic values to these variables using assignment 
+statements. 
+
+\begin{exer} Use an assignment statement to assign the value 5 to x. Again, 
+evaluate x afterword to confirm its new value. Then evaluate the expression $19\%x$ . 
+What did it evaluate to?  
+
+\evalline
+
+Try creating a third variable of type integer named z, but this time initialize it to the value 10 all in the same statement. That is, you should declare and initialize (assign a value to) z with a single statement. Test to make sure your statement worked, then write down the statement you used here:
+
+\evalline
+
+\end{exer}
+
+Now let's try some more complex statements. 
+
+\begin{exer}
+Develop a single statement that will increase the value of x by 1. Confirm 
+that it works by repeating it several times and evaluating x after each 
+statement. You don't need to type it in multiple times. Just hit the up arrow on the keyboard to automatically re-enter a previous line of input. 
+
+Once you've confirmed in the REPL that your statement works, copy it down below:
+
+\evalline
+
+\end{exer}
+
+Now let's look at some of the mistakes that can be made working with statements. 
+
+\begin{eval}
+Type in each of the statements below. They should all result in errors. Record 
+what the error was on the first line, and explain why it occurred on the second. 
+\begin{sevalenum}
+\item d = y + z;
+
+\evallinetwo
+
+\item int 5thVariable = 7;
+
+\evallinetwo
+
+\item 5 + 8 = x;
+
+\evallinetwo
+
+\item int break = 12;
+
+\evallinetwo
+
+\end{sevalenum}
+\end{eval}
+
+
+\subsection{Part 4 -- Working With Simple Algorithms}
+
+\begin{exer}
+In plain english, write out an algorithm for cubing a number x. 
+
+\evallinefour
+
+Set the variable x to the value 5. Now walk through your cubing algorithm. 
+Did you arrive at the proper value 125 in the REPL? If not, adjust your 
+algorithm and try again. 
+\end{exer}
+
+\begin{exer}
+Consider the following algorithm for determining if a number contained 
+in a variable called num is prime:
+\begin{enumerate}
+\item create a variable called possibleFactor and set it to 2.
+\item determine if num is divisible by possibleFactor. If it is, num is not prime (you're done).
+\item otherwise, if possibleFactor is less than num, increase possibleFactor by 1 and go back to step 2. 
+\item finally, if possibleFactor is equal to num, num must be prime (you're done).
+\end{enumerate}
+
+For the following numbers, use the algorithm to determine if they're prime. 
+Remember that you can repeat a step in the REPL by pressing the up arrow key.
+If the number is prime, write that it's prime on the line below. Otherwise, 
+list the number's prime factors. 
+\begin{sevalenum}
+\item 8
+
+\evalline
+
+\item 91
+
+\evalline
+
+\item 29
+
+\evalline
+\end{sevalenum}
+
+\end{exer}
+
+When you're finished, save the interactions from your REPL to a text file using the /save command:
+
+\begin{verbatim}
+/save lab1.txt
+\end{verbatim}
+
+If you and your partner off of one computer, make sure you share the file with
+your partner.  Use the /exit command to quit JShell.
+
+\initialbox
+
+Once you've received all the required signatures for this lab, scan your 
+lab sheet to a PDF file and turn it in for the lab \#1 assignment. 
+Make sure both you and your partner both turn in your own lab sheets. 

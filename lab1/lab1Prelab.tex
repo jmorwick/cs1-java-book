@@ -1,0 +1,185 @@
+\section{Algorithms}
+
+An algorithm is a list of abstract instructions for solving a problem. These 
+instructions need not be computer codes -- an algorithm, as a concept, transcends 
+any one particular programming language. 
+
+\begin{exa}
+Let's consider a very simple algorithm for computing the average of numbers $x_{1}$ through $x_{n}$:
+\begin{enumerate}
+\item add each number $x_{i}$ together (for every $i$ between $1$ and $n$)
+\item divide this sum by $n$
+\item the resulting quotient is the average value
+\end{enumerate}
+
+Note that the first step involves quite a bit of work! This is what we would call a 
+relatively high-level instruction, in that it makes a rather heavy assumption about 
+the reader's problem solving knowledge (specifically, that they understand they need 
+to add $x_{1}$ to $x_{2}$, add that sum to $x_{3}$, etc...)
+
+\end{exa}
+
+In this course you will write many computer programs in Java that implement algorithms.
+However, before we make that leap, we'll first we will learn about the basic building
+blocks of a Java program and weave them together to implement the steps in abstract
+algorithms.
+
+\section{Numeric Expressions in Java}
+
+Throughout the first unit we will be mostly looking at Java expressions. Think of 
+expressions as the most basic building blocks of a Java program. An expression is 
+something that is evaluated in your Java program (that is, it's interpreted to 
+represent some value). A common exercise / exam question you will have this semester 
+is ``what value does this expression evaluate to?''.
+
+Throughout the first unit, you will be using a program called a REPL (Read, Evaluate,
+Print Loop) to evaluate Java expressions. If you type a 
+Java expression in to the REPL, the REPL will interpret it and print out the value 
+that it evaluates to. 
+
+We'll start by working with numeric expressions. These are expressions that always 
+evaluate to some sort of numeric value (such as 5, or 9.2). 
+
+\subsection{Numeric Literal Expressions}
+
+Literal expressions are the most simple expressions in Java. The expression you type 
+in is literally the value you get back. For instance, the expression 5 evaluates to, 
+wait for it...,  5.  
+
+One catch is that there is more than one type of numeric value in Java! 5 is an example
+of what is called an integer (shortened to int in Java). There are some constraints on the size of an integer (the minimum value is −2147483648 or $-2^{31}$ and the maximum
+value is $2^{32}-1$ or 2147483648). There are different integer types with different sizes. For instance, 
+the type long has a range of $-2^{63}$ to $-2^{63}$ There are also the lesser used short and byte 
+integer types, but we won't work with these specifically (this semester). 
+
+Note that you can specify you want to create a long value using a special syntax for 
+the literal expression. For instance, 46L is a legal expression that evaluates to 
+the long integer value 46. 
+
+9.2 is an example of a floating point value. These are values with a decimal 
+component. Like integer values, there is more than one floating point type in Java 
+(single and double precision). By default, the literal expressions you type in that 
+contain a decimal point will be of type double (float is the other legal type name). 
+
+Internally, these values are stored in the same way you've used scientific notation. Each floating point value consists of two components: an exponent and a mantissa. The value is determined by multiplying the mantissa by 10 to the power 
+of the exponent. 
+ 
+There is a format for literal values that uses scientific notation using the letter E between these two components. For instance, 5E3 is the same as $5000.0$. 
+
+\subsection{Arithmetic Operators}
+
+A binary operator is something that operates over two expressions in Java, forming a larger, more complex, compound expression. For instance, + is a binary operator representing the addition operation. 5 is a numeric literal expression, and 5 + 5 is a more complex, compound expression using the addition operator. For example, 5 + 5 evaluates to the value 10. 
+
+There are several binary arithmetic operators which work over numeric expressions in Java. Each is described below:
+
+\begin{itemize}
+\item $+$ (the addition operator)
+\item $-$ (the subtraction operator)
+\item $*$ (the multiplication operator)
+\item $/$ (the division operator)
+\item $\%$ (the modulus operator)
+\end{itemize}
+
+Note that, when using the $/$ operator with integers, you get back the integer quotient (rather than a floating point value). Modulus gives you the reminder when performing integer division. 
+
+There is also a unary operator in Java. This is an operator that works over only one  operand (expression), as opposed to two. This is the negation operator, which, like subtraction, is represented with -. For instance, -5 is a compound expression that is the negation of 5. 
+
+Also similar to algebra, note that these operators follow the same order of precedence. That is, $2 * 3 + 1$ is equal to 7, not 8. You can also use parentheses to force a certain order of evaluation for your expressions, 
+just as you did in algebra. 
+
+\section{Java Statements}
+
+A statement in a Java program is essentially a single instruction. Generally,
+statements will end with a semicolon (think of this like the period at the end
+of a sentence in English). There are several types of statements in Java that we will examine this semester, but we'll start with declaration statements and assignment statements, which both work with variables in a Java program. 
+
+\subsection{Identifiers in Java}
+
+There are several places you'll see identifiers in Java. Identifiers can simply be thought of as the names of things in a Java program. There are some rules about which names are legal, since some names might be interpreted as instructions or other parts of the program if they're not written properly. Here are the Java identifier rules:
+
+\begin{enumerate}
+\item Every Java identifier must begin with either a letter, a dollar sign, or an underscore.
+\item Java identifiers cannot contain white space (spaces, new lines, tabs), but can contain any other characters. 
+\item Java identifiers cannot be a reserved word (you can find a list of these online or in the textbook).
+\end{enumerate}
+
+\subsection{Variables in Java}
+
+One of the essential components of any program is the ability to remember and recall values. In terms of computer hardware, this is what we refer to as memory. The most basic way to utilize memory in just about any programming language is by using variables.
+
+Variables in programming are similar to the idea of a variable you've seen in algebra. Variables in your Java programs hold a value. You give variables a name in Java by using a Java identifier. Thus \textbf{x} is a legal 
+variable name, but so is \textbf{x5} or \textbf{reallylongvariablename}. Note that the last variable name
+is somewhat difficult to read. For this reason, there are conventions in Java which 
+determine the proper way to name variables. \textbf{reallylongvariablename} is not an error, but it does break the proper naming convention in Java, which is called camel case. In camel case, you capitalize each of the sequential words. We must do this for identifiers consisting of multiple words since spaces are not allowed in identifiers. 
+
+For variable identifiers, we use camel case but we do not capitalize the first word. Thus, a proper convention-following identifier we could use as a variable name would be reallyLongVariableName. 
+
+Notice that this is a bit easier to read? 
+
+\subsection{Variable Declaration Statements}
+
+In order to use a variable in Java, you must declare it exists using a declaration statement. Java is known as a statically typed language, which means that when we declare variables, we must also declare what type of value they hold. The first element of a declaration statement is the type of data the variable will hold, and the second is the identifier (variable name). 
+
+\begin{exa}
+We can create a variable named \textbf{x} which holds integer values with the following statement:
+
+\begin{code}
+int x;
+\end{code}
+\end{exa}
+
+Once a variable is declared, you can use it as an expression. The expression will 
+evaluate to whatever the variable holds. 
+
+\begin{exa}
+Evaluating the expression x yields the value 0, since 0 is the default value 
+given to a variable of type integer.
+\end{exa}
+
+Note that if you use a variable in an expression before its defined, an error will result.
+
+\subsection{Variable Assignment Statements}
+
+The main difference between variables in programming and variables you've used in math classes is that you can change the values variables hold. In Java, this is done 
+using an assignment statement. Assignment statements may be a little confusing
+since they use the equals operator, even though this is not an equation! There 
+are two distinct parts to an assignment statement: on the left is an identifier for 
+the variable you want to make an assignment to, and on the right is an expression 
+which yields the value you want to assign to the variable. 
+
+\begin{exa}
+For example, the following assignment statement will assign the value 5 to the variable
+x:
+
+\begin{code}
+x = 5;
+\end{code}
+\end{exa}
+
+\begin{exa}
+The following assignment statement will also assign the value 5 to the variable
+x, but uses a more complex expression to do it:
+
+\begin{code}
+x = 2 + 3;
+\end{code}
+\end{exa}
+
+Note that, just as in variable expressions, it is required that a variable is
+declared before it can be used on the left-hand side of an assignment statement. 
+Using an undeclared variable in this way will result in an error. 
+
+\begin{exa}
+Note: it is possible to both declare and assign a value to a variable in one 
+combined statement. The following declares the new variable y and assigns the value 34
+to it:
+\begin{code}
+int y = 34;
+\end{code}
+\end{exa}
+
+
+\begin{exer}
+Normally there will be some brief exercises at the end of the pre-lab to ensure you're reading through the notes and preparing for class. Since this is the first week, your prelab assignment is simply to show up. So, if you're here in class 
+on the first day reading this, congratulations on your A! 
+\end{exer}

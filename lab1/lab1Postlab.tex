@@ -1,0 +1,30 @@
+
+For your postlab assignment, you will need to follow the euclidean algorithm with 
+the REPL to find the greatest common factor of several sets of numbers. Given 
+integers a and b, the algorithm could be described as follows:
+
+\begin{enumerate}
+\item if a is less than b, swap their values
+\item if a is divisible by b, then b is the GCD (you're done). 
+\item determine the remainder of a and b and set it to a variable r.
+\item set a to the value in b.
+\item set b to the value in r.
+\item go back to step 1.
+\end{enumerate}
+
+Your task will be to compute the GCD's for the following pairs of values:
+\begin{itemize}
+\item 15 and 25
+\item 84 and 140
+\end{itemize}
+
+Use the JShell REPL to follow the algorithm and make sure all the steps are visisble in the output from your REPL, including the correct answers. 
+
+When you are finished, enter the following command in to the REPL:
+
+\begin{verbatim}
+/save postlab1.txt
+\end{verbatim}
+
+Check to make sure this file contains all of your work from the REPL, then 
+turn it in on the postlab \#1 assignment. 
