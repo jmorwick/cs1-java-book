@@ -1,0 +1,168 @@
+\subsection{Part 1 -- Basic Style Conventions}
+
+Practice with the style conventions mentioned in this week's prelab by correcting the style in the code below. If you don't have a good understanding of scoring in american football, ask the instructor for help to understand what the code is intended to do. 
+
+\begin{code}
+int 
+getScore(int t, int f, int s) 
+{
+int x = 0;
+x = x + t*7; x = x + f*3; x = x + s*2;
+return x;}
+\end{code}
+
+
+
+\begin{exer}
+First, circle or highlight obvious style concerns in the code above. Next, copy and update the code to follow proper style conventions below. You do not need to enter this in to the REPL. 
+
+\evallineeight
+
+\end{exer}
+
+\initialbox
+
+\subsection{Part 2 -- Working with Characters}
+
+This week's prelab mentioned that character literals are a numeric type. This may seem odd, since typing a character literal in to the REPL results in a character literal, not a number. However, casting them to another numeric type exposes their numeric values. Let's start by evaluating some character expressions that will help you learn about their relationship to the integers. 
+
+\begin{eval}
+Evaluate the following expressions and record the results. Consider the signifigance of each with your partner before you move to the next. 
+
+\begin{sevalenum}
+\item 'a' == 'A'
+
+\evalline
+
+\item (int)'a'
+
+\evalline
+
+\item (int)'0'
+
+\evalline
+
+\item (int)'b'
+
+\evalline
+
+\item (int)'A'
+
+\evalline
+
+\item 'a' + 5
+
+\evalline
+\end{sevalenum}
+\end{eval}
+
+\begin{eval}
+For the following expressions, first predict what they will evaluate to on the first line, then check the result in the REPL and write a correction (if necessary) on the second line.
+
+\begin{sevalenum}
+
+\item 'A' + 2
+
+\evallinetwo
+
+\item (char)('a' + 3)
+
+\evallinetwo
+\end{sevalenum}
+\end{eval}
+
+\initialbox
+
+
+\subsection{Part 3 -- Serial Conditional Statements}
+
+
+\begin{eval}
+
+Enter the following method definition in to the REPL:
+
+\begin{code}
+
+int myMethod(int x) { return 0; }
+
+\end{code}
+
+Next, edit the method and copy in each of the definitions below. Each will result in an error. Summarize the error message on the first line, discuss it and the code with your partner, and then explain what the problem really is on the second line. 
+
+\begin{sevalenum}
+
+\item
+\begin{code}
+int myMethod(int x) { 
+  if( x < 0 ) {
+    return -1;
+  } 
+  
+  if (x == 0) {
+    return 0;
+  } 
+  
+  if (x > 0) {
+    return 1;
+  }
+}
+\end{code}
+
+\evallinetwo
+
+\item 
+int myMethod(int x) { 
+  if( x < 0 ) {
+    return -1;
+  } if (x == 0) {
+    return 0;
+  } else {
+    return 1;
+  }
+}
+
+\evallinetwo
+
+\end{sevalenum}
+\end{eval}
+
+
+\begin{exer}
+
+Now write a simple method called \textit{bowlingRollScore} for interpreting a bowling score. This method returns an integer (the score of the roll) and has one character parameter called \textit{roll} indicating what happened on that roll of the bowling ball.  A bowling score can be any of the digits 0 - 9, indicating the number of pins knocked down, or a / (called a spare) or a X (called a strike), indicating all 10 pins were knocked down. For those familiar with bowling, this method will ignore future rolls that may impact the score of a spare or a strike. In each case, this method should simply return the score as the number of pins knocked down. For an unrecognized character, the method should return 0.
+
+It is recommended that you solve this using a switch statement, but you may use an if/else chain if you wish. 
+
+You can complete this method on codingbat here:
+
+
+\begin{verbatim}
+http://codingbat.com/prob/p246309
+\end{verbatim}
+
+\end{exer}
+
+\initialbox
+
+
+\subsection{Part 4 -- While Loops}
+
+In lab \#3, we used an if statement to capture some of the conditional logic in our GCD algorithm from week \#1. Now that we have while loops, we're ready to finish the algorithm!
+
+\begin{exer}
+Look back over all of the GCD exercises we've worked with as well as your solutions. With your partner, identify the portion of the code that repeats, and briefly characterize it below:
+
+\evallinethree
+\end{exer}
+
+\begin{exer}
+Now you will complete the GCD algorithm by writing a method that, given two integers a and b, will compute it. Visit the following codingbat URL and complete your work on codingbat. YOu may want to copy and paste back and forth from the REPL if you want to test your method with arbitrary values. 
+
+\begin{verbatim}
+http://codingbat.com/prob/p296872
+\end{verbatim}
+
+\end{exer}
+
+\initialbox
+
