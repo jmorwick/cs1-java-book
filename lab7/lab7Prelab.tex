@@ -1,0 +1,103 @@
+\section{Methods with No Return Type}
+
+\subsection{The void Keyword}
+
+\subsection{Printing to Standard Output}
+
+We've received messages back from the REPL each time we evaluate an expression, but perhaps we would like a message to be delivered somewhere during the execution of our program. Many ``text-based'' applications interact with their users solely through messages printed to a console (such as the REPL itself). Java has a special function for printing such messages to what is called \textit{standard output} or \textit{the console}. In the case of jshell, standard output is simply the jshell screen, so any messages you print while using jshell will show up there.
+
+The method we will use to print to standard output is unfortunately (and infamously) somewhat complicated looking. Technically, it is an instance method that we call from a PrintWriter object. The PrintWriter object in question is a static variable in the \textbf{System} class called \textbf{out}, and the instance method we'll call from this object is called textbf{println}. So all together, we'll be calling this method by calling \textbf{System.out.println}. If the last sentence is all you remember from this paragraph, that's all you'll need for the rest of the semester. 
+
+This method will take one argument -- whatever we want printed to standard output. So, if we want to print the number 5 to our jshell screen, we can use the following method call:
+
+\begin{code}
+System.out.println(5);
+\end{code}
+
+Note that this method doesn't return anything. It will take any type of expression we give it, however. So the following code:
+
+\begin{code}
+System.out.println("Joseph Kendall-Morwick");
+\end{code}
+
+prints my name to standard output, and the following code:
+
+\begin{code}
+System.out.println(1 + 1 == 2);
+\end{code}
+
+prints the value \textit{true} to standard output.  
+
+
+\subsection{String Escapes}
+
+
+There are also some special values that strings (and characters) can hold, such as new lines (a character representing that the cursor drops to the next line), tabs (a character represeting that the tab key was pressed), and so on. These are insterted in to string (and character) literals by including a backslash (called an escape) before a special code. These special characters are interpreted when we print out strings. For example, consider the following print statement:
+
+\begin{code}
+System.out.println("A tab is \n\ta quite simple way \n\t\tto advance");
+\end{code}
+
+...prints the following haiku to the console:
+
+\begin{verbatim}
+A tab is
+	a quite simple way
+		to advance
+\end{verbatim}
+
+It is important to note that because back slashes are interpreted as escapes, they can not be used as any other character would be in a string. However, you can include them by escaping them! For instance, the following code:
+
+\begin{code}
+System.out.println("here's a backslash: \\");
+\end{code}
+
+prints the following to the standard output:
+
+\begin{verbatim}
+here's a backslash: \
+\end{verbatim}
+
+
+\section{For Loops}
+
+*** while loop processing a string revisited (print each char, one per line, in a void method)
+*** for loop structure
+*** converting from while loop to for loop
+
+\section{Block Comments and Javadoc Comments}
+
+\subsection{Block Comments}
+*** before methods
+*** commenting out code
+\subsection{Javadoc Comments}
+*** Java API Documentation
+*** parameters
+*** return values
+
+\section{Before Next Class}
+
+Please answer the following questions before you arrive to class:
+
+\begin{exer}
+
+\begin{itemize}
+
+\item name both of the new keywords you learned this week
+
+  \evalline
+  
+\item what statement that you've already seen is a for statement most similar to?
+
+  \evalline
+  
+\item what do you type to begin a javadoc comment?
+
+  \evalline
+  
+\end{itemize}
+
+\end{exer}
+
+Bring your completed pre-lab sheet with you to class for Week \#7. Also submit your answers online on the Moodle prelab assignment.  
+
