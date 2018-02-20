@@ -1,0 +1,281 @@
+This week will introduce a significant new data type: strings. Strings provide a good example of where we can begin applying while loops. We'll also cover a few relevant odds and ends. 
+
+\section{Static Methods for Characters}
+
+Last week we introduced the character primitive type and wrote some methods working with characters. There are also some \textit{built in} static methods for working with characters. These are all found in the \textit{Character} class (no import necessary). A few of the more important ones are summarized below:
+
+\begin{enumerate}
+\item boolean \textbf{Character.isDigit}(char) - Takes a character as input and returns a boolean indicating whether or not it is a digit (0-9). 
+\item boolean \textbf{Character.isLetter}(char) - Takes a character as input and returns a boolean indicating whether or not it is a letter (a-z or A-Z). 
+\item boolean \textbf{Character.isUpperCase}(char) - Takes a character as input and returns a boolean indicating whether or not it is a upper-case letter (A-Z). 
+\item boolean \textbf{Character.isLowerCase}(char) - Takes a character as input and returns a boolean indicating whether or not it is a lower-case letter (a-z).
+\item char \textbf{Character.toUpperCase}(char) - Takes a character as input and returns that character in upper-case (or leaves it alone if it was already upper-case).
+\item char \textbf{Character.toLowerCase}(char) - Takes a character as input and returns that character in lower-case (or leaves it alone if it was already lower-case).
+\end{enumerate}
+
+\begin{exa}
+Executing the following code:
+
+\begin{code}
+char c = 'A';
+if(Character.isUpperCase(c)) {
+  c = 'a';
+}
+\end{code}
+
+would result in textit{c} holding the value 'a' at the end.  The following code would also produce the same result:
+
+
+\begin{code}
+char c = 'A';
+c = Character.toLowerCase(c);
+\end{code}
+\end{exa}
+
+
+\section{Strings}
+
+Strings follow from our work with characters since they are essentially a sequence of characters. While a character literal only holds a single value, such as 'h', a string can hold 0 or more character values. Thus, strings can represent more complex data, such as names, sentences, or even this entire book!
+
+Strings will be the first significant object type we'll regularly work with. Until now, the frequent types we've seen were all primitive types (such as int, char, etc..). One difference we'll see with strings is that the name of the type is capitalized. For instance, the following declaration statement creates a variable of type String called \textit{name}:
+
+\begin{code}
+
+String name;
+
+\end{code}
+
+\subsection{String Literals}
+
+Character literals are a single character surrounded by single quotes, such as 'a'. String literals are simmilar, but as noted, there may be more than one character in the string, and we use double quotes to surround them. For instance, the following code initializes the name variable from the previous example with my name as a value:
+
+\begin{code}
+name = "Joesph Kendall-Morwick";
+\end{code}
+
+Note that string literals can contain all sorts of characters, including spaces and dashes, and distinguish between upper and lower case characters. Character literals work just the same way, but character literals hold exactly one character.
+
+String literals may also hold zero characters. For instance:
+
+\begin{code} 
+name = "";
+\end{code}
+
+is also legal. Note that the empty string (above) is still a string value! It doesn't mean there isn't a string held by the variable \textit{name}. If \textit{name} held no value, we would say it holds the \textbf{null} value, just as any other object-type variable that doesn't hold a value. Recall that \textbf{null} is a keyword representing this value:
+
+\begin{code}
+name = null;
+\end{code}
+
+Note that there are no quotes around \textbf{null}, since it is a keyword. 
+
+
+\subsection{String Concatenation}
+
+Two string values may be joined together with the concatenation operator. Unfortunately, you've technically already seen the concatentation operator because it uses the same symbol as the addition operator (+). However, they are considered distinct operators since they take distinct actions on their operands. You will end up with addition or concatentation depending on the data types of the operands. This is more generally called \textbf{operator overloading}. 
+
+\begin{exa}
+The following code:
+\begin{code}
+String fullName = "Joseph" + " " + "Kendall-Morwick";
+\end{code}
+will store a single string value representing my full name in the variable \textit{fullName}.
+\end{exa}
+
+In fact, concatenation is performed when even just one of the operands is a string value. The other value will be coerced (transformed) in to a string value. 
+
+\begin{exa}
+The following code:
+\begin{code}
+String message = "my favorite number is " + 5;
+\end{code}
+will store a single string value holding the message ``my favorite number is 5'' in the variable \textit{message}.
+\end{exa}
+
+
+\subsection{String Instance Methods}
+
+The string class has many useful instance methods. We'll take a look at four of the most important ones this week.
+
+
+\subsubsection{int String.length()}
+
+The \textbf{length} instance method has no parameters but returns the length of the string (as an integer). 
+
+\begin{exa}
+
+\begin{code} 
+"hello".length() 
+\end{code}
+
+evaluates to the value 5 whereas
+
+\begin{code} 
+"".length() 
+\end{code}
+
+evaluates to the value 0
+
+\end{exa}
+
+\subsubsection{char String.charAt(int)}
+
+The \textbf{charAt} instance method takes the location (called the index or offset) of a character in the string and returns just that character (as a character-type value). The tricky part of working with string indexes is that the first index is zero (not one). 
+
+\begin{exa}
+
+\begin{code} 
+"hello".charAt(0) 
+\end{code}
+
+evaluates to the value 'h' whereas
+
+\begin{code} 
+"hello".charAt(4) 
+\end{code}
+
+evaluates to the value 'o'
+
+\end{exa}
+
+\subsubsection{int String.indexOf(char)}
+
+The \textbf{indexOf} instance method takes a character you're searching for as input and returns the first index of where it's found in the string. If the character is not present in the string, -1 is returned instead. 
+
+
+\begin{exa}
+
+\begin{code} 
+"hello".indexOf('l') 
+\end{code}
+
+evaluates to the value 2 (the first index where an \textit{l} is present in textit{hello}) whereas
+
+\begin{code} 
+"hello".indexOf('z') 
+\end{code}
+
+evaluates to the value -1 (since there isn't a \textit{z} in \textit{hello}). 
+
+\end{exa}
+
+\subsubsection{String String.substring(int,int)}
+
+The \textbf{substring} instance method takes two integer values (indexes) as input and returns a substring of the original string starting at the first index and ending just before the last index. Be mindful of the fact that
+
+
+\begin{exa}
+
+\begin{code} 
+"hello".substring(1, 3) 
+\end{code}
+
+evaluates to the value "el"
+\end{exa}
+
+
+
+\subsection{Iterating Through Strings}
+
+The first two methods mentioned above (\textbf{length} and \textbf{charAt}) can be useful for iterating over a string -- that is, examining each character of a string, one by one. We can use a while loop to accomplish this. Like last week, we'll use a counter to determine when to stop looping, and we'll increment that counter (add one to it) in each iteration of the loop. We'll use the \textbf{length} method to determine when the counter has reached the end of the string, and we'll use the \textbf{charAt} method to read out and process the character at index \textit{i} through each iteration of the loop.
+
+This pattern is very common and commonly the \textit{counter} variable I've referred to is named \textit{i} (for \textit{index}). Though this seems to violate the coding conventions for descriptive variable names introduced last week, the fact that \textit{i} is so commonplace can be considered an exception to this rule, since any experienced programmer should understand why it was named that way.
+
+\begin{exa}
+
+The following loop will count all of the times the letter 'l' appears in the string \textit{message}:
+
+\begin{code}
+String message = "hello";
+int i = 0;
+int occurancesOfL = 0;
+while (i < message.length()) {
+  if(message.charAt(i) == 'l') {
+    occurancesOfL = occurancesOfL + 1;
+  }
+  i = i + 1;
+}
+\end{code}
+
+\end{exa}
+
+
+\subsection{Shortcuts for Common Assignment Statements}
+
+You've now no doubt wrote a statement such as the following many times:
+
+\begin{code}
+i = i + 1;
+\end{code}
+
+This happens so frequently in Java that there are several built-in shortcuts for such statements. 
+For instance, if we simply want to add a value \textit{to} a variable (rather than replace a value in a variable), we could do so using the += operator. Thus, an equivalent version of the code above is the following:
+
+\begin{code}
+i += 1;
+\end{code}
+
+We could also add 2 to the value of i the same way, or any other value we want to increment it by. Similarly, we could subtract that value from i with the -= operator. Each of the other arithmetic operators has a similar shortcut. 
+
+Beyond these shortcuts, it's also very common that we're simply adding 1 from a variable, so there is a second shortcut that just adds 1:
+
+\begin{code}
+i++;
+\end{code}
+
+
+Note that this shortcut can be used to simplify the string iteration example considerably, since it uses a somewhat long variable name:
+
+\begin{code}
+String message = "hello";
+int i = 0;
+int occurancesOfL = 0;
+while (i < message.length()) {
+  if(message.charAt(i) == 'l') {
+    occurancesOfL++;
+  }
+  i++;
+}
+\end{code}
+
+
+If you've ever heard of the programming language C++ and wondered why it was named that way, now you know. Similarly, a similar shortcut exists for subtracting 1 from a variable. 
+
+
+\begin{code}
+i--;
+\end{code}
+
+
+
+\section{Before Next Class}
+
+Please answer the following questions before you arrive to class:
+
+\begin{exer}
+
+\begin{itemize}
+
+\item How does the String type fundamentally differ from integer, double, and character types?
+
+  \evalline
+  
+\item How do String literals differ from character literals?
+
+  \evalline
+  
+\item What operator that works over integer values also works over Strings (albiet in a different way)?
+
+  \evalline
+  
+\item How do you determine how long a String is?
+
+  \evalline
+  
+  
+\end{itemize}
+
+\end{exer}
+
+Bring your completed pre-lab sheet with you to class for Week \#6. Also submit your answers online on the Moodle prelab assignment.  
+
