@@ -29,7 +29,7 @@ For each of the following expressions, predict what you expect the value to be o
 \subsection{Part 2 -- Manipulating Strings with More Complex Expressions}
 
 \begin{eval}
-For each of the following expressions, predict what you expect the value to be on the first line (discussing it with your partner), then evaluate the expression in the REPL and confirm or correct your prediction on the second line if necessary. Assume the following code has been executed:
+For each of the following expressions, predict what you expect the value to be on the first line (discussing it with your partner), then evaluate the expression in the REPL and confirm or correct your prediction on the second line if necessary. Before evaluating the expressions, type in the following statement:
 
 \begin{code}
 String message = "Hello there";
@@ -42,19 +42,19 @@ String message = "Hello there";
 \evallinetwo
 \item message.substring(0, message.length())
 \evallinetwo
-\item message.substring(message.indexOf(' '), message.indexOf(h))
+\item message.substring(message.indexOf(' '), message.indexOf('h'))
 \evallinetwo
 \item message.substring(0, message.indexOf(message.charAt(7)))
 \evallinetwo
 \item "give me " + 5 + 5 + " bananas."
 \evallinetwo
-\item "I love the number " 3 + 9
+\item "I love the number " + 3 + 9
 \evallinetwo
 \end{sevalenum}
 \end{eval}
 
 \begin{eval}
-Each of the following expressions will result in an error of some sort. Briefly summarize the error output from the REPL, then  explain what the real problem is on the line below. Consider that the following code has been executed:
+Each of the following expressions will result in an error of some sort. Try to predict what it will be, then evalute the expression and briefly summarize the error output from the REPL, then  explain what the real problem is on the line below. Before evaluating the expressions, type in the following statements:
 
 \begin{code}
 String message1;
@@ -63,15 +63,15 @@ String message2 = "hello";
 
 \begin{sevalenum}
 \item message1.length()
-\evallinetwo
+\evallinethree
 \item message2.substring(0, 6)
-\evallinetwo
+\evallinethree
 \item message2.charAt(message2.indexOf('z'))
-\evallinetwo
+\evallinethree
 \item message2.substring(0, message.length())
-\evallinetwo
+\evallinethree
 \item message2.charAt(message2.length())
-\evallinetwo
+\evallinethree
 \end{sevalenum}
 \end{eval}
 
@@ -80,30 +80,56 @@ String message2 = "hello";
 
 \subsection{Part 3 -- Writing Basic Methods with Strings}
 
-*** write a method called 'uMad' that returns true if there is an exclamation point in an input string (tell them to use indexOf)
+\begin{exer}
+Write a method called \textbf{uMad} that has a String type parameter called \textit{txt} and returns a boolean value. It should return true if \textit{txt} has an exclamation point anywhere inside of it, and false otherwise. Use the indexOf instance method to get this working -- you should be able to do it with a single expression. You can write this and test it in the REPL, or write it directly on codingbat, here:
 
 http://codingbat.com/prob/p220491
 
-*** write a method called firstNameOnly that returns a substring up to but not including the first space in a string (tell them to use one line with indexOf and substring)
+Once you're finished, write the return statement you used here:
+
+\evalline
+
+\end{exer}
+
+\begin{exer}
+Write a method called \textbf{firstNameOnly} that has a single parameter of type String named \textit{fullName}. This method should return just the portion of \textit{fullName} starting at the beginning and ending just before the first space in the string. For your first attempt at this method, try to write it in just one line. You should pass all of the test cases but the last one on codingbat:
 
 http://codingbat.com/prob/p281900
 
-*** update firstNameOnly to account for strings with no spaces
+Once you're finished, write down your return statement here:
 
+\evalline
+
+\end{exer}
+
+\begin{exer}
+	Now update your definition of firstNameOnly to pass the last test (a full name that is just a first name with no spaces). You can use an if statement or a conditional expression to complete your method.
+
+You can test in the REPL if you wish, but make sure both you and your partner have a copy of the method you complete submitted to codingbat when you're finished.
+\end{exer}
 \initialbox
 
 
 \subsection{Part 4 -- Processing Strings with Loops}
+\begin{exer}
+Rewrite your solution to the \textbf{uMad} problem to use a while loop instead of using indexOf. Take a look at the ``Iterating through a String'' section of the prelab for direction on how to accomplish this. Again, once you're finished, make sure that you and your partner both have a submission submitted to codingbat. 
+\end{exer}
 
-*** write uMad without using indexOf
 
-*** write a method that counts the number of digits in a string
+\begin{exer}
+Now write a method named \textbf{countDigits} that has a single parameter of type String named \textit{message} and returns the number of digits in message.  The link to the codingbat page for this problem is here:
 
 http://codingbat.com/prob/p217885
 
-*** write a method that removes all the exclamation points from a string
+\end{exer}
+
+\begin{exer}
+	Finally, write one last method named \textbf{calmDown} that has a single parameter of type String named \textit{txt} and returns a copy of \textit{txt} with all of the exclamation points removed. The link to the codingbat page for this problem is here:
 
 http://codingbat.com/prob/p203598
+
+This method will serve as a basis for completing the postlab. If you get it working correctly, you should only need to make a couple simple changes to get this week's postlab working. 
+\end{exer}
 
 \initialbox
 
