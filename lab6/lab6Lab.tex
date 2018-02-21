@@ -23,15 +23,57 @@ For each of the following expressions, predict what you expect the value to be o
 \end{eval}
 
 
-\subsection{Part 2 -- Manipulating Strings with More Complex Expressions}
-*** predict/evalutate difficult method calls (empty string results, missing character, missing character upper-case (but not lowercase), nested calls using substring and length, substring and indexOf)
-*** predict/evaluate difficult concatenations (l-r ordering prevents addition)
 
-*** explain errors
-	*** null ptr exception w/ .length
-	*** negative starting point w/ charAt
-	*** charAt just over length of string (using call to length)
-	*** indexOf doesn't exist, but nested in to substring call
+\initialbox
+
+\subsection{Part 2 -- Manipulating Strings with More Complex Expressions}
+
+\begin{eval}
+For each of the following expressions, predict what you expect the value to be on the first line (discussing it with your partner), then evaluate the expression in the REPL and confirm or correct your prediction on the second line if necessary. Assume the following code has been executed:
+
+\begin{code}
+String message = "Hello there";
+\end{code}
+
+\begin{sevalenum}
+\item "Hello".indexOf('h')
+\evallinetwo
+\item message.indexOf('h')
+\evallinetwo
+\item message.substring(0, message.length())
+\evallinetwo
+\item message.substring(message.indexOf(' '), message.indexOf(h))
+\evallinetwo
+\item message.substring(0, message.indexOf(message.charAt(7)))
+\evallinetwo
+\item "give me " + 5 + 5 + " bananas."
+\evallinetwo
+\item "I love the number " 3 + 9
+\evallinetwo
+\end{sevalenum}
+\end{eval}
+
+\begin{eval}
+Each of the following expressions will result in an error of some sort. Briefly summarize the error output from the REPL, then  explain what the real problem is on the line below. Consider that the following code has been executed:
+
+\begin{code}
+String message1;
+String message2 = "hello";
+\end{code}
+
+\begin{sevalenum}
+\item message1.length()
+\evallinetwo
+\item message2.substring(0, 6)
+\evallinetwo
+\item message2.charAt(message2.indexOf('z'))
+\evallinetwo
+\item message2.substring(0, message.length())
+\evallinetwo
+\item message2.charAt(message2.length())
+\evallinetwo
+\end{sevalenum}
+\end{eval}
 
 
 \initialbox
