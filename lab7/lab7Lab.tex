@@ -1,0 +1,143 @@
+\subsection{Part 1 -- Transitioning to For Loops}
+
+\begin{exer}
+Now write a method named \textbf{palindrome} that has a single parameter of type String named \textit{s} and returns true if \textit{s} is a palindrome (that is, the characters in the string are the same read either forwards or backwards).  The link to the codingbat page for this problem is here:
+
+http://codingbat.com/prob/p265699
+
+Use a while loop to write this method at first, then convert your code to use a for loop. Once you have it working with a for loop, write down your code below:
+
+\evallinesix
+\end{exer}
+
+\initialbox
+
+\subsection{Part 2 -- Short For Loops}
+
+\begin{exer}
+Evaluate the following code in the REPL and record the response:
+
+\begin{code}
+for(int i=0; i<5; i++) 
+  System.out.print(i + " ");
+\end{code}
+\evalline
+\end{exer}
+
+\begin{eval}
+Now develop similar for loops that will print the following (write down the for loops below each line of expected output):
+\begin{sevalenum}
+
+\item \begin{verbatim}1 2 3 4 5\end{verbatim}
+
+\evallinetwo
+
+\item \begin{verbatim}2 4 6 8 10\end{verbatim}
+
+\evallinetwo
+
+\item \begin{verbatim}1 3 6 10 15\end{verbatim}
+
+\evallinefour
+
+\end{sevalenum}
+\end{eval}
+
+
+
+\begin{eval}
+Each of the following expressions will result in an error of some sort. Try to predict what it will be, then evalute the code and briefly summarize the error output from the REPL, then  explain what the real problem is on the line below.
+
+\begin{sevalenum}
+\item 
+\begin{code}
+for(i=0; i<5; i++) 
+  System.out.print(i + " ");
+\end{code}
+\evallinethree
+
+
+
+\item 
+\begin{code}
+for(int i=0; i<5; i++;) 
+  System.out.print(i + " ");
+\end{code}
+\evallinethree
+
+
+
+\item 
+\begin{code}
+for(int i=0; i<5; i++) 
+  System.out.print(i + " ");
+  System.out.print((i+1) + " ");
+\end{code}
+\evallinethree
+
+\end{sevalenum}
+\end{eval}
+
+
+\initialbox
+
+\subsection{Part 3 -- Nesting For Loops}
+
+\begin{exer}
+Execute the following code in the REPL:
+
+\begin{code}
+int size = 4;
+for(int row=0; row<size; row++) {
+  for(int col=0; col<size; col++) {
+    System.out.print("*");
+  }
+  System.out.println("");
+}
+\end{code}
+
+Describe in plain english what this code is doing:
+\evallinethree
+\end{exer}
+
+
+\begin{exer}
+Now create a method with a return type of \textit{void}. Name it \textbf{drawRectangle}. It should have two parameters: textbf{height} and \textbf{width}. Use the code above as the body of this method, but modify it so that it properly ``draws'' a rectangle. Note that, since this method is \textit{void}, you should not need a return statement. 
+
+When you are finished and you have tested your code to confirm it is working, write the method definition below:
+
+\evallineeight
+\end{exer}
+
+
+\begin{exer}
+Now create a method with a return type of \textit{void} named it \textbf{drawRightTriangle}. It should have one parameter: textbf{height}. Use the code above as the body of this method, but modify it so that it properly ``draws'' a right triangle (with the diagonal on the right-hand side). This should only require a \textbf{very minor} change from your last method definition.  
+
+When you are finished and you have tested your code to confirm it is working, write the method definition below:
+
+\evallineeight
+\end{exer}
+
+\initialbox
+
+\subsection{Part 4 -- Working with Block Comments}
+\begin{exer}
+Use the edit command in jshell to modify your last two method definitions. Include an appropriate javadoc comment that includes descriptions of the parameters. You can copy and paste between the two definitions to speed things up, but be prepared to show your instructor your comments. After your instructor sees the comments and approves, copy your comment for \textbf{drawRectangle} verbatim in to your notebook below:
+
+\evallinesix
+\end{exer}
+
+
+\begin{exer}
+Now create a method with a return type of \textit{void} named it \textbf{drawIsocelesTriangle}. It should again have one parameter: \textbf{height}. Use the code above as the body of this method, but modify it so that it properly ``draws'' an isoceles triangle (pyramid shape). This triangle will be twice as wide as it is high. You will need to print space characters to achieve this, but it will be helpful to start with the code from your right triangle method. 
+
+When you are finished and you have tested your code to confirm it is working, write the method definition below:
+
+\evallineeight
+\end{exer}
+
+\begin{exer}
+Now use a block comment to \textit{comment out} only the portion of your code that draws the spaces in your isoceles triangle. Test to make sure the rest is still being drawn properly. When you're finished, show this code to your instructor and demonstrate that it's working, then restore your code to its original form and demonstrate it once more. 
+\end{exer}
+
+\initialbox
