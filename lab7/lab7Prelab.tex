@@ -61,19 +61,97 @@ here's a backslash: \
 
 \section{For Loops}
 
-*** while loop processing a string revisited (print each char, one per line, in a void method)
-*** for loop structure
-*** converting from while loop to for loop
+When writing loops, three tasks are very commonly included: 
+\begin{itemize}
+\item Some local variable is declared and initialized, for instance a varibale named \textit{counter} could be initialized to 1. 
+\item That variable is tested as part of the while condition, for instance looping while \textit{counter} is less than 10. 
+\item At the end of each iteration of the loop, the variable is altered in some way, for instance \textit{counter} could be incremented at the end of each iteration of the loop. 
+\end{itemize}
+
+Since nearly every while loop that we write contains these three components, and also because they play an important role in determining how the loop executes, Java provides a special syntax called a \textbf{for loop} that simply re-organizes these components to all reside at the front of the loop. 
+
+\textbf{for} loops start with the \textit{for} keyword and a pair of parentheses, just like a while loop starts, but inside the parentheses is first an expression (ending in a semicolon) that is executed before the loop starts, secondly a boolean expression (the same as the looping condition for the while loop), also ending in a semicolon, and finally a statement that is executed at the end of each loop (typically incrementing a variable). The last statement doesn't have a semicolon following it, but all three should be within the parentheses. The rest is identical to a while loop. 
+
+\begin{exa}
+Consider the following while loop which adds the numbers between 1 and 10:
+
+
+\begin{code}
+int total = 0;
+int count = 1;
+while(count <= 10) {
+  total = total + count;
+  count++;
+}
+\end{code}
+
+Here is identical code written as a for loop:
+
+
+\begin{code}
+
+int total = 0;
+for(int count = 1; count <= 10; count++) {
+
+  total = total + count;
+}
+\end{code}
+\end{exa}
+
+Because code written with while loops and for loops perform the exact same task, we call for loops \textbf{syntactic sugar}, in that it is meant only to help with the look of your code, not the function of your code. Essentially, it is used to improve your coding \textit{style}.
+
+\begin{exa}
+The following code will print each character of the string \textit{message}, one character per line:
+
+\begin{code}
+String message = "hello";
+for(int i=0; i < message.length(); i++) {
+  System.out.println(message.charAt(i));
+}
+\end{code}
+
+\end{exa}
+
 
 \section{Block Comments and Javadoc Comments}
 
+Some times a portion of your code requires a more significant explanation spanning multiple lines. Rather than beginning each of these lines with a double slash for an end-of-line comment, it is sometimes preferable to designate a larger portion of your code for comments. 
+
 \subsection{Block Comments}
-*** before methods
-*** commenting out code
+
+Block comments are often used for these larger, more descriptive comments. To begin a block comment, type /* and all of the code, including newlines, will be considered a comment up to the closing */.
+
+Another use of block comments is to temporarily \textit{comment out} a portion of your code if you don't want it to run while you test your code but you also don't want to permenantly delete it. This can be helpful when \textit{debugging} your more complicated programs. 
+
 \subsection{Javadoc Comments}
-*** Java API Documentation
-*** parameters
-*** return values
+A special type of block comment is a \textbf{javadoc comment}. These comments come before each method definition and describe in detail what the method does, including the roles of its parameters and a description of the method's return value (if any). Javadoc comments begin with a /** instead of a /*
+
+Javadoc comments also have a special syntax for describing the parameters and return values. Within the Javadoc comment, a line beginning with \begin{verbatim}@return\end{verbatim} will describe the return value and a line beginning with \begin{verbatim}@param\end{verbatim} followed by the name of the parameter will describe one of the parameters. If you document your parameters in this way, you can also refer to your parameters in the rest of the comment with the following: \begin{verbatim}\{@code parameterName\}\end{verbatim} where \textit{parameterName} is the name of your parameter. 
+
+If you use the Javadoc comment format, HTML documentation for your code can be automatically generated. In fact, the API documentation pages we've used previously were all automatically generated from javadoc comments in the API source code!
+
+\newpage
+
+\begin{exa}
+The following method definition has an appropriate Javadoc comment preceeding it:
+
+\begin{code}
+/** This method computes the result of rasing the value {@code base} to the power {@code exponent}.
+    It is assumed {@code exponent} is a positive integer.
+    
+    @param base the base value to raise to some power
+    @param exponent the exponent that the base value will be raised to
+    @return {@code base} rasied to the power {@code exponent}
+*/
+int raiseToPower(int base, int exponent) {
+  int result = 1;
+  for(int i=0; i<exponent; i++) { 
+    result *= base;
+  } 
+  return result;
+}
+\end{code}
+\end{exa}
 
 \section{Before Next Class}
 
