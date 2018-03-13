@@ -75,7 +75,7 @@ If a field is never meant to be altered, it should be made in to a \textbf{const
 
 \begin{code}
 public class Lab9 {
-  final static String greeting = "Hello!";
+  static final String greeting = "Hello!";
 
   static void sayHello() {
     System.out.println(greeting);
@@ -153,11 +153,64 @@ arguments
 
 \section{Console I/O}
 
-\subsection{Writing to Standard Output}
+A \textbf{text-based application} (or command-line application) is one type of application you might develop and a simple one to start with. This type of application uses the command prompt to interact with the user. This was a very popular style of application on older computer systems in the 90's and earlier but has remained relevant and has perhaps even gained popularity more recently. For example, jshell itself is a text-based application.
 
-\subsection{Reading from Standard Input}
+\subsection{Writing to Standard Output with the System Console}
+
+A text-based application writes to standard output to communicate something to the user. You've already seen how to do this by using \textbf{System.out.println}. What you haven't seen yet is how to receive a response from the user while your program is running. This chapter will introduce the system console which is capable of doing both. Note that the console can't be used in jshell (if you try, you will get an error), but it can be used in a stand-alone text-based application run from the command-line. 
+
+The system console can be retrieved using the console() static method of the System class. This method returns a \textbf{Console} object with several instance methods we can use for input or output. One such instance method, the \textbf{printf} method, works similarly to the System.out.print method we used earlier. Here is ``Hello World'' using this method from the console:
+
+\begin{code}
+public class Hello {
+  public static void main(String[] args) {
+    System.console().printf("Hello World!");
+  }
+}
+\end{code}
+
+printf allows us to more easily print complex messages without having to concatenate several expressions together. This is done using a formatted string -- a string containing special character sequences that are a stand-in for other values provided as additional arguments to printf. 
+
+\begin{exa}
+``\%d'' is the character sequence that is used for an integer argument, and the following will print out the contents of the \textit{age} variable without using string concatentation:
+
+\begin{code}
+int age = 28;
+System.console().printf("I am \%d years old.", age);
+\end{code}
+\end{exa}
+
+To see what other types of character sequences you can use, check the documentation for printf method of the java.io.Console class. 
+
+\subsection{Reading from Standard Input Using the System Console}
+
+The Console class also has several useful methods for reading input in from the user. The most essential is \textbf{readLine}. Calling this method with no arguments will have it simply return the next line of input from the user as a single string. The program will pause and allow the user to type until they press the enter / return key, at which point the line of text that the user entered will be returned as a string. 
+
+Since the application will pause for the user's response when this method is called, the user should be presented with a \textbf{prompt} to indicate that they are expected to enter some input. Such a prompt can optionally be provided as an argument to the readLine method. 
 
 
+\begin{exa}
+The following application will quiz the user on some basic Java vocabulary. It will start by prompting the user with a question and then indicate to the user whether they entered the correct answer or not.
+
+
+\begin{code}
+public class JavaVocabQuiz {
+  public static void main(String[] args) {
+    String question = "What do you call a variable that holds an argument value for a method?";
+    String answer = System.console().readLine(question + " ");
+    if(answer.equals("parameter")) {
+      System.console().printf("Correct!\n");
+    } else {
+      System.console().printf("Wrong!\n");
+    }
+  }
+}
+\end{code}
+
+\end{exa}
+
+
+\newpage
 
 \section{Before Next Class}
 
@@ -167,11 +220,15 @@ Please answer the following questions before you arrive to class:
 
 \begin{itemize}
 
-\item ***
+\item What is the name of a method that must be in every Java application? 
 
   \evalline
   
-\item ***
+\item What keywords must come before the name of the method in a definition of the method above? 
+
+  \evalline
+  
+\item In a text-based application, how can you read a line of input from the user?
 
   \evalline
   
