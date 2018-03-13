@@ -28,6 +28,19 @@ System.out.println(1 + 1 == 2);
 
 prints the value \textit{true} to standard output.  
 
+Note that if you don't want a newline printed, you can use System.out.print instead. This allows you to make multiple calls without continuing to the next line. For instance:
+\begin{code}
+System.out.print("hi");
+System.out.print(" ");
+System.out.print("there");
+\end{code}
+
+Would print:
+
+\begin{verbatim}
+hi there
+\end{verbatim}
+
 
 \subsection{String Escapes}
 
@@ -40,11 +53,11 @@ System.out.println("A tab is \n\ta quite simple way \n\t\tto advance");
 
 ...prints the following haiku to the console:
 
-\begin{verbatim}
+\begin{code}
 A tab is
 	a quite simple way
 		to advance
-\end{verbatim}
+\end{code}
 
 It is important to note that because back slashes are interpreted as escapes, they can not be used as any other character would be in a string. However, you can include them by escaping them! For instance, the following code:
 
@@ -61,7 +74,7 @@ here's a backslash: \
 
 \section{For Loops}
 
-When writing loops, three tasks are very commonly included: 
+When writing loops, three components are very commonly included: 
 \begin{itemize}
 \item Some local variable is declared and initialized, for instance a varibale named \textit{counter} could be initialized to 1. 
 \item That variable is tested as part of the while condition, for instance looping while \textit{counter} is less than 10. 
