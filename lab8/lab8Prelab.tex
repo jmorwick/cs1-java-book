@@ -17,7 +17,73 @@ int[] arr;
 
 \subsection{Creating Array Values}
 
+Like strings, arrays are object types. Thus, variables with array types can be null:
+
+\begin{code}
+int[] arr = null;
+\end{code}
+
+We also create array objects with the \textbf{new} keyword, although the syntax is a little different than for other constructor calls. Square brackets are used instead of parentheses and the size of the array is provided within the square brackets. The size is constant and cannot be changed over the lifetime of the array object you create. For example, the following code initializes \textit{arr} to contain an array of 5 integers:
+
+\begin{code}
+int[] arr = new int[5];
+\end{code}
+
+Each of the integers in the array \textit{arr} are initialized to zero in the previous example. However, we can initialize them to hold arbitrary values by enumerating those values within curly braces instead of providing the length of the array. For example, the following code initializes \textit{arr} to hold the values 1 through 10:
+
+
+\begin{code}
+int[] arr = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+\end{code}
+
 \subsection{Operations on Arrays}
+
+\subsubsection{Length of an Array}
+The first operation to consider on arrays is how to determine the length of an array. This is similar to determining the length of a string, but instead of calling a method, the \textbf{length} \textit{field} is accessed instead. For example, assuming the most recent defitinition of \textit{arr}, the following expression will evaluate to $10$:
+
+\begin{code}
+arr.length
+\end{code}
+
+It is a very common mistake to include parentheses at the end of \textit{length} for an array or to leave off parentheses at the end of \textit{length} for a string because of this unfortunate inconsistency. 
+
+\subsubsection{Accessing an Array}
+
+The most important operation on arrays is retrieving a value from an array. This is very similar to the \textbf{charAt} instance method we used with strings, but instead of calling a method, square brackets following an array value indicate the index of the value to be retrieved. For example, assuming the most recent defitinition of \textit{arr}, the following expression will evaluate to $1$:
+
+\begin{code}
+arr[0]
+\end{code}
+
+Note that the first index of an array is 0, just as with strings.
+
+\subsubsection{Modifying an Array}
+
+Though the size of an array can't change, the values it contains can. Think of an indexed array (an array value with an index following it in square brackets) as any other variable. In addition to evaluating it like a variable expression (above), we can also use it in an assignment statement. For example, the following statement will assign the value $100$ to the first position in the array \textit{arr}:
+
+\begin{code}
+arr[0] = 100;
+\end{code}
+
+Following this assignment statement, the following expression will evaluate to $100$:
+
+\begin{code}
+arr[0]
+\end{code}
+
+
+\subsubsection{Iterating through an Array}
+
+For loops are a very convient way to process each element of an array. For example, the following code initializes arr to the values 1 through 10, but can be easily modified to have any upper limit:
+
+\begin{code}
+int size = 10;
+int[] arr = new int[size];
+for(int i=0; i<arr.length; i++) {
+  arr[i] = (i + 1);
+}
+\end{code}
+
 
 \section{Object Parameter Passing}
 
