@@ -1,6 +1,16 @@
 \section{Methods with No Return Type}
 
+Not every method will need to return a value. This section will look at at one possible rationale for writing such a method.
+
 \subsection{The void Keyword}
+
+Though not every method has a return value, method definitions require \textit{something} in the place of the return type in the method definition header. If no value is returned by the method, the \textbf{void} keyword is used to indicate such. If you use the void keyword in your method definition, you are not required to have a return statement in your method definition. Thus, the following is legal:
+
+\begin{code}
+void methodWithNoReturnStatement() {
+  // this method literally does nothing
+}
+\end{code}
 
 \subsection{Printing to Standard Output}
 
