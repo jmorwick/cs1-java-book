@@ -1,15 +1,23 @@
-<example xml:id="ex.dssslfunction">
-The following code example includes two statements. The first is a variable declaration that creates a variable 
-named <varname>x</varname> of type <type>int</type>. Second is an assignment statement that will assign the value 
-<literal>5</literal> to the variable <varname>x</varname>.
-<programlisting>
-<xi:include href="assignment-simple.jsh"/>
-</programlisting>
-
-Now evaluating the variable expression x at the shell prompt will yield the value <literal>5</literal>:
-<screen>
+<example xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="ex.dssslfunction"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Assigning a Value to a Variable</title>
+    
+    <para>
+        The following code example includes two statements. The first is a variable declaration that creates a variable 
+        named <varname>x</varname> of type <type>int</type>. Second is an assignment statement that will assign the value 
+        <literal>5</literal> to the variable <varname>x</varname>.
+    </para>
+    
+    <programlisting>
+<xi:include href="assignment-simple.jsh" parse="text/plain"/>
+    </programlisting>
+    
+    <para>
+        Now evaluating the variable expression x at the shell prompt will yield the value <literal>5</literal>:
+    </para>
+    
+    <screen>
 jshell> <userinput>x</userinput>
 x ==> 5
-
-</screen>
+    </screen>
 </example>
