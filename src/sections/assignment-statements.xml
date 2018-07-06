@@ -4,42 +4,26 @@
         <title>Assignment Statements</title>
     </info>
     
-    The main difference between variables in programming and variables you've used in math classes is that you can change the values variables hold. In Java, this is done 
-    using an assignment statement. Assignment statements may be a little confusing
-    since they use the equals operator, even though this is not an equation! There 
-    are two distinct parts to an assignment statement: on the left is an identifier for 
-    the variable you want to make an assignment to, and on the right is an expression 
-    which yields the value you want to assign to the variable. 
+    <para>
+        The main difference between variables in programming and variables you've used in math 
+        classes is that you can change the values variables hold. In Java, this is done 
+        using an assignment statement. Assignment statements may be a little confusing
+        since they use the equals operator, even though this is not an equation! There 
+        are two distinct parts to an assignment statement: on the left is an identifier for 
+        the variable you want to make an assignment to, and on the right is an expression 
+        which yields the value you want to assign to the variable. 
+    </para>
     
-    \begin{exa}
-    For example, the following assignment statement will assign the value 5 to the variable
-    x:
+    <xi:include href="../examples/assignment-simple.xml"/>
     
-    \begin{code}
-    x = 5;
-    \end{code}
-    \end{exa}
+    <xi:include href="../definitions/initialization.xml"/>
     
-    \begin{exa}
-    The following assignment statement will also assign the value 5 to the variable
-    x, but uses a more complex expression to do it:
+    <para>
+        Variables must be initialized before they can be used in another part of a program, and variables must be declared before they 
+        can be initialized, however variables can be declared and initialized in a single statement. It's also not always necessary
+        to provide a type in a declaration. The example below walks you through the relevant Java syntax:
+    </para>
     
-    \begin{code}
-    x = 2 + 3;
-    \end{code}
-    \end{exa}
-    
-    Note that, just as in variable expressions, it is required that a variable is
-    declared before it can be used on the left-hand side of an assignment statement. 
-    Using an undeclared variable in this way will result in an error. 
-    
-    \begin{exa}
-    Note: it is possible to both declare and assign a value to a variable in one 
-    combined statement. The following declares the new variable y and assigns the value 34
-    to it:
-    \begin{code}
-    int y = 34;
-    \end{code}
-    \end{exa}
+    <xi:include href="../examples/assignment-and-declaration-statement.xml"/>
     
 </section>
