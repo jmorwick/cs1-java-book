@@ -6,4 +6,40 @@
     
     <xi:include href="../definitions/statements-def.xml"/>
     
+    
+    \subsection{Variables in Java}
+    
+    One of the essential components of any program is the ability to remember and recall values. In terms of computer hardware, this is what we refer to as memory. The most basic way to utilize memory in just about any programming language is by using variables.
+    
+    Variables in programming are similar to the idea of a variable you've seen in algebra. Variables in your Java programs hold a value. You give variables a name in Java by using a Java identifier. Thus \textbf{x} is a legal 
+    variable name, but so is \textbf{x5} or \textbf{reallylongvariablename}. Note that the last variable name
+    is somewhat difficult to read. For this reason, there are conventions in Java which 
+    determine the proper way to name variables. \textbf{reallylongvariablename} is not an error, but it does break the proper naming convention in Java, which is called camel case. In camel case, you capitalize each of the sequential words. We must do this for identifiers consisting of multiple words since spaces are not allowed in identifiers. 
+    
+    For variable identifiers, we use camel case but we do not capitalize the first word. Thus, a proper convention-following identifier we could use as a variable name would be reallyLongVariableName. 
+    
+    Notice that this is a bit easier to read? 
+    
+    \subsection{Variable Declaration Statements}
+    
+    In order to use a variable in Java, you must declare it exists using a declaration statement. Java is known as a statically typed language, which means that when we declare variables, we must also declare what type of value they hold. The first element of a declaration statement is the type of data the variable will hold, and the second is the identifier (variable name). 
+    
+    \begin{exa}
+    We can create a variable named \textbf{x} which holds integer values with the following statement:
+    
+    \begin{code}
+    int x;
+    \end{code}
+    \end{exa}
+    
+    Once a variable is declared, you can use it as an expression. The expression will 
+    evaluate to whatever the variable holds. 
+    
+    \begin{exa}
+    Evaluating the expression x yields the value 0, since 0 is the default value 
+    given to a variable of type integer.
+    \end{exa}
+    
+    Note that if you use a variable in an expression before its defined, an error will result.
+    
 </section>
