@@ -1,0 +1,15 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.identifiers"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>Identifiers</title>
+    </info>
+
+There are several places you'll see identifiers in Java. Identifiers can simply be thought of as the names of things in a Java program. There are some rules about which names are legal, since some names might be interpreted as instructions or other parts of the program if they're not written properly. Here are the Java identifier rules:
+
+\begin{enumerate}
+\item Every Java identifier must begin with either a letter, a dollar sign, or an underscore.
+\item Java identifiers cannot contain white space (spaces, new lines, tabs), but can contain any other characters. 
+\item Java identifiers cannot be a reserved word (you can find a list of these online or in the textbook).
+\end{enumerate}
+
+</section>
