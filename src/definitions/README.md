@@ -1,6 +1,6 @@
 Defining terms:
 
-*(termdef)[https://tdg.docbook.org/tdg/5.2/termdef.html]* markup is used for concise definitions of terms in the book:
+*[termdef](https://tdg.docbook.org/tdg/5.2/termdef.html)* markup is used for concise definitions of terms in the book:
 
 These concise definitions should be the top level element in xml files with the 
 name of the term followed by "-def.xml". Inside these elements, *firstterm*
