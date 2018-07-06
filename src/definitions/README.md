@@ -1,4 +1,4 @@
-#Defining terms#
+# Defining terms
 
 Term definition files include a concise definition of a term and a brief elaboration of that definition (no examples). 
 
