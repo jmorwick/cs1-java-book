@@ -1,0 +1,17 @@
+<example xml:id="ex.average-algorithm">
+    
+    \begin{exa}
+    Let's consider a very simple algorithm for computing the average of numbers $x_{1}$ through $x_{n}$:
+    \begin{enumerate}
+    \item add each number $x_{i}$ together (for every $i$ between $1$ and $n$)
+    \item divide this sum by $n$
+    \item the resulting quotient is the average value
+    \end{enumerate}
+    
+    Note that the first step involves quite a bit of work! This is what we would call a 
+    relatively high-level instruction, in that it makes a rather heavy assumption about 
+    the reader's problem solving knowledge (specifically, that they understand they need 
+    to add $x_{1}$ to $x_{2}$, add that sum to $x_{3}$, etc...)
+    
+    \end{exa}
+</example>
