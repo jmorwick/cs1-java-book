@@ -1,0 +1,16 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.algorithms"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>Algorithms</title>
+    </info>
+    
+    <xi:include href="../definitions/algorithm-def.xml"/>
+    
+    <para>
+        In this course you will write many computer programs in Java that implement algorithms.
+        However, before we make that leap, we'll first learn about the basic building
+        blocks of a Java program and weave them together to implement the steps in abstract
+        algorithms.
+    </para>
+    
+</section>
