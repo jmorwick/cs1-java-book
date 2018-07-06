@@ -1,4 +1,4 @@
-<para xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="te.algorithm" > 
+<para xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="te.algorithm"> 
    <termdef xml:id="term.algorithm">
       An <firstterm>Algorithm</firstterm> is a list of abstract instructions for solving a problem.
    </termdef>

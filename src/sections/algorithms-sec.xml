@@ -1,0 +1,9 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.algorithms"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>Algorithms</title>
+    </info>
+    
+    <xi:include href="../definitions/algorithm-def.xml"/>
+    
+</section>

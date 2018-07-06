@@ -1,0 +1,8 @@
+<chapter xmlns="http://docbook.org/ns/docbook" xml:id="chapter.introduction"
+      xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+  <info>
+    <title>Introduction</title>
+  </info>
+  
+  <xi:include href="../sections/algorithms-sec.xml"/>
+</chapter>
