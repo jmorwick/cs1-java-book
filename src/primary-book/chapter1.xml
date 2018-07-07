@@ -1,9 +1,11 @@
-<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.introduction"
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.algorithms"
       xmlns:xi="http://www.w3.org/2001/XInclude">
   <info>
-    <title>Introduction</title>
+    <title>Algorithms</title>
   </info>
   
-  <xi:include href="../sections/algorithms-sec.xml"/>
+  <!-- TODO: add chapter intro -->
+  
+  <xi:include href="../sections/algorithms.xml"/>
   
 </chapter>
