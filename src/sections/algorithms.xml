@@ -4,7 +4,7 @@
         <title>Algorithms</title>
     </info>
     
-    <xi:include href="../definitions/algorithm-def.xml"/>
+    <xi:include href="../definitions/algorithm.xml"/>
     
     <para>
         In this course you will write many computer programs in Java that implement algorithms.
