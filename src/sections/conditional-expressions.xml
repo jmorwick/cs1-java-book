@@ -1,0 +1,26 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.conditional-expressions"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>Conditional Expressions</title>
+    </info>
+    <para>
+    You can also create expressions that evaluate conditionally. These expressions use two operators in conjunction: a question mark (?) and a colon (:). Conditional expressions consist of 3 parts: a boolean expression, followed by a question mark, followed by an expression that wll be evaluated if the initial  boolean expression is true, followed by a colon, followed by an expression that will be evaluated if the initial boolean expression is false.
+    For example, consider the following expression:
+    </para>  
+<programlisting>
+    5 > 10 ? 30 : 40
+</programlisting>
+<para>
+    This expression evaluates to the value 40 since the initial boolean expression evaluates 
+    to false, the expression following the colon is evaluated. The middle expression is ignored 
+    in this case. If we changed the comparison operator to &lt; 
+    the conditional expression would have evaluated to 30. 
+    
+    Here's another example that would evaluate to the maximum of x and y:
+</para>    
+
+<programlisting>
+    x > y ? x : y
+</programlisting>
+    
+</section>

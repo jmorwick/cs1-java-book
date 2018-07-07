@@ -1,0 +1,51 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.comparison-operators"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>Comparison Operators</title>
+    </info>
+    
+    <para>   
+        
+        The boolean type is useful for answering ``yes'' or ``no'' 
+        quesions, such as ``is 2 equal to 1 + 1?''. We can ask these 
+        types of questions with comparison operators. 
+        
+        The comparison operators are binary operators, just like the 
+        arithmetic operators you learned last week. However, they operate 
+        over values of any type, and the evaluate to a boolean value. For 
+        instance, == is the comparison operator. It determines whether two 
+        values are the same or not. So, to answer the question we posed in 
+        the last paragraph, we could use an expression like this:
+        
+<programlisting>
+(1 + 1) == 2
+</programlisting>
+        
+        If you type this in to the REPL, it will evaluate to true. 
+        Note that the parentheses are not necessary, either. + will be evaluated before 
+        any comparison operators will be.
+        There are several other comparison operators that will be useful to us, summarized below:
+        
+        <itemizedlist>
+            <listitem>
+                <para>!=  Not equal to</para>
+            </listitem>
+            <listitem>
+                <para>&gt; greater than</para>
+            </listitem>
+            <listitem>
+                <para>&lt; less than</para>
+            </listitem>
+            <listitem>
+                <para>&gt;= greater than or equal to</para>
+            </listitem>
+            <listitem>
+                <para>&lt;= less than or equal to</para>
+            </listitem>
+       </itemizedlist>
+    </para>
+        <para>
+        For example, the expression 
+        4 &lt; 3 + 3 would evalute to <literal>true</literal>. 
+    </para>
+</section>

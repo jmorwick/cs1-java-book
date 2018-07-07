@@ -1,0 +1,57 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.boolean-operators"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>Boolean Operators</title>
+    </info>
+        <para>
+    
+    There are also operators that work strictly over boolean values, just as the arithmetic 
+    operators we used last week worked strictly over numeric values. These are called 
+    <firstterm>boolean operators</firstterm>. They operate over one or 
+    two boolean values and evaluate to another boolean value.  These operations are 
+    quite simple, but form the basis for what is known as <firstterm>boolean algebra</firstterm>. 
+    
+    The first operator we'll consider is the and operator: &amp;&amp;. This is a boolean operator 
+    that evaluates to true only when both the left and right operands also evaluate to true. For instance:
+    
+<programlisting>
+true &amp;&amp; false
+</programlisting>    
+    
+    ...evaluates to false, since the right-hand operand is false. However:
+    
+            <programlisting>
+true &amp;&amp; true
+</programlisting>
+    
+    ...evalutes to true, since both operands are true.
+    
+    The next operator we'll consider is the or operator: || It is similar to the 
+    and operator, but it evaluates to true when either of the operands are true. 
+    Put another way, this operator will only evaluate to false when both of its 
+    operands evaluate to false. For example, if you replaced &amp;&amp; with || 
+    in both of the last two expressions, they would both evaluate to true.
+    
+    The last boolean operator we'll consider is unique in that it's a unary 
+    operator. Recall that this means it has only one operand. It is called the 
+    not operator: !   This operator simply reverses the boolean value of its 
+    operand. For example:
+    
+<programlisting>
+!false
+</programlisting>
+    
+    ...evaluates to true. Note that all of these operators can be combined and nested in subexpressions. For instance, the following expression evaluates to true:
+    
+    
+<programlisting>
+!((false &amp;&amp; false) || false)
+</programlisting>
+    
+    These operators also have an oerder of precedence: !, ||, &amp;&amp;
+        </para>
+    
+    
+
+    
+</section>

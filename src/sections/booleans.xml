@@ -1,0 +1,22 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.booleans"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>Booleans</title>
+    </info>
+    
+    <para>   
+        This section will introduce a significant new primitive type: \begin{textbf}booleans\end{textbf}.
+        The boolean type is actually the most simple type because they have only two possible values: 
+        \begin{textit}true\end{textit} and \begin{textit}false\end{textit}. Both \begin{textit}true\end{textit} 
+        and \begin{textit}false\end{textit} are also literal boolean values, and \begin{textit}boolean\end{textit} 
+        is the name of the type. For instance, you can declare and initialize a boolean variable as follows:
+    </para>
+<programlisting>
+boolean mybool = true;
+</programlisting>
+
+
+    <xi:include href="comparison-operators.xml"/>
+    <xi:include href="boolean-operators.xml"/>
+    
+</section>

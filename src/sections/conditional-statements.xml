@@ -1,0 +1,38 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.conditional-statements"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>Conditional Statements</title>
+    </info>
+    <para>
+    Booleans are important because you can use them to make decisions in your programs. Note that several of the algorithms we've worked with asked us to do one of two things depending on some condition. Boolean expressions allow us to specify the condition, and conditional expressions and if statements allow us to 
+    make conditional actions. 
+    </para>
+
+    <para>
+    An if statement is a new kind of statement that will only execute when a certain boolean expression evaluates to true. These statements start with the keyword \begin{textbf}if\end{textbf}, then a boolean expression (surrounded in parentheses -- the parentheses are necessary), then the statement we want to conditionally execute. For instance, consider the following statements:
+    </para>
+    
+<programlisting>
+    int x = 10;
+    int y = 0;
+    
+    if (y > x) x = 30;
+    
+    if (x > y) y = 20;
+</programlisting>
+    
+    <para>
+    The first if statement does nothing. y is not greater than x at this point, so the assignment statement that follows it (x = 30;) does not execute. The second if statement will set the variable y to the value 20. Since x is greater than y, the statement (y = 20;) will be executed. 
+    
+    More than one conditional statement can be included in an if statement. In fact, you can include as many as you like by opening up a \begin{textbf}block\end{textbf} of code using curly braces surrounding each of the conditional statements:
+    </para>
+<programlisting>    
+    if (x > y) {
+    x = 30;
+    y = 40;
+    z = 50;
+    }
+</programlisting>  
+
+    
+</section>
