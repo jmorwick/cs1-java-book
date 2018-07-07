@@ -1,5 +1,6 @@
 <book xmlns="http://docbook.org/ns/docbook"
       xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
-<title>Modern Computer Programming</title>
-<xi:include href="chapter1.xml"/>
+      <title>Modern Computer Programming</title>
+      <xi:include href="chapter1.xml"/>
+      <xi:include href="chapter2.xml"/>
 </book>
