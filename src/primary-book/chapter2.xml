@@ -1,4 +1,4 @@
-<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.introduction"
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.basics"
     xmlns:xi="http://www.w3.org/2001/XInclude">
     <info>
         <title>Basic Elements of Imperative Programming</title>
@@ -6,6 +6,6 @@
     
     <!-- TODO: add chapter intro -->
     
-    <xi:include href="../sections/expressions.xml"/>
+    <xi:include href="../sections/expressions.xml"/>    
     <xi:include href="../sections/statements.xml"/>
 </chapter>
