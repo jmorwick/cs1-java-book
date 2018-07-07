@@ -1,0 +1,40 @@
+<example xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="ex.declaration-default-value"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Declaring a Variable and Using it in an Expression</title>
+    
+    <para>
+        We can create a variable named <varname>x</varname> which holds integer values 
+        with the following statement:
+    </para>
+    
+    <programlisting>
+<xi:include href="declaration-statement.jsh" parse="text/plain"/>
+    </programlisting>
+    
+    <para>
+        Once a variable is declared, you can use it as an expression (called a 
+        <firstterm>variable expression</firstterm>). The expression will 
+        evaluate to whatever the variable holds. Evaluating the expression x yields the value 0,
+        since 0 is the default value given to a variable of type <type>int</type>. You can 
+        see both the declaration statement and the variable expression being evaluted below:
+    </para>
+<screen>    
+jshell> int x;
+x ==> 0
+    
+jshell> x
+x ==> 0
+</screen>        
+    
+    <para>
+        Note that if you use a variable in an expression before its defined, an error will result.
+    </para>
+<screen>
+jshell> y
+|  Error:
+|  cannot find symbol
+|    symbol:   variable y
+|  y
+|  ^        
+</screen>
+</example>

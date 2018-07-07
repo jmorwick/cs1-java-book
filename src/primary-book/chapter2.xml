@@ -4,5 +4,8 @@
         <title>Basic Elements of Imperative Programming</title>
     </info>
     
+    <!-- TODO: add chapter intro -->
+    
+    <xi:include href="../sections/expressions.xml"/>
+    <xi:include href="../sections/statements.xml"/>
 </chapter>
-

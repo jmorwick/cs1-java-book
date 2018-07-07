@@ -1,0 +1,40 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.declaration-statements"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>Declaration Statements</title>
+    </info>
+    
+    <para>Before we can explore declaration statements, we must first understand variables:</para>
+    
+    
+    <xi:include href="../definitions/variable.xml"/>
+    
+    <para>
+        You give variables a name in Java by using a Java identifier. Thus <varname>x</varname> is a legal 
+        variable name, but so is <varname>x5</varname> or <varname>reallylongvariablename</varname>. 
+        Note that the last variable name is somewhat difficult to read. For this reason, there are 
+        <firstterm>rmconventions></firstterm> in Java which 
+        determine the proper way to name variables. <varname>reallylongvariablename</varname> is not an error, 
+        but it does break 
+        the proper naming convention in Java, which is called <firstterm>camel case</firstterm>. In camel case, 
+        you capitalize each of the
+        sequential words. We must do this for identifiers consisting of multiple words since spaces are not allowed in 
+        identifiers. Thus, a proper convention-following identifier 
+        we could use as a variable name would be <varname>reallyLongVariableName</varname>. 
+        Notice that this is a bit easier to read? 
+    </para>
+
+    <para>
+      In order to use a variable in Java, you must declare it exists using a 
+      <firstterm>declaration statement</firstterm>. 
+        
+        <!-- figure with syntax details for declaration statements -->
+  
+      Java is known as a statically typed language, which means that when we declare variables, 
+      we must also declare what type of value they hold. The first element of a declaration statement 
+      is the type of data the variable will hold, and the second is the identifier (variable name). 
+    </para>
+    
+    <xi:include href="../examples/declaration-default-value.xml"/>
+  
+</section>
