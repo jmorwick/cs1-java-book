@@ -3,4 +3,5 @@
       <title>Modern Computer Programming</title>
       <xi:include href="chapter1.xml"/>
       <xi:include href="chapter2.xml"/>
+      <xi:include href="chapter3.xml"/>
 </book>
