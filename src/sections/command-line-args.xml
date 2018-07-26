@@ -1,0 +1,39 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.command-line-arguments"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>Command-Line Arguments</title>
+    </info>
+    <para>
+Though you should understand what the type \textbf{String[]} means at this point (an array of string values), it may not be clear why a parameter with this type must be provided to the main method. The purpose of this parameter is to hold any \textbf{command-line arguments} that may be provided to your application when it is started at the command prompt. This would allow you to write an application similar to \textit{javac} itself! 
+    </para>
+    <para>
+Consider the following example program:
+    </para>
+<programlisting>
+<xi:include href="CommandLineDemo.java" parse="text/plain"/>
+</programlisting>
+    
+    <para>
+    This application prints out each of the command line arguments given to it when it is executed. These arguments are specified at the end of the \textit{java} command that starts the JRE. 
+    </para>
+    
+    <para>
+    For example, if you were to compile and run this program with the following command:
+    </para>
+    
+    <programlisting>
+    java CommandLineDemo here are some arguments
+    </programlisting>
+    
+    <para>
+    ...the following would be printed to the screen:
+    </para>
+    
+<screen>
+here
+are
+some
+arguments
+</screen>
+</section>
+    

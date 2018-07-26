@@ -1,0 +1,12 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.expressions"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <info>
+        <title>Else Statements</title>
+    </info>
+        <para>Conditional expressions provided a value whether our boolean expression evaluated to true \textit{or} false. We can similarly provide an alternative block of statements we want executed if the boolean expression used in our if statement evaluates to false by using an \textit{else} statement. Else statements look exactly like if statements but must immediately follow the end of the if statement. For example, let's rewrite myAbs using an if and an else statement instead of a conditional expression:
+        </para>
+        <programlisting>
+<xi:include href="myAbs.jsh" parse="text/plain"/>
+        </programlisting>
+    <para>Note that the return statement is still always the last statement executed, no matter what the value of x is. </para>
+</section>

@@ -1,0 +1,64 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.assignment-statements"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>Methods with No Return Type</title>
+    </info>
+    
+    <para>
+Not every method will need to return a value. This section will look at at one possible rationale for writing such a method.
+    </para>
+    <section>
+        <title>The void Keyword</title>
+        <para>
+            Though not every method has a return value, method definitions require \textit{something} in the place of the return type in the method definition header. If no value is returned by the method, the \textbf{void} keyword is used to indicate such. If you use the void keyword in your method definition, you are not required to have a return statement in your method definition. Thus, the following is legal:
+        </para>
+        
+<programlisting>
+void methodWithNoReturnStatement() {
+// this method literally does nothing
+}
+</programlisting>
+
+    </section>
+    <section>
+        <title>Printing to Standard Output</title>
+        <para>We've received messages back from the REPL each time we evaluate an expression, but perhaps we would like a message to be delivered somewhere during the execution of our program. Many ``text-based'' applications interact with their users solely through messages printed to a console (such as the REPL itself). Java has a special function for printing such messages to what is called \textit{standard output} or \textit{the console}. In the case of jshell, standard output is simply the jshell screen, so any messages you print while using jshell will show up there.
+        </para>
+        
+        <para>The method we will use to print to standard output is unfortunately (and infamously) somewhat complicated looking. Technically, it is an instance method that we call from a PrintWriter object. The PrintWriter object in question is a static variable in the \textbf{System} class called \textbf{out}, and the instance method we'll call from this object is called textbf{println}. So all together, we'll be calling this method by calling \textbf{System.out.println}. If the last sentence is all you remember from this paragraph, that's all you'll need for the rest of the semester. 
+            
+        </para>
+        
+        <para>This method will take one argument -- whatever we want printed to standard output. So, if we want to print the number 5 to our jshell screen, we can use the following method call:
+        </para>
+        
+        <programlisting>
+System.out.println(5);
+        </programlisting>
+        
+        <para>Note that this method doesn't return anything. It will take any type of expression we give it, however. So the following code:
+        </para>
+        
+        <programlisting>
+System.out.println("Joseph Kendall-Morwick");            
+        </programlisting>
+        
+        <para>prints my name to standard output, and the following code:</para>
+        
+        <programlisting>System.out.println(1 + 1 == 2);</programlisting>
+        
+        <para>
+            prints the value \textit{true} to standard output.  Note that if you don't want a newline printed, you can use System.out.print instead. This allows you to make multiple calls without continuing to the next line. For instance:
+        </para>
+        
+        
+<programlisting>
+System.out.print("hi");
+System.out.print(" ");
+System.out.print("there");
+</programlisting>
+        <para>would print:</para>
+        
+<screen>hi there</screen>
+    </section>
+</section>

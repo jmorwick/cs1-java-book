@@ -1,0 +1,73 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.while-loops"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>While Loops</title>
+    </info>
+
+    <para>While loops are the last piece of the puzzle for a <emphasis>real</emphasis> programming language (or what computer scientists call a ``Turing Complete'' language). What this means is that, technically, you can now write a program that is capable of doing whatever any other program written in any other language can do. 
+</para><para>
+While loops are a lot like if statements. In fact, they have a nearly identical syntax. You start with the \textit{while} keyword, then you supply a boolean expression in parentheses, then a block of code (a series of statements surrounded by curly braces). The only difference is that when this block of code completes, program control returns to the beginning of the while loop. Think of it as an if statement that repeats itself indefinitely.
+</para><para>
+Now you may be concerned by the word ``indefinitely''. You should be -- it's a distinct possibility that a while loop can run ``forever''. However, after each \textit{iteration} of the loop (that is, each time the statements inside the block are executed), the boolean expression at the front of the while loop is evaluated again. If you wrote the loop correctly, that boolean expression should evaluate to false when you're done with the loop. 
+</para><para>
+For example, the following code will add up the numbers 1 through 10:
+</para>
+<programlisting>
+<xi:include href="count-to-ten.jsh" parse="text/plain"/>
+</programlisting>
+<para>
+After the first iteration of the loop, count will increase by 1 and total will increase by 1. Thus, when the boolean expression is evaluated the second time, count will be 1 (and not 0). However, 1 is still less than 10, so the loop will run a second time. After the second iteration, count will increase to 2 and total will increase to 3. Now you might see where this is going. The loop will run 8 more times until count is equal to 11. At that point, count will be greater than 10, so the boolean expression will be false, and the statements inside the block will be skipped. 
+</para>
+    <section>
+        <title>More Advanced Conditional Statements</title>
+
+
+        <para>Last week \textit{else} statements were introduced and we also looked at nesting if statements. This week we will complete our coverage of conditional statements with a few special cases and a new datatype that helps explain the usefulness of the final example. </para>
+<section>
+<title>If / Else Chains</title>
+<para>
+Last week, when a situation called for one of two kinds of action, we could use a if statement with an else statement following it. However, if there are more than two actions we might take, the if statements will get somewhat complicated. To avoid this complexity, there are coding conventions (like those mentioned in the first section) that dictate when you should use curly braces and how much you should indent to avoid very wide lines in your code. This is called using an if/else chain, and is explained with an example:
+</para>
+<example>
+<para>An application is being developed that can order an appropriate snack for you automatically. If the temperature outside is high, it will order an ice cream, and if the temperature is low, it will order a hot chocolate. Assume that there are two methods available that can order either of these foods. The code might look like this:
+</para>
+<programlisting>
+if ( temperature > 65 ) {
+orderIceCream();
+} else {
+orderHotChocolate();
+}
+</programlisting>
+<para>
+Now consider that the application might also order popcorn if the temperature is more moderate. We would have to use a nested if statement to accomplish this:
+</para>
+<programlisting>
+if ( temperature > 80 ) {
+orderIceCream();
+} else {
+if (temperature > 50 ) {
+orderPopcorn();
+} else {
+orderHotChocolate();
+}
+}
+</programlisting>
+<para>
+If we wanted to add, for example, 5 more snack options, this would become quite a mess, with many layers of nested if statements inside of else statements! Your code would be so far indented to the right, that it may begin to run over the length of the screen. 
+</para>
+<para>
+This is avoided by not opening a new curly brace for each if statement that immediately follows an else, and instead putting both on the same line. The body of the else then becomes the if statement that follows the else, and the following if statement is not indented further than the else that it follows. For example, we could re-write the code above this way:
+</para>
+<programlisting>
+if ( temperature > 80 ) {
+orderIceCream();
+} else if (temperature > 50 ) {
+orderPopcorn();
+} else {
+orderHotChocolate();
+}
+</programlisting>
+
+</example>
+    </section>
+</section>

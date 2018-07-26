@@ -1,0 +1,122 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.method-definitions"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>Method Definitions</title>
+    </info>
+    
+    In week \#2 we used method calls to do some of the computing for us. For example, a call to Math.max was a simple way to achieve what would have otherwise required more detailed code. 
+    
+    This week you will learn how to define your own custom methods. Now you can include the statements for an algorithm you would like to implement once in a method definition and then make a call to that method whenever you would like to run the algorithm. 
+    
+    \subsection{The Anatomy of a Method}
+    
+    Method definitions are a bit more involved than our previous topics. Methods take data as input (through parameters) and return data as output. The data types for both a method's input and output must be specified, just as you had to specify the data type for the variables you created in Lab \#1. 
+    
+    A method definition consists of a header (or signature) defining the input and output data types, and a method body. Let's first take a look at the contents of the signature. First is a data type for the data returned by the method. For instance, the Math.abs method returns a double, so it's return type would be \textit{double}. Next is the name of the method. 
+    
+    So far, the definition looks a lot like a variable definition, but we're not quite finished. We also need to define parameters for the method. Parameters are variables that will hold the input values for the method (the input values are the arguments you were providing to methods in prior weeks).
+    
+    Following the name of the method is a pair of parentheses with definitions of the parameters in between the parentheses. Each parameter definition consists of a data type followed by the name of the parameter (just like the method definitions we saw in week \#1). There may be zero or more parameter definitions, separated by commas. 
+    
+    The method body should be familiar to you -- it is very similar to the body of an if statement. The body consists of an open curly brace, 1 or more statements, and a closing curly brace. Unlike if statements, the curly braces are always required, even if you only have one statement in the body. Another difference is that your method must always reach a return statement (with some exceptions -- but for now assume this is always true). The return statement must be the last statement executed in the method. We'll take a look at a return statement in the next section with a simple example.
+    
+    \subsection{Simple Method Definitions}
+    
+    Let's start by defining a method that works exactly like Math.abs. We'll name it \textit{myAbs}:
+    
+    \begin{code}
+    double myAbs(double x) {
+    return x > 0 ? x : -x;
+    }
+    \end{code}
+    
+    myAbs takes a double value as input and stores that value in its parameter \textit{x}. There is only one statement in myAbs: a return statement. \textit{return} is a keyword, similar to \textit{if}. What follows the return keyword is an expression that must evaluate to the same data type as the method's return type. Whatever this expression evaluates to is the \textit{output} of the method. In this case, it's a conditional expression that should be very similar to what you came up with in Lab \#3 to find the absolute value of a variable x. You can type this definition in to jshell and afterword you can make calls to it without having to supply a class context (such as you did with static methods like Math.abs) or an object context (such as you did with instance methods like Graphics.drawRect). You can call this method like so:
+    
+    \begin{code}
+    myAbs(-5)
+    \end{code}
+    
+    This expression will evaluate to 5 if you defined myAbs as specified above. Note that, after you define a method in jshell, you can edit it by typing \textit{/edit myAbs} in to jshell, which will open an external text editor.
+    
+    \subsection{Methods with Multiple Parameters}
+    
+    We can define a method with more than one parameter by separating the parameter definitions by commas. For example, let's define \textit{myMax}, which will work exactly like the Math.max method you used in prior weeks:
+    
+    \begin{code}
+    double myMax(double a, double b) {
+    return a > b ? a : b;
+    }
+    \end{code}
+    
+    When you make a call to myMax, you would separate your arguments with a comma just as you did with Math.max. For example, the following expression evaluates to 3:
+    
+    \begin{code}
+    myMax(-2, 3)
+    \end{code}
+    
+    We can also define a method with no parameters if we wish. Let's define a method called \textit{ultimateAnswer} which has no parameters (takes no input) and simply returns 42:
+    
+    \begin{code}
+    int ultimateAnswer() {
+    return 42;
+    }
+    \end{code}In week \#2 we used method calls to do some of the computing for us. For example, a call to Math.max was a simple way to achieve what would have otherwise required more detailed code. 
+    
+    This week you will learn how to define your own custom methods. Now you can include the statements for an algorithm you would like to implement once in a method definition and then make a call to that method whenever you would like to run the algorithm. 
+    
+    \subsection{The Anatomy of a Method}
+    
+    Method definitions are a bit more involved than our previous topics. Methods take data as input (through parameters) and return data as output. The data types for both a method's input and output must be specified, just as you had to specify the data type for the variables you created in Lab \#1. 
+    
+    A method definition consists of a header (or signature) defining the input and output data types, and a method body. Let's first take a look at the contents of the signature. First is a data type for the data returned by the method. For instance, the Math.abs method returns a double, so it's return type would be \textit{double}. Next is the name of the method. 
+    
+    So far, the definition looks a lot like a variable definition, but we're not quite finished. We also need to define parameters for the method. Parameters are variables that will hold the input values for the method (the input values are the arguments you were providing to methods in prior weeks).
+    
+    Following the name of the method is a pair of parentheses with definitions of the parameters in between the parentheses. Each parameter definition consists of a data type followed by the name of the parameter (just like the method definitions we saw in week \#1). There may be zero or more parameter definitions, separated by commas. 
+    
+    The method body should be familiar to you -- it is very similar to the body of an if statement. The body consists of an open curly brace, 1 or more statements, and a closing curly brace. Unlike if statements, the curly braces are always required, even if you only have one statement in the body. Another difference is that your method must always reach a return statement (with some exceptions -- but for now assume this is always true). The return statement must be the last statement executed in the method. We'll take a look at a return statement in the next section with a simple example.
+    
+    \subsection{Simple Method Definitions}
+    
+    Let's start by defining a method that works exactly like Math.abs. We'll name it \textit{myAbs}:
+    
+    \begin{code}
+    double myAbs(double x) {
+    return x > 0 ? x : -x;
+    }
+    \end{code}
+    
+    myAbs takes a double value as input and stores that value in its parameter \textit{x}. There is only one statement in myAbs: a return statement. \textit{return} is a keyword, similar to \textit{if}. What follows the return keyword is an expression that must evaluate to the same data type as the method's return type. Whatever this expression evaluates to is the \textit{output} of the method. In this case, it's a conditional expression that should be very similar to what you came up with in Lab \#3 to find the absolute value of a variable x. You can type this definition in to jshell and afterword you can make calls to it without having to supply a class context (such as you did with static methods like Math.abs) or an object context (such as you did with instance methods like Graphics.drawRect). You can call this method like so:
+    
+    \begin{code}
+    myAbs(-5)
+    \end{code}
+    
+    This expression will evaluate to 5 if you defined myAbs as specified above. Note that, after you define a method in jshell, you can edit it by typing \textit{/edit myAbs} in to jshell, which will open an external text editor.
+    
+    \subsection{Methods with Multiple Parameters}
+    
+    We can define a method with more than one parameter by separating the parameter definitions by commas. For example, let's define \textit{myMax}, which will work exactly like the Math.max method you used in prior weeks:
+    
+    \begin{code}
+    double myMax(double a, double b) {
+    return a > b ? a : b;
+    }
+    \end{code}
+    
+    When you make a call to myMax, you would separate your arguments with a comma just as you did with Math.max. For example, the following expression evaluates to 3:
+    
+    \begin{code}
+    myMax(-2, 3)
+    \end{code}
+    
+    We can also define a method wi
+    
+    When you call this method you still need to provide empty parentheses. For example, the following expression evaluates to 42:
+    
+    \begin{code}
+    ultimateAnswer()
+    \end{code}
+    
+    
+</section>

@@ -1,0 +1,51 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.algorithms"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>Shortcuts for Common Assignment Statements</title>
+    </info>
+
+<para>
+You've now no doubt wrote a statement such as the following many times:
+</para>
+    
+<programlisting>
+i = i + 1;
+</programlisting>
+
+<para>
+This happens so frequently in Java that there are several built-in shortcuts for such statements. 
+For instance, if we simply want to add a value \textit{to} a variable (rather than replace a value in a variable), we could do so using the += operator. Thus, an equivalent version of the code above is the following:
+</para>
+    
+<programlisting>
+i += 1;
+</programlisting>
+    
+<para>
+We could also add 2 to the value of i the same way, or any other value we want to increment it by. Similarly, we could subtract that value from i with the -= operator. Each of the other arithmetic operators has a similar shortcut. 
+</para>
+<para>
+Beyond these shortcuts, it's also very common that we're simply adding 1 from a variable, so there is a second shortcut that just adds 1:
+</para>
+    
+<programlisting>
+i++;
+</programlisting>
+
+<para>
+Note that this shortcut can be used to simplify the string iteration example considerably, since it uses a somewhat long variable name:
+</para>
+    
+<programlisting>
+<xi:include href="count-l-in-hello.jsh" parse="text/plain"/>
+</programlisting>
+
+<para>
+If you've ever heard of the programming language C++ and wondered why it was named that way, now you know. Similarly, a similar shortcut exists for subtracting 1 from a variable. 
+</para>
+
+<programlisting>
+i--;
+</programlisting>
+
+</section>

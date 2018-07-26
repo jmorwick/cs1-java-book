@@ -1,0 +1,77 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.algorithms"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>The Character Primitive Data Type</title>
+    </info>
+<para>
+A character is essentially another type of numeric primitive, but with a special purpose. In order to work with textual data on a computer (such as the letters you're reading right now, which were printed off by a computer), each letter (and also other symbols such as punctuation, numbers, etc) are each given a special code number. 
+</para>
+    <para>
+Characters are a primitive type in Java, and the name of the type is \textbf{char}. Thus, just like \textbf{int} and \textbf{double}, you can create a variable of type \textbf{char}:
+    </para>
+    
+<programlisting>
+char letterGrade;
+</programlisting>
+
+<para>
+There is also a special format for character literals. You can surround a character with single-quotes and Java will interpret that as a literal character value. For instance:
+</para>
+    
+<programlisting>
+letterGrade = 'A';
+</programlisting>
+
+<para>
+Since Java was designed to work on any available computing platform, naturally it should also support any language as well. Thus, the standard used for the characters in Java include codes not only for the letters used in English, but also all other natural languages (including those with many characters, such as Chinese)! This system is called Unicode:
+https://unicode.org/</para>
+   
+
+<para>
+    The actual codes used for each character in Java can be looked up on the UTF-8 chart here: https://www.unicode.org/charts/
+</para>
+    
+    <section>
+        <title>Static Methods for Characters</title>
+    <para>Last week we introduced the character primitive type and wrote some methods working with characters. There are also some \textit{built in} static methods for working with characters. These are all found in the \textit{Character} class (no import necessary). A few of the more important ones are summarized below:
+    
+        <itemizedlist>
+            <listitem>
+                <para>boolean \textbf{Character.isDigit}(char) - Takes a character as input and returns a boolean indicating whether or not it is a digit (0-9). </para>
+            </listitem>
+            <listitem>
+                <para>boolean \textbf{Character.isLetter}(char) - Takes a character as input and returns a boolean indicating whether or not it is a letter (a-z or A-Z). </para>
+            </listitem>
+            <listitem>
+                <para>boolean \textbf{Character.isUpperCase}(char) - Takes a character as input and returns a boolean indicating whether or not it is a upper-case letter (A-Z). </para>
+            </listitem>
+            <listitem>
+                <para>boolean \textbf{Character.isLowerCase}(char) - Takes a character as input and returns a boolean indicating whether or not it is a lower-case letter (a-z)</para>
+            </listitem>
+            <listitem>
+                <para>char \textbf{Character.toUpperCase}(char) - Takes a character as input and returns that character in upper-case (or leaves it alone if it was already upper-case)</para>
+            </listitem>
+            <listitem>
+                <para>char \textbf{Character.toLowerCase}(char) - Takes a character as input and returns that character in lower-case (or leaves it alone if it was already lower-case)</para>
+            </listitem>
+        </itemizedlist>
+    </para>
+        
+        <para>Executing the following code:</para>
+        
+    <programlisting>
+char c = 'A';
+if(Character.isUpperCase(c)) {
+  c = 'a';
+}
+    </programlisting>
+    
+    <para>would result in textit{c} holding the value 'a' at the end.  The following code would also produce the same result:
+    </para>
+    
+    <programlisting>
+char c = 'A';
+c = Character.toLowerCase(c);
+    </programlisting>
+    </section>
+</section>

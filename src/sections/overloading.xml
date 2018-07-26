@@ -1,0 +1,39 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.numeric-literal-expressions"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>Overloading Method Parameters</title>
+    </info>
+    
+<para>What if the programmer wanted to develop a method that could take more than one type of argument? You may have noticed in the past that \textbf{Math.abs} works with either \textbf{int} values or \textbf{double} values. That is because there are two different implementations of \textbf{Math.abs}, one for each of these parameter data types. This is called \textbf{overloading}.
+</para>
+    <para>
+Methods in Java are not identified by their name alone. If you were to call Math.abs(5), the Java compiler will search for a method named \textit{abs} that has exactly one parameter of type \textit{int}. There may be another method named \textit{abs} that has a parameter of type \textit{double}, or more than one parameter, or no parameters, etc..
+    </para>
+    
+    <example>
+
+        <para>Consider the following method definitions:</para>
+
+<programlisting>
+int abs(int a) {
+System.out.println("abs was called with an int");
+return a > 0 ? a : -a;
+}
+
+double abs(double a) {
+System.out.println("abs was called with an double");
+return a > 0 ? a : -a;
+}
+</programlisting>
+
+<para>The implementations of these methods look nearly identical, but if you enter them in to jshell and then evaluate the following statements:
+</para>
+<programlisting>
+abs(-5);
+abs(-5.0);
+</programlisting>
+
+<para>You will see that one returns an integer value and the other returns a double value, as well as each printing out a different message.
+</para>
+    </example>
+</section>
