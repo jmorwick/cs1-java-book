@@ -9,23 +9,15 @@
         <para>A class definition begins with the keyword \textbf{class}, followed by the class name, and then a pair of curly braces. For example, here is a very simple class definition:
         </para>
 <programlisting>
-class Lab9 {
-}</programlisting>
+<xi:include href="../../examples/code/simple-class.jsh" parse="text/plain"/>
+</programlisting>
         <para>A Java file must contain one class designated as public using the \textbf{public} keyword before the class definition. It's also important to note that the filename must match the name of the public class, with \textit{.java} at the end (similar to how an HTML file has \textit{.html} at the end). For example, if we were to produce a Java file called \textit{Lab9.java}, it could have the following as its contents:
         </para>
         
-        <programlisting>
-public class Lab9 {
-}</programlisting>
+        <programlisting><xi:include href="../../examples/code/ExampleClass.java" parse="text/plain"/></programlisting>
         <para>Inside of these curly braces is the class body in which its \textbf{members} are defined. Class members include method definitions, so we can include any the method definitions we've been developing. If we make these methods static by including the \textit{static} keyword before the method definition, we can use them like any other static method (such as Math.max). For instance, consider the following modification of the Lab9 class definition:
         </para>
-<programlisting>
-public class Lab9 {
-  static void sayHello() {
-    System.out.println("Hello!");
-  }
-}    
-</programlisting>
+      <programlisting><xi:include href="../../examples/code/ExampleClassWithStaticMethod.java" parse="text/plain"/></programlisting>
         <para>Any other Java code we write, even in another file, could access this method as follows:
         </para>
 <programlisting>
@@ -36,19 +28,7 @@ Lab9.sayHello();
         <title>Static Fields</title>
         <para>Methods aren't the only members we can add to a class. Variables can also be members, in which case they are called \textbf{fields}. For example, we can create a variable called \textit{greeting} to hold the message we use in the sayHello() method. This allows us to more easily maintain consistency with other methods that greet the user in other ways. \textit{greeting} must also be declared static to be used in Lab9's static methods: 
         </para>
-        <programlisting>
-public class Lab9 {
-  static String greeting = "Hello!";
-
-  static void sayHello() {
-    System.out.println(greeting);
-  }
-
-  static void sayHelloEmphatically() {
-    System.out.println(greeting + "!!!!!!!!");
-  }
-}
-</programlisting>
+        <programlisting><xi:include href="../../examples/code/ClassWithMultipleStaticMethods.java" parse="text/plain"/></programlisting>
     </section>
     <section>
         <title>Scope of Fields</title>
@@ -65,19 +45,8 @@ public class Lab9 {
             <para>If a field is never meant to be altered, it should be made in to a \textbf{constant} by using the \textbf{final} keyword in its definition. Here is the updated definition of the Lab9 class that prevents any changes to the greeting field:
             </para>
             
-            <programlisting>
-public class Lab9 {
-  static final String greeting = "Hello!";
-
-  static void sayHello() {
-    System.out.println(greeting);
-  }
-
-  static void sayHelloEmphatically() {
-    System.out.println(greeting + "!!!!!!!!");
-  }
-}
-</programlisting>
+          <programlisting><xi:include href="../../examples/code/ClassWithConstant.java" parse="text/plain"/></programlisting>
+          
         </section>
     </section>
 </section>

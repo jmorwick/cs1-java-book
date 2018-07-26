@@ -17,7 +17,7 @@
         Putting this all together, the following serves as an example of a complete Java application:
         </para>
         <programlisting>
-<xi:include href="hello.java" parse="text/plain"/>
+<xi:include href="../../examples/hello.java" parse="text/plain"/>
             </programlisting>
         <para>
         This is the classic ``hello world'' program that is often given on the first day of a programming class. In many languages, ``Hello World'' is simply a one-line program, making this a convienent place to start in an introductory programming class. However, Java was designed with more complex software development in mind, and a more complex ``Hello World'' example is one of the unintended side effects of that choice (pun intended). By starting with tools like jshell and codingbat, you were able to learn each of the concepts present in this code before using them in an application (with the exception of the \textit{public} keyword, to some extent). 
