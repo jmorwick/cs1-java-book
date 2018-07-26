@@ -1,2 +1,2 @@
 Each file must have a single [section](https://tdg.docbook.org/tdg/5.2/section.html) tag as its top level element.
-Sections can be nested within each other. 
+Sections can be nested within each other. Each file should be a self-contained unit that could be presented in an alternate order. Prerequisite sections should be indicated in a  [remark](https://tdg.docbook.org/tdg/4.5/remark.html) at the top of the section. These remarks will only be visble in drafts of the text. 
