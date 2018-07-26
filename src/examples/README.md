@@ -15,7 +15,7 @@ where NAME is the same as the filename. Additionally the example should have a t
 ## For examples containing a small program
 If the code in the example can stand alone (that is, it can be correctly interpreted by jshell, possibly requiring another 
 script to be run first), it should use a [programlisting](https://tdg.docbook.org/tdg/5.2/programlisting.html) tag. 
-Inside should be an xinclude reference to an actual jshell source file (in this directory) with the code in it (use 
+Inside should be an xinclude reference to an actual jshell source file (in the code directory) with the code in it (use 
 parse="text/plain" attribute to avoid validation problems). 
 The jshell file should have the same beginning name as the example xml file. 
 
