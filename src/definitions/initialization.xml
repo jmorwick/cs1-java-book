@@ -1,5 +1,0 @@
-<para xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="te.initialization"> 
-    <termdef xml:id="term.initialization">
-        When a variable is assigned its first (initial) value, we say that the variable has been <firstterm>initialized</firstterm>.
-    </termdef>
-</para>

@@ -16,7 +16,12 @@
     
     <xi:include href="../examples/assignment-simple.xml"/>
     
-    <xi:include href="../definitions/initialization.xml"/>
+    <para> 
+        <termdef xml:id="term.initialization">
+            When a variable is assigned its first (initial) value, we say that the variable has been        <firstterm>initialized</firstterm>.
+        </termdef>
+    </para>
+    
     
     <para>
         Variables must be initialized before they can be used in another part of a program, and variables must be declared before they 

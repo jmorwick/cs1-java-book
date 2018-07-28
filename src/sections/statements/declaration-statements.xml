@@ -6,8 +6,28 @@
     
     <para>Before we can explore declaration statements, we must first understand variables:</para>
     
+    <para> 
+        
+        One of the essential components of any program is the ability to remember and recall values. 
+        In terms of computer hardware, this is what we refer to as memory. The most basic way to utilize memory 
+        in just about any programming language is by using variables.
+        
+        <termdef xml:id="term.variable">
+            A <firstterm>variable</firstterm> is a named portion of computer memory that holds 
+            a single value. 
+        </termdef>
+        
+        
+        Variables in programming are similar to the idea of a variable you've seen in algebra. In algebra, the variable 
+        represents an unknown quantity. Likewise, when you write a program, you may not know what value a variable 
+        you're using will eventually hold. However, at the time when your program is running
+        (known as <firstterm>run time</firstterm>), the variable's value will be known to the computer, just as the
+        value of a variable in algebra is known when you solve an equation. 
+        
+        
+    </para>
     
-    <xi:include href="../definitions/variable.xml"/>
+    
     
     <para>
         You give variables a name in Java by using a Java identifier. Thus <varname>x</varname> is a legal 

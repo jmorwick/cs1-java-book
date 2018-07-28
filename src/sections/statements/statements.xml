@@ -3,7 +3,15 @@
     <info>
         <title>Statements</title>
     </info>
-    
-    <xi:include href="../../definitions/statement.xml"/>
-    
+    <para> 
+        <termdef xml:id="term.statement">
+            A <firstterm>statement</firstterm> is essentially a single instruction.
+        </termdef>
+        This is a fairly abstract definition, but statements serve many purposes in imperative 
+        programming languages like Java and can embody simple or complex instructions. 
+        
+        <!-- TODO: replace below with a figure on statement syntax -->
+        Generally, statements will end with a semicolon (think of this like the period at the end
+        of a sentence in English).  
+    </para>
 </section>
