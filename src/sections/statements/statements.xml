@@ -4,16 +4,6 @@
         <title>Statements</title>
     </info>
     
-    <xi:include href="../definitions/statement.xml"/>
-    
-    <para>    
-        There are 
-        several types of statements in Java that we will examine in the early portions of this book,
-        but we'll start with two of the most simple statements: declaration statements and assignment 
-        statements. 
-    </para>
-    
-    <xi:include href="declaration-statements.xml"/>
-    <xi:include href="assignment-statements.xml"/>
+    <xi:include href="../../definitions/statement.xml"/>
     
 </section>

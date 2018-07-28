@@ -6,6 +6,6 @@
   
   <!-- TODO: add chapter intro -->
   
-  <xi:include href="../sections/algorithms.xml"/>
+  <xi:include href="../sections/algorithms/algorithms.xml"/>
   
 </chapter>

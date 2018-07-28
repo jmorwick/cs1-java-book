@@ -4,8 +4,27 @@
         <title>Basic Elements of Imperative Programming</title>
     </info>
     
-    <!-- TODO: add chapter intro -->
+    <para>
+        Throughout the first unit we will be mostly looking at Java expressions. Think of 
+        expressions as the most basic building blocks of a Java program. An expression is 
+        something that is evaluated in your Java program (that is, it's interpreted to 
+        represent some value). A common exercise / exam question you will have this semester 
+        is ``what value does this expression evaluate to?''.
+    </para>
     
-    <xi:include href="../sections/expressions.xml"/>    
-    <xi:include href="../sections/statements.xml"/>
+    <para>
+        Throughout the first unit, you will be using a program called a REPL (Read, Evaluate,
+        Print Loop) to evaluate Java expressions. If you type a 
+        Java expression in to the REPL, the REPL will interpret it and print out the value 
+        that it evaluates to. 
+    </para>
+    
+    <para>
+        We'll start by working with numeric expressions. These are expressions that always 
+        evaluate to some sort of numeric value (such as 5, or 9.2). 
+    </para>
+    
+    <xi:include href="../sections/expressions/numeric-literal-expressions.xml"/>
+    <xi:include href="../sections/expressions/arithmetic-expressions.xml"/>   
+    <xi:include href="../sections/statements/statements.xml"/>
 </chapter>

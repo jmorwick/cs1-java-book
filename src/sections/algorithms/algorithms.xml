@@ -4,7 +4,13 @@
         <title>Algorithms</title>
     </info>
     
-    <xi:include href="../definitions/algorithm.xml"/>
+    <para> 
+        <termdef xml:id="term.algorithm">
+            An <firstterm>Algorithm</firstterm> is a list of abstract instructions for solving a problem.
+        </termdef>
+        These instructions need not be computer codes -- an algorithm, as a concept, 
+        transcends any one particular programming language.
+    </para>
     
     <para>
         In this course you will write many computer programs in Java that implement algorithms.
