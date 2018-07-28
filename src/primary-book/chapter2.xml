@@ -24,7 +24,6 @@
         evaluate to some sort of numeric value (such as 5, or 9.2). 
     </para>
     
-    <xi:include href="../sections/expressions/numeric-literal-expressions.xml"/>
     <xi:include href="../sections/expressions/arithmetic-expressions.xml"/>   
     <xi:include href="../sections/statements/statements.xml"/>
 </chapter>
