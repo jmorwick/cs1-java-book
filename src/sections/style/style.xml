@@ -134,27 +134,8 @@ return x + y;
         <para>
     If you use the Javadoc comment format, HTML documentation for your code can be automatically generated. In fact, the API documentation pages we've used previously were all automatically generated from javadoc comments in the API source code!
         </para>
-        
-    <example>
-    The following method definition has an appropriate Javadoc comment preceeding it:
     
-<programlisting>
-    /** This method computes the result of rasing the value {@code base} to the power {@code exponent}.
-    It is assumed {@code exponent} is a positive integer.
-    
-    @param base the base value to raise to some power
-    @param exponent the exponent that the base value will be raised to
-    @return {@code base} rasied to the power {@code exponent}
-    */
-    int raiseToPower(int base, int exponent) {
-    int result = 1;
-    for(int i=0; i<exponent; i++) { 
-        result *= base;
-        } 
-        return result;
-        }
-</programlisting>
-    </example>
+    <xi:include href="../../examples/javadoc-method-basic.xml" parse="application/xml"/>
     </section>
 <section>
     

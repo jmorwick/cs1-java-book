@@ -26,4 +26,5 @@
     
     <xi:include href="../sections/expressions/arithmetic-expressions.xml"/>   
     <xi:include href="../sections/statements/statements.xml"/>
+    <xi:include href="../sections/enactment/scripts.xml"/>
 </chapter>

@@ -6,7 +6,7 @@
   
   <!-- TODO: add chapter intro -->
   
-  <xi:include href="../sections/enactment/repls-and-scripts.xml"/>
+  <xi:include href="../sections/enactment/repls.xml"/>
   <xi:include href="../sections/expressions/numeric-literal-expressions.xml"/>
   <xi:include href="../sections/algorithms/algorithms.xml"/>
 </chapter>

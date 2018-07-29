@@ -1,0 +1,6 @@
+<example>
+    The following method definition has an appropriate Javadoc comment preceeding it:
+<programlisting>
+<xi:include href="code/javadoc-method-basic.jsh" parse="text/plain"/>
+</programlisting>
+</example>
