@@ -1,0 +1,7 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.inline-comments"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <title>Inline Comments</title>
+    <para>Programs that you write will quickly become so complex that it may not be easy to look at your code and understand what it will do (or what it is intended to do). Programmers deal with this problem with a liberal use of comments -- portions of source code that are intended to be read by other programmers and not interpreted as an instruction in the program.</para>
+    <para>The most common type of comment you'll find in any programming language are called inline comments (also called end-of-line comments, since they appear at the end of lines). In Java, att any point in a line of code, you can type two slashes. Everything following those slashes is ignored by the interpreter. It's often helpful to include a comment explaining what a significant or particularly complex snippet of code is intended to do (in plain english). In fact, it is often helpful to write these comments <emphasis>first</emphasis> and then write the code the comments are describing!
+    </para>
+</section>

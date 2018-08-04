@@ -37,14 +37,6 @@ return x + y;
         <para>In week \#1 the rules for Java identifiers (the names of variables and methods) were discussed. If you deviate from those rules, you end up with an error (for example, you can't have a variable named 10x). However, by \textit{convention} we try to use variable names that are meaningful and help explain the purpose of a variable. For instance, if you want to average the values of three exam scores, you might call each of the variables holding the exam scores \textit{exam1}, \textit{exam2}, and \textit{exam3} instead of \textit{x}, \textit{y}, and \textit{z}, and you might call the variable holding the average \textit{averageExamScore} or perhaps simply \textit{average}.
         </para>
     </section>
-
-
-    <section><title>Inline Comments</title>
-        <para>The code you're now developing is also complex enough that it may not be easy to look at it and understand what it will do (or what it is intended to do). Programmers deal with this problem with a liberal use of inline comments (also called end-of-line comments, since they appear at the end of lines). At any point in a line, you can type two slashes. Everything following those slashes is ignored by the interpreter. When you define methods, it's often helpful to include a comment explaining what a significant block of code, series of statements, or a particularly complex statement is intended to do (in plain english). In fact, it is often helpful to write these comments \textit{first} and then write the code the comments are describing!
-        </para>
-        <para>If you use several inline comments in a row, try to ensure they're all tabbed up a similar amount to make your code easier to read and aesthetically pleasing. 
-        </para>
-    </section>
     
 <section>
     <title>For Loops</title>
