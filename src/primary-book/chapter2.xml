@@ -1,7 +1,7 @@
 <chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.basics"
     xmlns:xi="http://www.w3.org/2001/XInclude">
     <info>
-        <title>Basic Elements of Imperative Programming</title>
+        <title>Forming Simple Programs from Statements</title>
     </info>
     
     <para>
@@ -24,7 +24,8 @@
         evaluate to some sort of numeric value (such as 5, or 9.2). 
     </para>
     
-    <xi:include href="../sections/expressions/arithmetic-expressions.xml"/>   
+    <xi:include href="../sections/algorithms/algorithms.xml"/> 
     <xi:include href="../sections/statements/statements.xml"/>
+    <xi:include href="../sections/style/inline-comments.xml"/>
     <xi:include href="../sections/enactment/scripts.xml"/>
 </chapter>

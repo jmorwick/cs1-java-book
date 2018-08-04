@@ -1,12 +1,12 @@
 <chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.algorithms"
       xmlns:xi="http://www.w3.org/2001/XInclude">
   <info>
-    <title>Algorithms and Programs</title>
+    <title>Evaluating Simple Expressions</title>
   </info>
   
   <!-- TODO: add chapter intro -->
   
   <xi:include href="../sections/enactment/repls.xml"/>
   <xi:include href="../sections/expressions/numeric-literal-expressions.xml"/>
-  <xi:include href="../sections/algorithms/algorithms.xml"/>
+  <xi:include href="../sections/expressions/arithmetic-expressions.xml"/>  
 </chapter>
