@@ -5,6 +5,31 @@
     </info>
     
     <para>
-        
+        There are many ways to categorize programming languages. For instance, some programming languages are called <emphasis>object-oriented</emphasis>, <emphasis>functional</emphasis>, or <emphasis>statically typed</emphasis>, to name a few, and many of these categories overlap. An important category, as it relates to teaching Java to a beginning programmer, is that of <firstterm>scripting languages</firstterm>. This is important because Java has never in the past been considered one <footnote><para>Do not confuse Java with Javascript, which is an entirely different language and is indeed a scripting language.</para></footnote>, and this has led to problems when introducing it to someone who has never programmed before.
+    </para>
+    <para>
+        A scripting language is one that is intended to quickly write short, ad-hoc programs that perform a simple task, possibly only once. An important tool for working with a scripting language is a <acronym>REPL</acronym> (Read Evaluate Print Loop). A REPL allows you to run small snippets of a program, one at a time, and observe what the computer does in real time. This way the programmer can quickly react, correct errors, and experiment. This functionality is of obvious importantance to a new programmer learning how to use the language. 
+    </para>
+    <para>
+        Java, for a very long time, was imfamous for its <emphasis>wordiness</emphasis>. That is, it took a lot of typing to say anything meaningful. For example, the first program most introductory programming books show the reader is <emphasis>Hello World!</emphasis> -- a program that simply prints these words to the screen. In Java, this required the programmer to write 5 lines of code. This is essentially the opposite of the goal of a scripting language. 
+    </para>
+    <para>This changed somewhat in September 2017 when an official REPL was added to Java, called JShell. In JShell, <emphasis>Hello World!</emphasis> is just one line:
+    <figure xml:id="fig.repls.jshell">
+        <title>Using the JShell REPL</title>
+        <mediaobject>
+            <imageobject condition="print">
+                <imagedata fileref="../../fig/jshell.png"/>
+            </imageobject>
+            <imageobject condition="web">
+                <imagedata fileref="../../fig/jshell.png"/>
+                </imageobject>
+            <textobject><phrase>The Hello World! example with the JShell REPL</phrase></textobject>
+        </mediaobject>
+    </figure>
+        JShell is an example of a command-line program run from the system terminal. You can see in the figure that the first thing JShell did after I started it up was to welcome me and indicate what version is running. After that you see the <screen>jshell&gt;</screen> <firstterm>command prompt</firstterm>. At that prompt I typed <code>System.out.println("Hello World!");</code> which is a snippet of Java that instructs the computer to print the same message back to me. JShell read this command in from me (the R in REPL), then did as it was instructed (the E and P steps). You can see the JShell REPL complying with that command below, and then returning me to the command prompt for another command (L for loop -- after each command, it waits for another, looping indefinitely).     
+    </para>
+    
+    <para>
+        There are many commands you can enter at the command prompt that are not Java code snippets but are unique to using JShell. A very important one is the <code>/help</code> command. Typing in this command causes JShell to report on all the other special commands available to you. Another important command is <code>/exit</code>, which terminates JShell. We will see other commands as they become relevant in later sections. 
     </para>
 </section>
