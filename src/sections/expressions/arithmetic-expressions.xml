@@ -5,11 +5,7 @@
     </info>
     
     <para>
-        A binary operator is something that operates over two expressions in Java, 
-        forming a larger, more complex, compound expression. For instance, + is a 
-        binary operator representing the addition operation. <literal>5</literal> is a numeric literal 
-        expression, and 5 + 5 is a more complex, compound expression using the 
-        addition operator. For example, 5 + 5 evaluates to the value <literal>10</literal>. 
+        Expressions can be comined together to form a larger, more complex, compound expression. To combine two expressions, a <firstterm>binary operator</firstterm> is placed between them. The operator performs some function over the values that the two expressions evaluate to (these values are called <firstterm>operands</firstterm>). For instance, + is a binary operator representing the addition operation. <literal>5</literal> is a numeric literal expression, and <code>5 + 5</code> is a more complex, compound expression using the addition operator. For example, <code>5 + 5</code> evaluates to the value <literal>10</literal>. 
     </para>
     
     <para>
@@ -32,23 +28,17 @@
             </listitem>
     </itemizedlist>
 
-        Note that, when using the / operator with integers, you get back the integer quotient (rather than a floating point value). Modulus gives you the reminder when performing integer division. 
+Note that, when using the <code>/</code> operator with integers, you get back the integer quotient (rather than a floating point value). Modulus gives you the remainder when performing integer division. 
     </para>
     
     <para>
-        There is also a unary operator in Java. This is an operator that 
-        works over only one operand (expression), as opposed to two. 
-        This is the negation operator, which, like subtraction, is 
-        represented with -. For instance, <literal>-5</literal> is a compound expression 
-        that is the negation of 5. 
+        There is also a unary operator in Java. This is an operator that works over only one operand rather than two. This is the negation operator, which, like subtraction, is represented with <code>-</code>. For instance, <literal>-5</literal> is a compound expression that is the negation of 5. 
     </para>
     
     <para>
-      Also similar to algebra, note that these operators follow the same 
-      order of precedence. That is, 2 * 3 + 1 is equal to <literal>7</literal>,
-      not <literal>8</literal>. You 
-      can also use parentheses to force a certain order of evaluation for 
-      your expressions, just as you did in algebra. 
+        Also similar to algebra, note that these operators follow the same order of precedence. Multiplication and division are evaluated before addition an subtraction. For example, <code>2 * 3 + 1</code> is equal to <literal>7</literal>, not <literal>8</literal>. 
+    </para>
+    <para>You can also use parentheses to force a certain order of evaluation for your expressions, just as you did in algebra. For example, the expression <code>2 * (3 + 1)</code> does, in fact, evaluate to <literal>8</literal>.
     </para>
     
     
