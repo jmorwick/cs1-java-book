@@ -1,0 +1,11 @@
+<example xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="ex.call-sqrt"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Calling the Square Root Method</title>
+    
+    <para>We will see many types of methods in future chapters, but the methods we're calling in this chapter are called <firstterm>static</firstterm> methods. In order to use some of the methods that come standard with Java, we should first import them. Typing in the following line will make the square root method available (note that this method is named <varname>sqrt</varname>).
+    <programlisting>import static java.lang.Math.sqrt;</programlisting>
+        Note that <varname>Math</varname> must be capitalized and the line should end in a semicolon. Once you've typed this in, you're allowed to make calls to the square root function at will. For example:
+        <programlisting>sqrt(4)</programlisting>
+        This expression should yield the value <literal>2.0</literal>. Note that the method returns a double value, even though <literal>4</literal> is a perfect square. Try calling this method with some other, messier values.
+    </para>
+</example>

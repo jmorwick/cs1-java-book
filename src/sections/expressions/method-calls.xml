@@ -1,0 +1,13 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.method-calls"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>Method Calls</title>
+    </info>
+   
+        <para>The arithmetic operators we've used thus far are simple. We can combine them together to combine complex expressions, but that also makes our code more difficult to read. More complicated operations are often handled by <firstterm>methods</firstterm> which put a simple name to a potentially complex operation. Methods also allow Java to be <firstterm>extensible</firstterm>, in that you can create your own methods to perform custom tasks (we will see how to do this in future chapters). </para>
+        
+        <para>We formed arithmetic expressions with arithmetic operators. Similarly, we can form <firstterm>method call</firstterm> expressions by providing operands to a method. When the method call expression is evaluated, the method will calculate a value based on the operands it was given. In this context, the term <firstterm>function</firstterm> is also applicable.</para>
+        <para>To call a method, first give the name of the method you wish to call. Following the name should be a pair of parenthesis, within which is a comma-separated list of expressions for each operand. </para>
+        <xi:include href="../../examples/call-sqrt.xml"/>
+        
+</section>

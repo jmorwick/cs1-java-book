@@ -3,7 +3,6 @@
     <info>
         <title>Expressions</title>
     </info>
-    
     <para>
         <firstterm>Expressions</firstterm> are the most basic syntactic building blocks of a computer program. Think of an expression as a simple question that you're asking of the computer. The answer you get back from the computer is called a <firstterm>value</firstterm>, and the process of determining the value for an expression is called <firstterm>evaluation</firstterm>.</para>
     
@@ -31,4 +30,8 @@
     <para>
         In addition to writing out floating point literals with a decimal point, there is a format for literal values that uses scientific notation by placing a letter E between the mantisa and the exponent. For instance, <literal>5E3</literal> is the same as <literal>5000.0</literal>.
     </para>
+    
+    
+    <!-- TODO: add info about primitive types -->
+    <!-- TODO: add info about casting -->
 </section>

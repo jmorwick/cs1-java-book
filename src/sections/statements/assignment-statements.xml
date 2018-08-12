@@ -14,7 +14,7 @@
         which yields the value you want to assign to the variable. 
     </para>
     
-    <xi:include href="../examples/assignment-simple.xml"/>
+    <xi:include href="../../examples/assignment-simple.xml"/>
     
     <para> 
         <termdef xml:id="term.initialization">
@@ -29,6 +29,6 @@
         to provide a type in a declaration. The example below walks you through the relevant Java syntax:
     </para>
     
-    <xi:include href="../examples/assignment-and-declaration-statement.xml"/>
+    <xi:include href="../../examples/assignment-and-declaration-statement.xml"/>
     
 </section>

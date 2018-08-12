@@ -8,7 +8,7 @@
     </para>
     
     <programlisting>
-<xi:include href="assignment-and-declaration-statement1.jsh" parse="text/plain"/>
+<xi:include href="code/assignment-and-declaration-statement1.jsh" parse="text/plain"/>
     </programlisting>
     
     <para>
@@ -20,7 +20,7 @@
     </para>
     
     <programlisting>
-<xi:include href="assignment-and-declaration-statement2.jsh" parse="text/plain"/>
+<xi:include href="code/assignment-and-declaration-statement2.jsh" parse="text/plain"/>
     </programlisting>
     
     <para>

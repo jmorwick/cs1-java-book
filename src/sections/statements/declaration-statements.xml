@@ -55,6 +55,6 @@
       is the type of data the variable will hold, and the second is the identifier (variable name). 
     </para>
     
-    <xi:include href="../examples/declaration-default-value.xml"/>
+    <xi:include href="../../examples/declaration-default-value.xml"/>
   
 </section>
