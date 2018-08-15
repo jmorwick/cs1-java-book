@@ -26,4 +26,5 @@
     
     <para>In the diagram above, we're calling a method named <varname>pow</varname> which takes two arguments: the base and the power. The method returns the result of raising the specified base to the specified power (that is to say, this expression evaluates to the value 100).</para>
     
+    <xi:include href="../../examples/call-round.xml"/>
 </section>
