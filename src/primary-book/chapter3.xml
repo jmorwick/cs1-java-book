@@ -8,5 +8,6 @@
     
     <xi:include href="../sections/booleans.xml"/>
     <xi:include href="../sections/conditional-statements.xml"/>
-    <xi:include href="../sections/conditional-expressions.xml"/>
+    <xi:include href="../sections/expressions/constructor-calls.xml"/>
+    <xi:include href="../sections/expressions/instance-method-calls.xml"/>
 </chapter>

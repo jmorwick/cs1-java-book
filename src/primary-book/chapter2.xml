@@ -12,6 +12,4 @@
     <xi:include href="../sections/statements/assignment-statements.xml"/>
     <xi:include href="../sections/style/inline-comments.xml"/>
     <xi:include href="../sections/enactment/scripts.xml"/>
-    <xi:include href="../sections/expressions/constructor-calls.xml"/>
-    <xi:include href="../sections/expressions/instance-method-calls.xml"/>
 </chapter>
