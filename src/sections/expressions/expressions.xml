@@ -16,7 +16,7 @@
     <para>
       One catch is that there are more than one type of numeric value in Java! <literal>5</literal> is an example of what is called an <type>integer</type> (shortened to <type>int</type> in Java). There are some constraints on the size of an integer (the minimum value is <literal>−2147483648</literal> or -2<superscript>31</superscript> and the maximum value is 2<superscript>31</superscript>-1 or <literal>2147483648</literal>). Considering this rule, the expression 2147483649 would be a syntax error, since it is too large to be an <type>int</type>.
     </para>
-    <para>There are also other integer types with different ranges of values. For instance, the type <type>long</type> has a range of -2<superscript>63</superscript> to -2<superscript>63</superscript> This type of value is often used when a number is too large to be represented as an <type>int</type>. Note that you can specify you want to create a long value using a special syntax for the literal expression. For instance, <literal>46L</literal> is a legal expression that evaluates to the <type>long</type> integer value 46. 
+    <para>There are also other integer types with different ranges of values. For instance, the type <type>long</type> has a range of -2<superscript>63</superscript> to -2<superscript>63</superscript> This type of value is often used when a number is too large to be represented as an <type>int</type>. Note that you can specify you want to create a long value using a special syntax for the literal expression. For instance, <literal>46L</literal> is a legal expression that evaluates to the <type>long</type> integer value 46 and <literal>2147483649L</literal> is also legal (where 2147483649 was not). 
     </para>
     
     <para>
@@ -24,11 +24,7 @@
     </para>
     
     <para>
-        Internally, these values are stored in the same way you would use scientific notation. Each floating point value consists of two components: an exponent and a mantissa. The value is determined by multiplying the mantissa by 10 to the power of the exponent. 
-    </para>
-    
-    <para>
-        In addition to writing out floating point literals with a decimal point, there is a format for literal values that uses scientific notation by placing a letter E between the mantisa and the exponent. For instance, <literal>5E3</literal> is the same as <literal>5000.0</literal>.
+        Internally, these values are stored in the same way you would use scientific notation. Each floating point value consists of two components: an exponent and a mantissa. The value is determined by multiplying the mantissa by 10 to the power of the exponent. In addition to writing out floating point literals with a decimal point, you can also format them by identifying these two components explicitly. Literal values that use the scientific notation format place a letter E between the mantisa and the exponent. For instance, <literal>5E3</literal> is the same as <literal>5000.0</literal>.
     </para>
     
     
