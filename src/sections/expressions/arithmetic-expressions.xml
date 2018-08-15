@@ -5,7 +5,7 @@
     </info>
     
     <para>
-        Expressions can be comined together to form a larger, more complex, compound expression. To combine two expressions, a <firstterm>binary operator</firstterm> is placed between them. The operator performs some function over the values that the two expressions evaluate to (these values are called <firstterm>operands</firstterm>). For instance, + is a binary operator representing the addition operation. <literal>5</literal> is a numeric literal expression, and <code>5 + 5</code> is a more complex, compound expression using the addition operator. For example, <code>5 + 5</code> evaluates to the value <literal>10</literal>. 
+        Expressions can be comined together to form a larger, more complex, compound expression. To combine two expressions, a <firstterm>binary operator</firstterm> is placed between them. The operator performs some function over the values that the two expressions evaluate to (these values are called <firstterm>operands</firstterm>). For instance, + is a binary operator representing the addition operation. <literal>5</literal> is a numeric literal expression, and <code>5 + 5</code> is a more complex, compound expression using the addition operator that evaluates to the value <literal>10</literal>. 
     </para>
     
     <para>
