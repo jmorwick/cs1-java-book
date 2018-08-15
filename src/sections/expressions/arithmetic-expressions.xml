@@ -41,5 +41,6 @@ Note that, when using the <code>/</code> operator with integers, you get back th
     <para>You can also use parentheses to force a certain order of evaluation for your expressions, just as you did in algebra. For example, the expression <code>2 * (3 + 1)</code> does, in fact, evaluate to <literal>8</literal>.
     </para>
     
+    <xi:include href="../../examples/averaging.xml" parse="xml"/>
     
 </section>

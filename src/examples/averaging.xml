@@ -1,0 +1,28 @@
+<example xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="ex.averaging"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Averaging Several Integers</title>
+    <para>Consider the following arithmetic expression that averages three integer values:
+        <programlisting>(5 + 7 + 8) / 3</programlisting> This expression evaluates to the value
+            <literal>6</literal>, since it simplifies to: <programlisting>20/3</programlisting> If
+        we wanted the average including the fractional component, we could cast the original sum to
+        a <type>double</type> value, or we could just use a <type>double</type> formatted literal
+        such as <literal>3.0</literal> as the divsor. For instance, evaluating
+        <programlisting>(double)(5 + 7 + 8) / (double)3</programlisting> yields the value
+            <literal>6.666666666666667</literal>. Perhaps it's surprising then that our original
+        expression yielded <literal>6</literal> instead of <literal>7</literal>. The average should
+        round up to <literal>7</literal>, but when performing division with integers, the remainder
+        is simply thrown away. If we wanted to round up to the nearest integer, we could take
+        advantage of casting to do this. Consider the following expression:
+        <programlisting>(int)((double)(5 + 7 + 8) / (double)3 + 0.5)</programlisting>This first
+        simplifies to <programlisting>(int)((double)20 / (double)3 + 0.5)</programlisting> as
+        before, and then <programlisting>(int)(20.0 / 3.0 + 0.5)</programlisting> and next
+        <programlisting>(int)(6.666666666666667 + 0.5)</programlisting> but now we'll add 0.5 to the
+        result of the division, in effect rounding it up and simplifying to
+        <programlisting>(int)(7.166666666666667)</programlisting> All that's remaining now is the
+        cast expression, which yields the value <literal>7</literal>. Note that if we changed the
+        last 8 to a 7 in the original expression, making the result of the division
+            <literal>6.333333333333333</literal>, adding <literal>0.5</literal> would only bring it
+        up to <literal>6.833333333333333</literal> and truncating it by converting to an
+            <type>int</type> would yield <literal>6</literal>, essentially rounding down to the
+        nearest integer. </para>
+</example>
