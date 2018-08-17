@@ -4,6 +4,47 @@
         <title>Scripts</title>
     </info>
     
+    <para>
+    	Together, a collection of statements comprises an imperative computer <firstterm>program</firstterm>. Even one statement by itself can be a program (such as the hello world example). However, typing each of these statements in to the REPL is tedious. Any useful programming language has a means to easily store and run programs.
+    </para>
+    
+    <section>
+    	<title>JShell Scripts</title>
+    	<para>JShell also introduces a facility for this purpose that wasn't previously available to Java programmers. All of the statements you type in to a JShell session can be saved to a file by typing the following command in to JShell:
+<programlisting>
+/save myscript.jsh
+</programlisting>
+    	where <filename>myscript.jsh</filename> can be any file name of your choosing. A series of statements saved to a file in any programming language referred to as a <firsterm>script</firsterm>. The <filename>.jsh</filename> extension distinguishes in the filename distinguishes this file as a JShell script that can be loaded and executed. In fact, you can load a script you've previously saved in JShell by typing in the following command:
+<programlisting>
+/load myscript.jsh
+</programlisting>
+    	</para>
+    	
+    	<!-- TODO: add example of averaging script -->
+    </section>
+    
+    
+    <section>
+    <title>Inline Comments</title>
+    	<para>
+    		Programs that you write will quickly become so complex that it may not be easy to look at your code and understand what it will do (or what it is intended to do). Programmers deal with this problem with a liberal use of comments -- portions of source code that are intended to be read by other programmers and not interpreted as an instruction in the program.
+    	</para>
+    	<para>
+    		The most common type of comments you'll find in any programming language are called inline comments (also called end-of-line comments, since they appear at the end of lines). In Java, at any point in a line of code, you can type two slashes. Everything following those slashes is ignored by the interpreter.
+    	</para>
+    	<para>
+    		Inline comments can also be used as placeholders for future instructions while you're writing a program. In this way, they can be seen as a go-between when converting the steps of an algorithm in to an actual computer program.
+    	</para>
+    	
+    	<!-- TODO: include comments averaging example -->
+    	
+    	<para>
+    		More often inline comments are used to explain what a significant or particularly complex snippet of code is intended to do (in plain english). It is often helpful to write these comments <emphasis>first</emphasis> and then write the code the comments are describing, but they can also be added to code later after a programmer realizes their code might not be so easy to follow. 
+    	</para>
+    	<para>
+    		There is a bit of an art to writing comments well, just as there is an art to writing programs well. Too few comments and it may not be clear what a program is doing. This can also make errors in the program harder to detect. Too many comments can also make a program more laborious to read and also wastes the programmer's time, since good comments often take careful thought. A good middle ground is to use descriptive variable names that do a lot of the job a comment might be intended for, and also not use comments that merely repeat what a statement is doing, but rather explain the purpose behind one or more statements if that purpose is not immediately obvious. 
+    	</para>
+    </section>
 </section>
 
 

@@ -10,6 +10,5 @@
     <xi:include href="../sections/statements/statements.xml"/>
     <xi:include href="../sections/statements/declaration-statements.xml"/>
     <xi:include href="../sections/statements/assignment-statements.xml"/>
-    <xi:include href="../sections/style/inline-comments.xml"/>
     <xi:include href="../sections/enactment/scripts.xml"/>
 </chapter>
