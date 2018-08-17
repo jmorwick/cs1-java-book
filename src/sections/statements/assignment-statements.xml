@@ -5,28 +5,37 @@
     </info>
     
     <para>
-        The main difference between variables in programming and variables you've used in math 
-        classes is that you can change the values variables hold. In Java, this is done 
-        using an assignment statement. Assignment statements may be a little confusing
-        since they use the equals operator, even though this is not an equation! There 
-        are two distinct parts to an assignment statement: on the left is an identifier for 
-        the variable you want to make an assignment to, and on the right is an expression 
-        which yields the value you want to assign to the variable. 
+        The main difference between variables in programming and variables you've used in math classes is that you can change the values variables hold. In Java, this is done using an assignment statement. The automatically generated variables from JShell ($1, $2, etc) aren't intended to be changed, but the variables we declare ourselves are!
     </para>
+    
+    <para>
+        Below is a syntax diagram for a typical assignment statement:
+        <!-- TODO: insert assignment syntax diagram -->
+        There are two distinct parts to an assignment statement: on the left is an identifier for the variable you want to make an assignment to, and on the right is an expression which yields the value you want to assign to the variable. 
+    </para>
+    <para>
+    	This syntax may be a little confusing since it uses the equals operator despite the fact that this is not an equation! This is one situation where the semantics (meaning) of Java syntax diverges from what you might be accustomed to from algebra. Rather than trying to determine what the <varname>x</varname>'s value should be, this statement does something: it makes <varname>x</varname> equal to <literal>5</literal>. 
+    </para>
+    
+    
     
     <xi:include href="../../examples/assignment-simple.xml"/>
     
     <para> 
         <termdef xml:id="term.initialization">
-            When a variable is assigned its first (initial) value, we say that the variable has been        <firstterm>initialized</firstterm>.
+            When a variable is assigned its first (initial) value, we say that the variable has been <firstterm>initialized</firstterm>.
         </termdef>
-    </para>
-    
-    
-    <para>
         Variables must be initialized before they can be used in another part of a program, and variables must be declared before they 
-        can be initialized, however variables can be declared and initialized in a single statement. It's also not always necessary
-        to provide a type in a declaration. The example below walks you through the relevant Java syntax:
+        can be initialized. In the previous example, two statements were used for these two tasks, respectively. However variables can be declared and initialized in a single statement, which saves the programmer some typing. These combination statements take the following form:
+        
+        <!-- TODO: insert initialization syntax diagram -->
+        </para>
+        <para>
+        It's also not always necessary to provide a type in a declaration. Since Java 10 was released, Java will infer the proper type of the variable from the type of the expression used to initialize it. In this case, you can simply use the keyword <keyword>var</keyword> rather than a type when declaring and initializing a variable:
+        
+        <!-- TODO: insert initialization w/ type inference syntax diagram -->
+        
+        Note that the only difference between this diagram and the previous one is the <keyword>var</keyword>. This is one of several ways that the Java maintainers have recently integrated <firstterm>type inference</firstterm> -- meaning that the programmer doesn't need to explicitly name a type of a variable when the proper type is obvious from context. Note that the type is still static (meaning that you can't later change the type of the variable). Though either form of these initialization statements are acceptable, type inference has made Java a little less wordy and a little easier on programmers, so as long as you're using a more recent version of Java (in this case, Java 10 or later), the latter syntax is preferred in most cases. 
     </para>
     
     <xi:include href="../../examples/assignment-and-declaration-statement.xml"/>
