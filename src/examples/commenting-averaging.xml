@@ -1,0 +1,9 @@
+<example xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="ex.averaging"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Adding End-of-Line Comments to Averaging</title>
+    
+    <para>Our previous averaging example relied on a trick that may not be obvious to a programmer reading the code. In fact, it might even look like a mistake if they don't realize the intention of the code! Part of the problem is that one statement is doing a lot of work. We could break the complex statement down in to multiple statements:
+    </para>
+    <!-- TODO: finish -->
+
+</example>
