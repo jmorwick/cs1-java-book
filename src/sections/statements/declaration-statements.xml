@@ -4,7 +4,8 @@
         <title>Declaration Statements</title>
     </info>
     
-    <para>Declaration statements are used to define new variables. In constrast to the automatically generated variables we saw when evaluating expressions with the REPL, declaration statements allow us to create variables with any legal name we wish. Variable names must be legal <firstterm>Java identifiers</firstterm>. </para>
+    <para>Declaration statements are used to define new variables. In constrast to the automatically generated variables we saw when evaluating expressions with the REPL, declaration statements allow us to create variables with any legal name we wish. Variable names must be legal <firstterm>Java identifiers</firstterm>. 
+    </para>
     <para>A legal Java identifier must start with a letter, a dollar sign, or an underscore. Identifiers can contain digits, but they cannot begin with one. Thus <varname>x</varname> is a legal variable name, but so is <varname>x5</varname> or <varname>reallylongvariablename</varname>.</para>
     <para>Note that the last variable name is somewhat difficult to read. For this reason, there are <firstterm>rmconventions></firstterm> in Java that determine the proper way to name variables. <varname>reallylongvariablename</varname> is not an error, but it does break the proper naming convention in Java, which is called <firstterm>camel case</firstterm>. In camel case, you don't include spaces between words, but you capitalize each successive word (not including the first word). We must do this for identifiers consisting of multiple words since spaces are not allowed in identifiers. Thus, a proper convention-following identifier we could use as a variable name would be <varname>reallyLongVariableName</varname>. Notice that this is a bit easier to read? 
 </para>
@@ -15,9 +16,7 @@
         
         <!-- TODO: figure with syntax details for declaration statements -->
   
-      Java is known as a statically typed language, which means that when we declare variables, 
-      we must also declare what type of value they hold. The first element of a declaration statement 
-      is the type of data the variable will hold, and the second is the identifier (variable name). 
+      Java is known as a statically typed language, which means that when we declare variables, we must also declare what type of value they hold. The first element of a declaration statement is the type of data the variable will hold, and the second is the identifier (variable name). 
     </para>
     
     <xi:include href="../../examples/declaration-default-value.xml"/>

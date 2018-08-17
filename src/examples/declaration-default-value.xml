@@ -3,8 +3,7 @@
     <title>Declaring a Variable and Using it in an Expression</title>
     
     <para>
-        We can create a variable named <varname>x</varname> which holds integer values 
-        with the following statement:
+        We can create a variable named <varname>x</varname> which holds integer values with the following statement:
     </para>
     
     <programlisting>
@@ -12,11 +11,7 @@
     </programlisting>
     
     <para>
-        Once a variable is declared, you can use it as an expression (called a 
-        <firstterm>variable expression</firstterm>). The expression will 
-        evaluate to whatever the variable holds. Evaluating the expression x yields the value 0,
-        since 0 is the default value given to a variable of type <type>int</type>. You can 
-        see both the declaration statement and the variable expression being evaluted below:
+        Evaluating the expression x yields the value 0, since 0 is the default value given to a variable of type <type>int</type>. You can see both the declaration statement and the variable expression being evaluted below:
     </para>
 <screen>    
 jshell> int x;
