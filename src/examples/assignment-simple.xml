@@ -9,7 +9,7 @@
     </para>
     
     <programlisting>
-<xi:include href="code/assignment-simple.jsh" parse="text/plain"/>
+<xi:include href="code/assignment-simple.jsh" parse="text"/>
     </programlisting>
     
     <para>

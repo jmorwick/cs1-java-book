@@ -8,7 +8,7 @@
     </para>
     
     <programlisting>
-<xi:include href="code/declaration-statement.jsh" parse="text/plain"/>
+<xi:include href="code/declaration-statement.jsh" parse="text"/>
     </programlisting>
     
     <para>
