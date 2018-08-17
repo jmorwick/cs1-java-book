@@ -11,7 +11,14 @@ jshell> 5
 $1 ==> 5
 </screen>
     
-    <para>The <varname>$1</varname> that you see indicates the name of an automatically generated variable. <firstterm>Variables</firstterm> are simply names given to some location in computer memory that holds a value. In this case, the value <literal>5</literal> is stored in computer memory at a location accessible with the variable name <varname>$1</varname>. When you type an expression in to the REPL, another variable will be automatically generated to hold the value. For instance:</para>
+    <para>The <varname>$1</varname> that you see indicates the name of an automatically generated variable. 
+        <termdef xml:id="term.variable"> A <firstterm>variable</firstterm> is a named portion of computer memory that holds a single value. </termdef> 
+        In this case, the value <literal>5</literal> is stored in computer memory at a location accessible with the variable name <varname>$1</varname>. 
+        </para>
+    
+    <para>Variables in programming are similar to the idea of a variable you've seen in algebra. In algebra, the variable  represents an unknown quantity. Likewise, when you write a program, you may not know what value a variable you're using will eventually hold. However, at the time when your program is running (known as <firstterm>run time</firstterm>), the variable's value will be known to the computer, just as the        value of a variable in algebra is known when you solve an equation. </para>
+    
+    <para>When you type an expression in to the REPL, another variable will be automatically generated to hold the value. For instance:</para>
 <screen>
 jshell> 5
 $1 ==> 5

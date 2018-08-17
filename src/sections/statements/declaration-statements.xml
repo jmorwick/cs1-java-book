@@ -4,51 +4,16 @@
         <title>Declaration Statements</title>
     </info>
     
-    <para>Before we can explore declaration statements, we must first understand variables:</para>
-    
-    <para> 
-        
-        One of the essential components of any program is the ability to remember and recall values. 
-        In terms of computer hardware, this is what we refer to as memory. The most basic way to utilize memory 
-        in just about any programming language is by using variables.
-        
-        <termdef xml:id="term.variable">
-            A <firstterm>variable</firstterm> is a named portion of computer memory that holds 
-            a single value. 
-        </termdef>
-        
-        
-        Variables in programming are similar to the idea of a variable you've seen in algebra. In algebra, the variable 
-        represents an unknown quantity. Likewise, when you write a program, you may not know what value a variable 
-        you're using will eventually hold. However, at the time when your program is running
-        (known as <firstterm>run time</firstterm>), the variable's value will be known to the computer, just as the
-        value of a variable in algebra is known when you solve an equation. 
-        
-        
-    </para>
-    
-    
-    
-    <para>
-        You give variables a name in Java by using a Java identifier. Thus <varname>x</varname> is a legal 
-        variable name, but so is <varname>x5</varname> or <varname>reallylongvariablename</varname>. 
-        Note that the last variable name is somewhat difficult to read. For this reason, there are 
-        <firstterm>rmconventions></firstterm> in Java which 
-        determine the proper way to name variables. <varname>reallylongvariablename</varname> is not an error, 
-        but it does break 
-        the proper naming convention in Java, which is called <firstterm>camel case</firstterm>. In camel case, 
-        you capitalize each of the
-        sequential words. We must do this for identifiers consisting of multiple words since spaces are not allowed in 
-        identifiers. Thus, a proper convention-following identifier 
-        we could use as a variable name would be <varname>reallyLongVariableName</varname>. 
-        Notice that this is a bit easier to read? 
-    </para>
+    <para>Declaration statements are used to define new variables. In constrast to the automatically generated variables we saw when evaluating expressions with the REPL, declaration statements allow us to create variables with any legal name we wish. Variable names must be legal <firstterm>Java identifiers</firstterm>. </para>
+    <para>A legal Java identifier must start with a letter, a dollar sign, or an underscore. Identifiers can contain digits, but they cannot begin with one. Thus <varname>x</varname> is a legal variable name, but so is <varname>x5</varname> or <varname>reallylongvariablename</varname>.</para>
+    <para>Note that the last variable name is somewhat difficult to read. For this reason, there are <firstterm>rmconventions></firstterm> in Java that determine the proper way to name variables. <varname>reallylongvariablename</varname> is not an error, but it does break the proper naming convention in Java, which is called <firstterm>camel case</firstterm>. In camel case, you don't include spaces between words, but you capitalize each successive word (not including the first word). We must do this for identifiers consisting of multiple words since spaces are not allowed in identifiers. Thus, a proper convention-following identifier we could use as a variable name would be <varname>reallyLongVariableName</varname>. Notice that this is a bit easier to read? 
+</para>
 
     <para>
       In order to use a variable in Java, you must declare it exists using a 
       <firstterm>declaration statement</firstterm>. 
         
-        <!-- figure with syntax details for declaration statements -->
+        <!-- TODO: figure with syntax details for declaration statements -->
   
       Java is known as a statically typed language, which means that when we declare variables, 
       we must also declare what type of value they hold. The first element of a declaration statement 
