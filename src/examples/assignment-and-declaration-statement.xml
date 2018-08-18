@@ -12,8 +12,7 @@
     </programlisting>
     
     <para>
-        Since Java 10, it is also unnecessary to provide the variable type in an assignment statement if you are initializing it 
-        with the same statement. Instead of giving a type, you can instead use the <command>var</command> keyword in its place. 
+        Instead of giving a type (<type>int</type>), we can instead use the <command>var</command> keyword in its place. 
         Since the variable is being initialized on the same line, Java can infer what the type of the variable should be from the 
         type of value being assigned to it. The following code produces the exact same result as the previous example: a variable named 
         <varname>y</varname> of type <type>int</type> initialized to the value <literal>34</literal>:
@@ -24,7 +23,6 @@
     </programlisting>
     
     <para>
-        Throughout this book we will use the <command>var</command> keyword wherever possible in our variable definitions. However, there are cases where 
-        a type must be explicitly provided in a variable definition, and we will make special note of those cases. 
+        Throughout this book we will use the <command>var</command> keyword wherever possible in our variable definitions. However, there are cases where a type must be explicitly provided in a variable definition, and we will make special note of those cases. 
     </para>
 </example>
