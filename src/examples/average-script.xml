@@ -1,0 +1,57 @@
+<example xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="ex.average-script"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Averaging Script</title>
+    <para>
+        We've seen an algorithm for averaging numbers and we've averaged some numbers interactively in the REPL, now let's develop a script that averages several numbers. Perhaps, in this case, each number will represent the points a player scored in a basketball game. Consider typing the following statements in to the REPL:
+    </para>
+    <programlisting>
+<xi:include href="code/average-brief.jsh" parse="text"/>    
+/save bballscores.jsh       
+    </programlisting>
+    <para>
+        This will save a script that creates three different variables, each storing the number of points scored in 3 different games. Following that, the fourth line calculates the total of these scores, and the last line calculates the average number of points the player scored, rounded to the nearest integer. Now let's say we exit the REPL:
+        <screen>
+jshell> /exit
+|  Goodbye
+        </screen>
+        If we wanted to, we could open up this script with a text editor and make changes to the initialization statements. Perhaps there was an error in recording the scores and in game #1 the player actually scored 12 points. In the figure below, I'm using a text editor to update that score to 12:
+    </para>
+    
+        <mediaobject>
+            <imageobject condition="print">
+                <imagedata fileref="../fig/editing-bballscores.png" width="5in"/>
+            </imageobject>
+            <imageobject condition="web">
+                <imagedata fileref="../fig/editing-bballscores.png"/>
+            </imageobject>
+            <textobject><phrase>Editing a JShell Script</phrase></textobject>
+        </mediaobject>
+    
+    <para>
+        Now we can open JShell again and load the altered script.
+<screen>
+|  Welcome to JShell -- Version 10.0.1
+|  For an introduction type: /help intro
+
+jshell> /open bballscores.jsh
+
+</screen>
+        It appears nothing happens right after we load the script, but if we look for the variables defined in that script, we can see that they will have the expected, updated, values. Note that the <code>/vars</code> command will list all defined variables and their values. 
+<screen>
+jshell> pointsInGame1
+pointsInGame1 ==> 12
+
+jshell> averagePoints
+averagePoints ==> 9.333333333333334
+
+jshell> /vars
+|    int pointsInGame1 = 12
+|    int pointsInGame2 = 8
+|    int pointsInGame3 = 8
+|    int totalPoints = 28
+|    double averagePoints = 9.333333333333334
+
+jshell> 
+</screen>        
+    </para>
+</example>

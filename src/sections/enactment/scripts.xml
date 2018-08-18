@@ -14,13 +14,16 @@
 <programlisting>
 /save myscript.jsh
 </programlisting>
-    	where <filename>myscript.jsh</filename> can be any file name of your choosing. A series of statements saved to a file in any programming language referred to as a <firstterm>script</firstterm>. The <filename>.jsh</filename> extension distinguishes in the filename distinguishes this file as a JShell script that can be loaded and executed. In fact, you can load a script you've previously saved in JShell by typing in the following command:
+    	where <filename>myscript.jsh</filename> can be any file name of your choosing. A series of statements saved to a file in any programming language referred to as a <firstterm>script</firstterm>. The <filename>.jsh</filename> extension distinguishes in the filename distinguishes this file as a JShell script that can be loaded and executed. In fact, you can load and execute a script you've previously saved in JShell by typing in the following command:
 <programlisting>
-/load myscript.jsh
+/open myscript.jsh
 </programlisting>
     	</para>
-    	
-    	<!-- TODO: add example of averaging script -->
+        
+        <xi:include href="../../examples/average-script.xml" parse="xml"/>
+        
+        <para>You may need to download a text editor if you wish to edit these scripts that you create. You can also use a text editor to create a new script from scratch. Some text editors have nice features for programmers like syntax highlighting. If you're using Windows, my favorite editor is Notepad++: <uri>https://notepad-plus-plus.org/</uri>. For any system, jedit (which was developed in Java) is also a good option: <uri>http://www.jedit.org/</uri>. 
+        </para>
     </section>
     
     
@@ -30,20 +33,31 @@
     		Programs that you write will quickly become so complex that it may not be easy to look at your code and understand what it will do (or what it is intended to do). Programmers deal with this problem with a liberal use of comments -- portions of source code that are intended to be read by other programmers and not interpreted as an instruction in the program.
     	</para>
     	<para>
-    		The most common type of comments you'll find in any programming language are called inline comments (also called end-of-line comments, since they appear at the end of lines). In Java, at any point in a line of code, you can type two slashes. Everything following those slashes is ignored by the interpreter.
+    		The most common type of comments you'll find in any programming language are called inline comments (also called end-of-line comments, since they appear at the end of lines). In Java, at any point in a line of code, you can type two slashes. Everything following those slashes is ignored. Thus, its only purpose is to be read by you or other programmers to help understand your program. 
     	</para>
     	<para>
     		Inline comments can also be used as placeholders for future instructions while you're writing a program. In this way, they can be seen as a go-between when converting the steps of an algorithm in to an actual computer program.
     	</para>
     	
-    	<!-- TODO: include comments averaging example -->
-    	
     	<para>
     		More often inline comments are used to explain what a significant or particularly complex snippet of code is intended to do (in plain english). It is often helpful to write these comments <emphasis>first</emphasis> and then write the code the comments are describing, but they can also be added to code later after a programmer realizes their code might not be so easy to follow. 
     	</para>
     	<para>
-    		There is a bit of an art to writing comments well, just as there is an art to writing programs well. Too few comments and it may not be clear what a program is doing. This can also make errors in the program harder to detect. Too many comments can also make a program more laborious to read and also wastes the programmer's time, since good comments often take careful thought. A good middle ground is to use descriptive variable names that do a lot of the job a comment might be intended for, and also not use comments that merely repeat what a statement is doing, but rather explain the purpose behind one or more statements if that purpose is not immediately obvious. 
+    		There is a bit of an art to writing comments well, just as there is an art to writing programs well. Too few comments and it may not be clear what a program is doing. This can also make errors in the program harder to detect. Too many comments can make a program laborious to read and also wastes the programmer's time since writing comments takes careful thought. There are many rules of thumb, but some important ones are:
+    	    <itemizedlist>
+    	        <listitem>
+    	            <para>Use descriptive variable names that do a lot of the job a comment might be intended for. If the variable's role is very simple, you may not need a comment describing its purpose. </para>
+    	        </listitem>
+    	        <listitem>
+    	            <para>Do not use comments that merely repeat what a statement is doing, but rather explain the purpose behind one or more statements if that purpose is not immediately obvious. </para>
+    	        </listitem>
+    	        <listitem>
+    	            <para>Otherwise, if it's not immediately clear what a statement is doing, it may deserve a comment, but put some thought in to whether your comment should cover just that one line of code, or perhaps several that are working closely together.</para>
+    	        </listitem>
+    		</itemizedlist> 
     	</para>
+        
+        <xi:include href="../../examples/commenting-averaging.xml" parse="xml"/>
     </section>
 </section>
 

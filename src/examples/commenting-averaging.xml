@@ -1,9 +1,28 @@
-<example xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="ex.averaging"
+<example xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="ex.commenting-averaging"
     xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Adding End-of-Line Comments to Averaging</title>
+    <title>Adding End-of-Line Comments to the Averaging Example</title>
     
     <para>Our previous averaging example relied on a trick that may not be obvious to a programmer reading the code. In fact, it might even look like a mistake if they don't realize the intention of the code! Part of the problem is that one statement is doing a lot of work. We could break the complex statement down in to multiple statements:
     </para>
-    <!-- TODO: finish -->
-
+    <programlisting>
+<xi:include href="code/average-expanded.jsh" parse="text"/>    
+    </programlisting>
+    <para>
+        An inline comment on the last line helps explain what the line is doing. The variable names on the other lines do a fairly sufficient job of explaining what each of their lines are responsible for, but perhaps the reader is not seeing the forest from the trees. A comment before the three scores indicating what that section of the script (not just one of the lines) is responsible for could help. 
+    </para>
+    <para>
+        Another critique of this approach is that it uses more lines (and more variables) than are necessary and that this may lead to long and convoluted code. Since this is a very simple example, it can't get all that convoluted, but taking this approach with a more complex algorithm would likely be overkill. If you end up writing some long lines that you don't want to split in to multiple statements, feel free to break the statement across multiple lines. There is no rule in Java that each statement must fit on a single line. You can also include in-line comments after several expressions in a complex statement split across several lines. If you're going to break a statement in to multiple lines, make sure to indent cosistently on each line every time an expression is nested (such as whenever you open a pair of parentheses). This makes your code easier to read and helps defend against errors involving too many open or too many close parentheses. 
+    </para>
+    <para>
+        A final critique is that the averaging trick, even with a comment, is perhaps less ideal than calling a method that accomplishes the same task. It's harder to make a mistake when calling a method, but when using the averaging trick, perhaps you accidentally add <literal>5</literal> instead of <literal>0.5</literal>, or perhaps you add this value <emphasis>before</emphasis> you divide. These errors can be difficult to detect and comments won't necessarily save you from making them. 
+    </para>
+    <para>
+        Below is an example incorporating some of the ideas from the previous paragraphs:
+        
+        <programlisting>
+<xi:include href="code/average-one-commented-line.jsh" parse="text"/>    
+        </programlisting>
+        
+        The last line is still a little clunky. There will be times that this technique of using multi-line statements will do a lot to make your code easier to understand and there will be others when a multi-line statement will make it more confusing. This situation is in somewhat of a gray area. 
+    </para>
 </example>
