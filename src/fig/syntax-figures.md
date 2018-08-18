@@ -3,7 +3,7 @@
 Figures for explaining syntax rules will be developed as dia diagram files. When putting together a syntax template, the following style rules should be observed for each portion of the text in the template:
 
 | Element  | Color  | Font  | Style | Background |
-|-|-|-|-|
+| -------- | ------ | ----- | ----- | ---------- |
 | static syntactic element (semicolons, etc) | #000000 | | | | 
 | required keywords (class, etc) | #000000 | | bold | | 
 | optional keywords (access modifiers, etc) | #993333 | | bold | | 
@@ -13,3 +13,5 @@ Figures for explaining syntax rules will be developed as dia diagram files. When
 | example identifier | #e600e6 | |  | | 
 | example argument / operand / literal | #e67300 | | italic | | 
 | repeated environment | | | | #ffffcc |
+
+
