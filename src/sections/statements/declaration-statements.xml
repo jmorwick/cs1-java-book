@@ -6,13 +6,12 @@
     
     <para>Declaration statements are used to define new variables. In constrast to the automatically generated variables we saw when evaluating expressions with the REPL, declaration statements allow us to create variables with any legal name we wish. Variable names must be legal <firstterm>Java identifiers</firstterm>. 
     </para>
-    <para>A legal Java identifier must start with a letter, a dollar sign, or an underscore. Identifiers can contain digits, but they cannot begin with one. Thus <varname>x</varname> is a legal variable name, but so is <varname>x5</varname> or <varname>reallylongvariablename</varname>.</para>
-    <para>Note that the last variable name is somewhat difficult to read. For this reason, there are <firstterm>rmconventions></firstterm> in Java that determine the proper way to name variables. <varname>reallylongvariablename</varname> is not an error, but it does break the proper naming convention in Java, which is called <firstterm>camel case</firstterm>. In camel case, you don't include spaces between words, but you capitalize each successive word (not including the first word). We must do this for identifiers consisting of multiple words since spaces are not allowed in identifiers. Thus, a proper convention-following identifier we could use as a variable name would be <varname>reallyLongVariableName</varname>. Notice that this is a bit easier to read? 
+    <para>A legal Java identifier must start with a letter, a dollar sign, or an underscore. Identifiers can contain digits, but they cannot begin with one. Thus <varname>x</varname> is a legal variable name, but so is <varname>x5</varname> or even something like  <varname>reallylongvariablename</varname>.</para>
+    <para>Note that the last variable name is somewhat difficult to read. For this reason, there are <firstterm>conventions</firstterm> in Java that dictate the proper way to name variables. <varname>reallylongvariablename</varname> is not an error, but it does break a variable naming convention in Java known as called <firstterm>camel case</firstterm>. In camel case, you don't include spaces between words, but you capitalize each successive word. We must do this for identifiers consisting of multiple words since spaces are not allowed in identifiers. Furthermore, for variable names in Java, by convention the first word is not capitalized. Considering these conventions, a proper identifier we could use as a variable name would be <varname>reallyLongVariableName</varname>. Notice that this is a bit easier to read? 
 </para>
 
     <para>
-      In order to use a variable in Java, you must declare it exists using a 
-      <firstterm>declaration statement</firstterm>. 
+      In order to use a variable in Java, you must declare that it exists using a <firstterm>declaration statement</firstterm>. 
         
         <figure xml:id="fig.declaration-statement">
             <title>Anatomy of a Declaration Statement</title>
