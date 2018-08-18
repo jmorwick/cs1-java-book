@@ -2,7 +2,7 @@
     xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Averaging Algorithm</title>
     <para>
-        Let's consider a very simple algorithm for computing the average of numbers <varname>x<subscript>1</subscript></varname> through <varname>x<subscript>n</subscript></varname>:
+        Let's consider a very simple algorithm for computing the average of <varname>n</varname> different numbers (labeled <varname>x<subscript>1</subscript></varname> through <varname>x<subscript>n</subscript></varname>):
     </para>
    <procedure>
        <step><para> add each number <varname>x<subscript>i</subscript></varname> together (for every <varname>i</varname> between <literal>1</literal> and <varname>n</varname>)</para></step>
@@ -16,4 +16,7 @@
     to add <varname>x<subscript>1</subscript></varname> to <varname>x<subscript>2</subscript></varname>, add that sum to <varname>x<subscript>3</subscript></varname>, etc...).
     </para>
     
+    <para>
+        Let's see what it would look like to apply this algorithm to some numbers. Let's say we wanted to average the numbers <literal>4</literal>, <literal>5</literal> and <literal>9</literal>. In this case, <varname>x<subscript>1</subscript></varname> would be 4, <varname>x<subscript>2</subscript></varname> would be 5, and <varname>x<subscript>3</subscript></varname> would b 9. First, step one would involve finding the sum of all three of these numbers, which is <literal>18</literal>. Next, in step 2, you would divide this sum by <varname>n</varname>, which in this case is <literal>3</literal>. The resulting value, which is <literal>6</literal>, is the average. 
+    </para>
 </example>
