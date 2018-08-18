@@ -14,7 +14,18 @@
       In order to use a variable in Java, you must declare it exists using a 
       <firstterm>declaration statement</firstterm>. 
         
-        <!-- TODO: figure with syntax details for declaration statements -->
+        <figure xml:id="fig.declaration-statement">
+            <title>Anatomy of a Declaration Statement</title>
+            <mediaobject>
+                <imageobject condition="print">
+                    <imagedata fileref="../../fig/declaration-statement.png"/>
+                </imageobject>
+                <imageobject condition="web">
+                    <imagedata fileref="../../fig/declaration-statement.png"/>
+                </imageobject>
+                <textobject><phrase>Anatomy of a Declaration Statement</phrase></textobject>
+            </mediaobject>
+        </figure>
   
       Java is known as a statically typed language, which means that when we declare variables, we must also declare what type of value they hold. The first element of a declaration statement is the type of data the variable will hold, and the second is the identifier (variable name). 
     </para>

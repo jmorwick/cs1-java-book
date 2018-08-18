@@ -14,7 +14,7 @@
 <programlisting>
 /save myscript.jsh
 </programlisting>
-    	where <filename>myscript.jsh</filename> can be any file name of your choosing. A series of statements saved to a file in any programming language referred to as a <firsterm>script</firsterm>. The <filename>.jsh</filename> extension distinguishes in the filename distinguishes this file as a JShell script that can be loaded and executed. In fact, you can load a script you've previously saved in JShell by typing in the following command:
+    	where <filename>myscript.jsh</filename> can be any file name of your choosing. A series of statements saved to a file in any programming language referred to as a <firstterm>script</firstterm>. The <filename>.jsh</filename> extension distinguishes in the filename distinguishes this file as a JShell script that can be loaded and executed. In fact, you can load a script you've previously saved in JShell by typing in the following command:
 <programlisting>
 /load myscript.jsh
 </programlisting>
