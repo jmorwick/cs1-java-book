@@ -1,13 +1,13 @@
 <chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.booleans"
     xmlns:xi="http://www.w3.org/2001/XInclude">
     <info>
-        <title>Decision Making in Imperative Programs</title>
+        <title>Object Data Types and Strings</title>
     </info>
     
-    <!-- TODO: add chapter intro -->
+    <!-- TODO: add chapter intro  -->
     
-    <xi:include href="../sections/expressions/constructor-calls.xml"/>
-    <xi:include href="../sections/expressions/instance-method-calls.xml"/>
-    <xi:include href="../sections/booleans.xml"/>
-    <xi:include href="../sections/conditional-statements.xml"/>
+    <xi:include href="../sections/datatypes/objects.xml"/>
+    <xi:include href="../sections/datatypes/characters.xml"/>
+    <xi:include href="../sections/datatypes/strings.xml"/>
+    <xi:include href="../sections/io/standard-io.xml"/>
 </chapter>

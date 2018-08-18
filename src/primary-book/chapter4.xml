@@ -1,0 +1,11 @@
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.booleans"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <info>
+        <title>Decision Making in Imperative Programs</title>
+    </info>
+    
+    <!-- TODO: add chapter intro -->
+    
+    <xi:include href="../sections/datatypes/booleans.xml"/>
+    <xi:include href="../sections/statements/conditional/conditional-statements.xml"/>
+</chapter>
