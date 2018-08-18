@@ -3,4 +3,5 @@
       <title>Modern Computer Programming -- An Expressions First Approach with Java (working title)</title>
       <subtitle>Note that this is an incomplete preprint. Do not distribute. (c) 2018 Joseph Kendall-Morwick</subtitle>
       <xi:include href="chapter1.xml"/>
+      <xi:include href="chapter2.xml"/>
 </book>
