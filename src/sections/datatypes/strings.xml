@@ -1,34 +1,34 @@
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.numeric-literal-expressions"
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.strings"
     xmlns:xi="http://www.w3.org/2001/XInclude" >
     <info>
         <title>Strings</title>
     </info>
-<para>Strings follow from our work with characters since they are essentially a sequence of characters. While a character literal only holds a single value, such as 'h', a string can hold 0 or more character values. Thus, strings can represent more complex data, such as names, sentences, or even this entire book!
-</para>
+    <para>A single character by itself doesn't convey much. The kind of data we more often want to work with is a sequence of multiple characters, like a name or address field, or even something longer and more complex like a news article or even a computer program. Java has a datatype that fits this role: the <type>String</type>. While a character literal only holds a single value, such as <literal>'h'</literal>, a string can hold 0 or more character values. Thus, strings can represent more complex data like names, sentences, or even this entire book! You can create a variable of type <type>String</type> as follows:
+    </para>
+    <programlisting>String name;</programlisting>
 <para>
-Strings will be the first significant object type we'll regularly work with. Until now, the frequent types we've seen were all primitive types (such as int, char, etc..). One difference we'll see with strings is that the name of the type is capitalized. For instance, the following declaration statement creates a variable of type String called \textit{name}:
+    Note that the type in that variable declaration is capitalized. That's because, unlike <type>char</type>'s and <type>int</type>'s, the string type is an object type (not a primitive type). Thus, when we use the string type in Java code (such as the example above), it must be capitalized. However, unlike <type>Point</type>'s and other objects we've played with, strings are a special object type in Java.
 </para>
-<programlisting>String name;</programlisting>
 <section>
     <title>String Literals</title>
     
-    <para>Character literals are a single character surrounded by single quotes, such as 'a'. String literals are simmilar, but as noted, there may be more than one character in the string, and we use double quotes to surround them. For instance, the following code initializes the name variable from the previous example with my name as a value:
+    <para>Unlike <type>Point</type>'s and other objects we've played with, strings are a special object type in Java in that they have their own special format for literal values. Character literals are a single character surrounded by single quotes, such as <literal>'a'</literal>. String literals are simmilar, but as noted, there may be more than one character in the string, and we use double quotes to surround them. For instance, the following code initializes the name variable from the previous example with my name as a value:
     </para>
     <programlisting>name = "Joesph Kendall-Morwick";</programlisting>
     
-    <para>Note that string literals can contain all sorts of characters, including spaces and dashes, and distinguish between upper and lower case characters. Character literals work just the same way, but character literals hold exactly one character.
+    <para>Note that string literals can contain all sorts of characters, including spaces and dashes. Strings also distinguish between upper and lower case characters. Character literals work just the same way, but character literals hold exactly one character.
     </para>
     
     <para>String literals may also hold zero characters. For instance:</para>
     
     <programlisting>name = "";</programlisting>
     
-    <para>is also legal. Note that the empty string (above) is still a string value! It doesn't mean there isn't a string held by the variable \textit{name}. If \textit{name} held no value, we would say it holds the \textbf{null} value, just as any other object-type variable that doesn't hold a value. Recall that \textbf{null} is a keyword representing this value:
+    <para>is also legal. Note that the empty string (above) is still a string value! It doesn't mean there isn't a string held by the variable <varname>name</varname>. If <varname>name</varname> held no value, we would say it holds the <code>null</code> value, just as any other object-type variable that doesn't hold a value. Recall that <code>null</code> is a keyword representing this value:
     </para>
     
     <programlisting>name = null;</programlisting>
     
-    <para>Note that there are no quotes around \textbf{null}, since it is a keyword. </para>
+    <para>Note that there are no quotes around <code>null</code>, since it is a keyword. </para>
     
 </section>
 
@@ -36,7 +36,7 @@ Strings will be the first significant object type we'll regularly work with. Unt
     <section>
         <title>String Concatenation</title>
     
-    <para>Two string values may be joined together with the concatenation operator. Unfortunately, you've technically already seen the concatentation operator because it uses the same symbol as the addition operator (+). However, they are considered distinct operators since they take distinct actions on their operands. You will end up with addition or concatentation depending on the data types of the operands. This is more generally called \textbf{operator overloading}. 
+        <para>Two string values may be joined together with the concatenation operator. Unfortunately, you've technically already seen the concatentation operator because it uses the same symbol as the addition operator (+). However, they are considered distinct operators since they take distinct actions on their operands. You will end up with addition or concatentation depending on the data types of the operands. Allowing an operator to take on multiple meanings depending on the types of the operands is more generally referred to as <firstterm>operator overloading</firstterm>. 
     </para>
     
 <example><title>Basic Concatenation</title>
@@ -45,7 +45,7 @@ Strings will be the first significant object type we'll regularly work with. Unt
 String fullName = "Joseph" + " " + "Kendall-Morwick";
 </programlisting>
     <para>
-        will store a single string value representing my full name in the variable \textit{fullName}.</para>
+        will store a single string value representing my full name in the variable <varname>fullName</varname>.</para>
 </example>
 
 <para>In fact, concatenation is performed when even just one of the operands is a string value. The other value will be coerced (transformed) in to a string value. 
@@ -57,18 +57,17 @@ String fullName = "Joseph" + " " + "Kendall-Morwick";
 <programlisting>
 String message = "my favorite number is " + 5;
 </programlisting>
-    <para>will store a single string value holding the message ``my favorite number is 5'' in the variable \textit{message}.</para>
-</example>
-        
+    <para>will store a single string value holding the message "my favorite number is 5" in the variable <varname>message</varname>.</para>
+</example>   
     </section>
 <section>
     <title>String Instance Methods</title>
     
-    <para>The string class has many useful instance methods. We'll take a look at four of the most important ones this week.
+    <para>The string class has many useful instance methods. We'll take a look at four of the most important ones.
     </para>
     
     <section><title>int String.length()</title>
-        <para>The \textbf{length} instance method has no parameters but returns the length of the string (as an integer). 
+        <para>The <varname>length</varname> instance method has no parameters but returns the length of the string (as an integer). 
         </para>
         
     <example>
@@ -86,39 +85,39 @@ String message = "my favorite number is " + 5;
     
     <section><title>char String.charAt(int)</title>
         
-        <para>The \textbf{charAt} instance method takes the location (called the index or offset) of a character in the string and returns just that character (as a character-type value). The tricky part of working with string indexes is that the first index is zero (not one). </para>
+        <para>The <varname>charAt</varname> instance method takes the location (called the index or offset) of a character in the string and returns just that character (as a character-type value). The tricky part of working with string indexes is that the first index is zero (not one). </para>
         <example>
             <title>char String.charAt(int)</title>
             <programlisting>"hello".charAt(0) </programlisting>
-            <para>evaluates to the value 'h' whereas</para>
+            <para>evaluates to the value <literal>'h'</literal> whereas</para>
             <programlisting>"hello".charAt(4) </programlisting>
-            <para>evaluates to the value 'o'</para>
+            <para>evaluates to the value <literal>'o'</literal></para>
         </example>
     </section>
     
     <section><title>int String.indexOf(char)</title>
         
-        <para>The \textbf{indexOf} instance method takes a character you're searching for as input and returns the first index of where it's found in the string. If the character is not present in the string, -1 is returned instead. </para>
+        <para>The <varname>indexOf</varname> instance method takes a character you're searching for as input and returns the first index of where it's found in the string. If the character is not present in the string, <literal>-1</literal> is returned instead. </para>
         
     </section>
     
     <section><title>String String.substring(int,int)</title>
         
-<para>        The \textbf{substring} instance method takes two integer values (indexes) as input and returns a substring of the original string starting at the first index and ending just before the last index. Be mindful of the fact that
+        <para>        The <varname>substring</varname> instance method takes two integer values (indexes) as input and returns a substring of the original string starting at the first index and ending just before the last index. Be mindful of the fact that
   </para>      
         <example>
             <title>String String.substring(int,int)</title>
             <programlisting>"hello".substring(1, 3) </programlisting>
-        <para>evaluates to the value "el"</para>
+            <para>evaluates to the value <literal>"el"</literal></para>
         </example>
     </section>
     
 </section>
 
-
+<!-- move to section following loops
     <section><title>Iterating Through Strings</title>
         
-        <para>        The first two methods mentioned above (\textbf{length} and \textbf{charAt}) can be useful for iterating over a string -- that is, examining each character of a string, one by one. We can use a while loop to accomplish this. Like last week, we'll use a counter to determine when to stop looping, and we'll increment that counter (add one to it) in each iteration of the loop. We'll use the \textbf{length} method to determine when the counter has reached the end of the string, and we'll use the \textbf{charAt} method to read out and process the character at index \textit{i} through each iteration of the loop.</para>
+        <para>        The first two methods mentioned above (\textbf{length} and \textbf{charAt}) can be useful for iterating over a string - that is, examining each character of a string, one by one. We can use a while loop to accomplish this. Like last week, we'll use a counter to determine when to stop looping, and we'll increment that counter (add one to it) in each iteration of the loop. We'll use the \textbf{length} method to determine when the counter has reached the end of the string, and we'll use the \textbf{charAt} method to read out and process the character at index \textit{i} through each iteration of the loop.</para>
         
         <para>        This pattern is very common and commonly the \textit{counter} variable I've referred to is named \textit{i} (for \textit{index}). Though this seems to violate the coding conventions for descriptive variable names introduced last week, the fact that \textit{i} is so commonplace can be considered an exception to this rule, since any experienced programmer should understand why it was named that way.</para>
         
@@ -162,5 +161,5 @@ to advance
         <para>prints the following to the standard output:</para>
         <screen>here's a backslash: \</screen>
     </section>
-
+ -->
 </section>
