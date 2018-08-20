@@ -4,50 +4,22 @@
         <title>Standard Input / Output</title>
     </info>
     
-<para>A \textbf{text-based application} (or command-line application) is one type of application you might develop and a simple one to start with. This type of application uses the command prompt to interact with the user. This was a very popular style of application on older computer systems in the 90's and earlier but has remained relevant and has perhaps even gained popularity more recently. For example, jshell itself is a text-based application.
+<para>The programs you write will need to be able to interact with a user and thus requires some sort of <firstterm>user interface</firstterm>. A text-based user interface (or command-line interface) is a very simple and straight forward way to start interacting with the users of your programs by printing information to the screen for the user in text format and taking in data when the user types something at the keyboard. JShell is an excellent example of a program that uses text-based user interface. This was a very popular style of application on older computer systems in the 90's and earlier but has remained relevant and has perhaps even gained popularity more recently. 
 </para>
+    <para>Now that you've had experience with characters and strings, you can use these datatypes to send messages back and forth with the user.
+    </para>
+    
     <section>
-        <title>Writing to Standard Output with the System Console</title>
+        <title>Reading from Standard Input</title>
         <para>
-            A text-based application writes to standard output to communicate something to the user. You've already seen how to do this by using \textbf{System.out.println}. What you haven't seen yet is how to receive a response from the user while your program is running. This chapter will introduce the system console which is capable of doing both. Note that the console can't be used in jshell (if you try, you will get an error), but it can be used in a stand-alone text-based application run from the command-line. 
-        </para>
-        <para>
-            The system console can be retrieved using the console() static method of the System class. This method returns a \textbf{Console} object with several instance methods we can use for input or output. One such instance method, the \textbf{printf} method, works similarly to the System.out.print method we used earlier. Here is ``Hello World'' using this method from the console:
+            A text-based application writes to <firstterm>standard output</firstterm> to communicate something to the user. You've already seen how to do this in the "Hello World!" example by using <varname>System.out.println</varname>. What you haven't seen yet is how to receive a response from the user while your program is running. This chapter will introduce <varname>Scanner</varname> objects which allow you to read messages from <firstterm>standard input</firstterm>.
         </para>
         
-        <programlisting>
-<xi:include href="hello.java" parse="text/plain"/>
-        </programlisting>
-        <para>
-            printf allows us to more easily print complex messages without having to concatenate several expressions together. This is done using a formatted string -- a string containing special character sequences that are a stand-in for other values provided as additional arguments to printf. 
-          
-        </para>
-        <example>
-            ``\%d'' is the character sequence that is used for an integer argument, and the following will print out the contents of the \textit{age} variable without using string concatentation:
-            
-            <programlisting>
-            int age = 28;
-            System.console().printf("I am \%d years old.", age);
-            </programlisting>
-        </example>
-        <para>To see what other types of character sequences you can use, check the documentation for printf method of the java.io.Console class. 
-        </para>
+        <!-- TODO: explain how to create a scanner -->
+        <!-- TODO: copycat example -->
     </section>
-<section>
-    <title>Reading from Standard Input Using the System Console</title>
-    <para>The Console class also has several useful methods for reading input in from the user. The most essential is \textbf{readLine}. Calling this method with no arguments will have it simply return the next line of input from the user as a single string. The program will pause and allow the user to type until they press the enter / return key, at which point the line of text that the user entered will be returned as a string. 
-    </para>
-    <para>Since the application will pause for the user's response when this method is called, the user should be presented with a \textbf{prompt} to indicate that they are expected to enter some input. Such a prompt can optionally be provided as an argument to the readLine method. 
-    </para>
     
     
-    <example>
-        <para>The following application will quiz the user on some basic Java vocabulary. It will start by prompting the user with a question and then indicate to the user whether they entered the correct answer or not.
-        </para>
-        
-<programlisting>
-</programlisting>
-        
-    </example>
-</section>
+    <!-- TODO: explain how to convert Strings to ints -->
+    <!-- TODO: interactive addition example -->
 </section>
