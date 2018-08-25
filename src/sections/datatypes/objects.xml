@@ -86,4 +86,18 @@
     </section>
     
     
+    <section>
+        <info>
+            <title>Instance Method Fields</title>
+        </info>
+        
+        <para>Some classes will allow you to access the object's fields directly and <varname>Point</varname> is one of them. You can access a field just as you would an instance method. For instance, to directly access the <varname>x</varname> coordinate of the <varname>Point</varname> object stored in <varname>homeLocation</varname>, you could use the following expression:
+        <programlisting>homeLocation.x</programlisting>
+        </para>
+        
+        <para>Most classes will prevent you from accessing the object's fields in this way as it's generally considered bad programming to write classes that expose their fields (though it's debatable whether it was a bad choice for the <varname>Point</varname> class, specifically). There are two primary reasons for this: is that it is expected that the designer of the class has already provided sufficiently powerful instance methods that serve as the proper means for manipulating the object, and more importantly also because it helps prevent errors that could occur when another programmer manipulates a field in a way that the designer of the class didn't anticipate (such as setting the balance of a bank account to a negative number). By only allowing objects to be manipulated through carefully designed instance methods, objects serve as more accurate abstractions of some real-world concept you're attempting to model in your program. </para>
+        
+    </section>
+    
+    
 </section>
