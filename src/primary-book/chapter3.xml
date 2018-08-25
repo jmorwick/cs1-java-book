@@ -4,7 +4,8 @@
         <title>Object Data Types and Strings</title>
     </info>
     
-    <!-- TODO: add chapter intro  -->
+    <para>So far you've seen several examples of what are called <firstterm>primitive</firstterm> datatypes that represent very simple data. This chapter will introduce a whole new category of datatypes: object types. These datatypes are more flexible and useful in complex tasks. We'll explore such a task in this chapter: communicating with the user of your program through input and output streams.
+    </para>
     
     <xi:include href="../sections/datatypes/objects.xml"/>
     <xi:include href="../sections/datatypes/characters.xml"/>
