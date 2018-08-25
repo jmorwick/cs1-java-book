@@ -5,24 +5,83 @@
     </info>
     
     <para>
-        <!-- TODO: explain objects generally -->
-    </para>
+        <para>Thus far we've worked with very simple data in Java (integers, floating point numbers, etc). These data types represent single values with no structure to them and can represent such real-world data as test scores, temperatures, etc.. However, how do we represent more complex real-world data? How would we be able to send data about a book, or a completed exam, or an immunization record? 
+        </para>
+        
+        <para>Some data doesn't consist of one simple value. More complex data may have multiple named <firstterm>fields</firstterm>. For instance, an employee record may have a name, a hire date, a department, etc. Furthermore, operations on this data are also going to be more complicated. We can add and subtract integers, but we hire or fire employees, or put them to work on tasks. We also need new operations for more complex data.
+        </para>
+        
+        <para>Both of these problems are solved by a whole new category of data types: objects. Object types are fundamentally different from primitive types. Object data types can have multiple fields associated with them and also have <firstterm>instance methods</firstterm> that allow you to perform operations over the objects. 
+        </para>
+        
+        <para>Objects are a very important part of the Java programming language (and are the reason Java is referred to as an <firstterm>Object Oriented</firstterm> programming langauge). In Java, you are also able to create new object types if some of the standard ones that ship with the JDK are not what you need or what you want -- however creating new object types is a more advanced topic that will be covered in a future course. This section will show you how to work with some of the object types available to you with a standard JDK. 
+       </para>
+    
+    <section>
+        <info>
+            <title>Classes, Packages, and Import Statements</title>
+        </info>
+        
+        <para>Objects are also called <firstterm>instances</firstterm> of a <firstterm>class</firstterm> in Java. A class is essentially a definition of an object type that determines what fields an object will have and what methods you can use to interact with the object. For instance, there might be an <varname>Employee</varname> class, but you could potentially have many instances of that class (objects) that represent individual employees with their own names, hire dates, etc.. The <varname>Employee</varname> class is merely a data type that ensures each of the objects that are instances of it have these features in common. </para>
+        
+        <para>Java provides literally thousands of classes with the JDK that you may use to create programs. Because there are so many classes, there was a need to keep them organized (it's possible two classes might even have the same name, such as a <varname>Deal</varname> class that might refer to a business deal or the cards laid down in a poker game). Java organizes classes by placing them in named <firstterm>packages</firstterm>. For instance, Java has a class called <varname>Point</varname> that is used to represent a point in a 2 dimensional cartesian plane. However, to avoid possible name conflicts and to help keep things organized, this class is placed in a package named <varname>java.awt</varname>, along with several other classes that assist with computer graphics. Remember that each class represents a data type, and data types have names (such as int). In this case, the name of this data type, incluing its package name, is <varname>java.awt.Point</varname>.  
+        </para>
+        
+        <para>It can be cumbersome to have to type in all of that every time you want to refer to a data type, so java provides <firstterm>import statements</firstterm> to allow you to shorten it to just the class name (in this case, <varname>Point</varname>). In order to use <varname>Point</varname> as the name of the data type rather than <varname>java.awt.Point</varname>, enter this import statement in the REPL:
+        
+<programlisting>import java.awt.Point;</programlisting>
+		
+		You can also import all of the classes in the <varname>java.awt</varname> package at the same time if you want to by using a <firstterm>wildcard</firstterm> in your import statement in place of the class name:
+
+<programlisting>import java.awt.*;</programlisting>
+		
+		This would allow you to use the short name for <varname>Point</varname>, but also <varname>Polygon</varname> (instead of <varname>java.awt.Polygon</varname> and many other classes in the <varname>java.awt</varname> package). Generally the use of wildcards is discouraged since you often will only need a handful of classes from a single package, and having each of them listed explicitly in an import statement makes it clear what classes you're using in your code. It also helps avoid the possibility of name conflicts.
+		</para>
+        
+    </section>
+    
     
     <section>
         <info>
             <title>Constructor Calls</title>
         </info>
-        <!-- TODO: explain constructor calls -->
+        
+        <para>Before you can use an object, you need to be able to create one. To create an object, you must call a special method called a <firstterm>constructor</firstterm>. There is a special syntax for calling constructors outlined in the diagram below:</para>
+        
         <!-- TODO: add constructor call diagram -->
         
+        <para>Assuming you've already imported the <varname>Point</varname> class, this is a method call expression that creates a new <varname>Point</varname> object with its <varname>x</varname> field set to <literal>5</literal> and its <varname>y</varname> set to <literal>2</literal>. Some constructors will require more or fewer arguments, and some will require none at all. In fact, if you provide no arguments to the constructor for the <varname>Point</varname> class, it will create a <varname>Point</varname> object with its <varname>x</varname> field set to 0 and its <varname>y</varname> field set to <literal>0</literal>:
+<programlisting>new Point()</programlisting>        
+        
+    </section>
+    
+          
+    <section>
+        <info>
+            <title>Object Type Variables</title>
+        </info>
+        
+        <para>If we want to store and manipulate the object values we create with constructor calls, we need to be able to put them in to variables. Object type variables work exactly the same as primitive type variables. You can simply use the <code>var</code> keyword and the proper data type will be assigned to the variable you create and initialize with a constructor call. The following example stores a point at x coordinate 4 and y coordinate 1 in a variable called <varname>homeLocation</varname>:
+        <programlisting>var homeLocation = new Point(4, 1);</programlisting>
+        Also, if you want to explicitly name the type rather than using the <code>var</code> keyword, you can simply use the class name as the name of the data type. The following example does the exact same thing as the previous example:
+        <programlisting>var homeLocation = new Point(4, 1);</programlisting>
+        
+        Again, the <code>var</code> syntax is preferred wherever possible, but there will be some cases where you will need to name the type explicitly. 
+        </para>
     </section>
     
     <section>
         <info>
             <title>Instance Method Calls</title>
         </info>
-        <!-- TODO: explain instance method calls -->
+        
+        <para>Once you create an object and store it in to a variable, you can interact with that object by calling its instance methods. Calling an instance method looks a lot like calling a normal method with the difference that you start with an expression of an object type, follow it with a dot, and then follow that with the method call. Typically, you will just use a variable reference as the object type expression. Below is a diagram of an instance method call on the <varname>Point</varname> object stored in the <varname>homeLocation</varname> variable we declared in the last section:
+        
         <!-- TODO: add instance method call diagram -->
+        
+        This method call moves the <varname>Point</varname> object forward <literal>2</literal> in the <varname>x</varname> direction and backward <literal>1</literal> in the <varname>y</varname> direction, meaning that the <varname>Point</varname> object will now be at location 6, 0 on the coordinate plane. Note that <emphasis>translation</emphasis> is an operation frequently applied to points in computer graphics, so it was developed as an instance method for the <varname>Point</varname> class. This is an example of how object provide useful abstractions in object-oriented programming, just as static methods do. </para>
+        
+        <para>The <varname>Point</varname> class has several other useful instance methods that can be called. Some of them have return values and some of them don't. You can find them all sumaraized here: <uri>https://docs.oracle.com/javase/10/docs/api/java/awt/Point.html</uri> </para>
         
     </section>
     
