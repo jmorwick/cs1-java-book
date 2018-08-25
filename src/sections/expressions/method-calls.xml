@@ -3,13 +3,27 @@
     <info>
         <title>Method Calls</title>
     </info>
-    <!-- TODO: explain how static methods are held in classes -->
-    <!-- TODO: explain how classes are held in packages -->
-    <!-- TODO: explain how import statements work for classes -->
-    <!-- TODO: explain how static imports work for classes -->
-        <para>The arithmetic operators we've used thus far are simple. We can combine them together to create more complex operations, but that also makes our code more difficult to read. More complicated operations are often handled by <firstterm>methods</firstterm> which put a simple name to a potentially complex operation. This is an example of <firstterm>abstraction</firstterm> -- a very important concept in computer programming in which the complexities of operations are hidden to make programs easier to read, modify, and combine with other programs. Methods also allow Java to be <firstterm>extensible</firstterm>, in that you can create your own methods to perform custom tasks (we will see how to do this in future chapters). </para>
+    
+        <para>The arithmetic operators we've used thus far are simple. We can combine them together to create more complex operations, but that also makes our code more difficult to read. More complicated operations are often handled by <firstterm>methods</firstterm> which put a simple name to a potentially complex operation. This is an example of <firstterm>abstraction</firstterm> -- a very important concept in computer programming in which the complexities of operations are hidden to make programs easier to read, modify, and combine with other programs. Methods also allow Java to be <firstterm>extensible</firstterm>, in that you can create your own methods to perform custom tasks (we will see how to do this in future chapters). </para><para>We formed arithmetic expressions with arithmetic operators. Similarly, we can form <firstterm>method call</firstterm> expressions by providing arguments to a method (arguments, in this case, are values derived from other expressions -- similar to the operands we supplied to operators in <!-- TODO: figure out how to link to section arithmetic-expressions--> section 1.3). When the method call expression is evaluated, the method will calculate a value based on the arguments it was given. In this context, the term <firstterm>function</firstterm> is also applicable.</para>
+    
+    <section><title>Static Imports</title>
+    	<para>In future sections you'll learn how to define your own methods, but initially you'll need to rely on <firstterm>static methods</firstterm> that are provided for you. Think of a static method as a <emphasis>normal</emphasis> method -- they're easier to define in contrast to special kinds of methods we'll see in later chapters. </para>
+    	
+    	<para>To use these static methods, you need to import them from <firstterm>classes</firstterm> that store them. To import them, you'll need to use an import statement. Import statements simply begin with the keyword <emphasis>import</emphasis>. When we import static methods, we also need to follow that with the keyword <emphasis>static</emphasis>. What follows is a package name, class name, and the name of the method we want to import, all separated by periods. Classes and packages will be covered in more depth in the objects section -- for now just understand them as containers of the static methods that Java makes available to you. For example, below is an import statement that allows us to use the <varname>pow</varname> method:
+<programlisting>import static java.lang.Math.pow;</programlisting>
+
+		In this case, the package name is <code>java.lang</code> and the class name is <code>Math</code>. We could import all of the static methods in the <varname>Math</varname> class at the same time if we wished by replacing the method name with a wildcard:
+		
+<programlisting>import static java.lang.Math.*;</programlisting>
+
+		This would allow us to use the complete collection of static methods organized in to the <varname>Math</varname> class. 
+    	</para>
+    </section>
+    
+    <section><title>Method Call Expressions</title>
+   
         
-    <para>We formed arithmetic expressions with arithmetic operators. Similarly, we can form <firstterm>method call</firstterm> expressions by providing arguments to a method (arguments, in this case, are values derived from other expressions -- similar to the operands we supplied to operators in <!-- TODO: figure out how to link to section arithmetic-expressions--> section 1.3). When the method call expression is evaluated, the method will calculate a value based on the arguments it was given. In this context, the term <firstterm>function</firstterm> is also applicable. Here is an example of a simple function call:</para>
+    <para>Now that we have some methods available for use, we can make calls to them. Here is an example of a simple function call:</para>
         <xi:include href="../../examples/call-sqrt.xml"/>
     
     <para>To call a method, first give the name of the method you wish to call. Following the name should be a pair of parenthesis, within which is a comma-separated list of expressions for each argument. In the last example, there was only one argument, but a method could take more than one argument, or could even take zero arguments.</para>
@@ -30,4 +44,5 @@
     <para>In the diagram above, we're calling a method named <varname>pow</varname> which takes two arguments: the base and the power. The method returns the result of raising the specified base to the specified power (that is to say, this expression evaluates to the value 100).</para>
     
     <xi:include href="../../examples/call-round.xml"/>
+    </section>
 </section>
