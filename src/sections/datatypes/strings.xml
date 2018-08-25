@@ -7,12 +7,12 @@
     </para>
     <programlisting>String name;</programlisting>
 <para>
-    Note that the type in that variable declaration is capitalized. That's because, unlike <type>char</type>'s and <type>int</type>'s, the string type is an object type (not a primitive type). Thus, when we use the string type in Java code (such as the example above), it must be capitalized. However, unlike <type>Point</type>'s and other objects we've played with, strings are a special object type in Java.
+    Note that the type in that variable declaration is capitalized. That's because, unlike <type>char</type>'s and <type>int</type>'s, the string type is an object type (not a primitive type). Thus, when we use the string type in Java code (such as the example above), it must be capitalized. However, unlike <type>Point</type>s and other objects we've played with, strings are a special object type in Java.
 </para>
 <section>
     <title>String Literals</title>
     
-    <para>Unlike <type>Point</type>'s and other objects we've played with, strings are a special object type in Java in that they have their own special format for literal values. Character literals are a single character surrounded by single quotes, such as <literal>'a'</literal>. String literals are simmilar, but as noted, there may be more than one character in the string, and we use double quotes to surround them. For instance, the following code initializes the name variable from the previous example with my name as a value:
+    <para>Unlike <type>Point</type>s and other objects we've played with, strings are a special object type in Java in that they have their own special format for literal values. Character literals are a single character surrounded by single quotes, such as <literal>'a'</literal>. String literals are simmilar, but as noted, there may be more than one character in the string, and we use double quotes to surround them. For instance, the following code initializes the name variable from the previous example with my name as a value:
     </para>
     <programlisting>name = "Joesph Kendall-Morwick";</programlisting>
     
@@ -117,7 +117,7 @@ String message = "my favorite number is " + 5;
 <!-- move to section following loops
     <section><title>Iterating Through Strings</title>
         
-        <para>        The first two methods mentioned above (\textbf{length} and \textbf{charAt}) can be useful for iterating over a string - that is, examining each character of a string, one by one. We can use a while loop to accomplish this. Like last week, we'll use a counter to determine when to stop looping, and we'll increment that counter (add one to it) in each iteration of the loop. We'll use the \textbf{length} method to determine when the counter has reached the end of the string, and we'll use the \textbf{charAt} method to read out and process the character at index \textit{i} through each iteration of the loop.</para>
+        <para>        The first two methods mentioned above (\textbf{length} and \textbf{charAt}) can be useful for iterating over a string -P that is, examining each character of a string, one by one. We can use a while loop to accomplish this. Like last week, we'll use a counter to determine when to stop looping, and we'll increment that counter (add one to it) in each iteration of the loop. We'll use the \textbf{length} method to determine when the counter has reached the end of the string, and we'll use the \textbf{charAt} method to read out and process the character at index \textit{i} through each iteration of the loop.</para>
         
         <para>        This pattern is very common and commonly the \textit{counter} variable I've referred to is named \textit{i} (for \textit{index}). Though this seems to violate the coding conventions for descriptive variable names introduced last week, the fact that \textit{i} is so commonplace can be considered an exception to this rule, since any experienced programmer should understand why it was named that way.</para>
         

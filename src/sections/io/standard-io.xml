@@ -1,4 +1,4 @@
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.numeric-literal-expressions"
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.standard-io"
     xmlns:xi="http://www.w3.org/2001/XInclude" >
     <info>
         <title>Standard Input / Output</title>
@@ -42,7 +42,10 @@ in.close();
         <para>
             If you ask a user for a number and read it in with <varname>nextLine</varname>, you will have a string, not an int or double! That means that if you try to add something to it, you'll be concatenating, not adding. </para>
             
-            <para> Scanners have many instance methods you can use to read in data other than strings.For example, you can call the <varname>nextInt</varname> or <varname>nextDouble</varname> methods to read in numeric data as an <type>int</type> or <type>double</type>, respectively. However, there is a problem with using these methods: They don't necessarily read an entire line of input, they only read the next value stored in an input buffer for the scanner. What this means is that if the user types in two different numbers separated by a space in one line, such as 23 54, calling <varname>nextInt</varname> once will return the value <literal>23</literal> and calling it a second time will return the value <literal>54</literal> without blocking and waiting for the user to enter another line of input. Sometimes this is exactly the behavoir you want from your scanner, but more often when writing text-based applications, this will create a confusing and error-prone experience for your users.
+            <para> Scanners have many instance methods you can use to read in data other than strings. For example, you can call the <varname>nextInt</varname> or <varname>nextDouble</varname> methods to read in numeric data as an <type>int</type> or <type>double</type>, respectively. However, there is a problem with using these methods: They don't necessarily read an entire line of input, they only read the next value stored in an input buffer for the scanner. What this means is that if the user types in two different numbers separated by a space in one line, such as 
+<code>
+23 54
+</code>, calling <varname>nextInt</varname> once will return the value <literal>23</literal> and calling it a second time will return the value <literal>54</literal> without blocking and waiting for the user to enter another line of input. Sometimes this is exactly the behavoir you want from your scanner, but more often when writing text-based applications, this will create a confusing and error-prone experience for your users.
         </para>
         
         <para>In a text-based application, a better approach is to always use <varname>nextLine</varname> to read in an entire line of input. Once you've read this line in, if you want to perform arithmetic with it, you can convert it from a string in to an integer with the static method <varname>parseInt</varname>. It's available for use after entering the following import statement:

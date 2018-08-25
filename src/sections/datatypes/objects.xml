@@ -48,7 +48,7 @@
         <para>Before you can use an object, you need to be able to create one. To create an object, you must call a special method called a <firstterm>constructor</firstterm>. There is a special syntax for calling constructors outlined in the diagram below:</para>
         
         
-        <figure xml:id="fig.instance-method-call">
+        <figure xml:id="fig.constructor-call">
             <title>Anatomy of a Constructor Method Call</title>
             <mediaobject>
                 <imageobject condition="print">
