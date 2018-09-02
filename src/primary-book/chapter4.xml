@@ -4,9 +4,16 @@
         <title>Decision Making in Imperative Programs</title>
     </info>
     
-    <!-- TODO: add chapter intro -->
+    <para>
+        In the last unit you explored several different kinds of expressions and statements that could be combined to form programs. You also saw how methods can hide a lot of the details of a complicated operation and make your programs cleaner. Although Java makes many methods available to you, you might not have always had a method that did exactly what you wanted or even worked exactly the way you wanted it to. 
+    </para>
+    <para>Starting this unit, you'll begin developing your own methods. Writing methods make for good programming exercises for the same reason that they are good abstractions: you get to write a very complete and self-standing peice of a program that can be re-used over and over in many programs you write! This chapter will begin with developing some methods similar to the ones you developed last week. 
+    </para>
     
+    <para>
+        In the GCD algorithm exercise, you had to manually work through the algorithm in jshell because so far you have not seen a way to handle the portions of the algorithm where a decision had to be made. In particular, you had to check if a value was greater than zero or not and repeat some of the code if it was. In this chapter, we'll begin looking at conditional statements which allow you to take one of several actions depending on the state of your program. This is only half of the issue for the GCD algorithm, but later in this unit you'll also learn how to have a snippet of code repeat multiple times as well. 
+    </para>
+    <xi:include href="../sections/definitions/methods/methods.xml"/>
     <xi:include href="../sections/datatypes/booleans.xml"/>
     <xi:include href="../sections/statements/conditional/conditional-statements.xml"/>
-    <xi:include href="../sections/definitions/methods/methods.xml"/>
 </chapter>
