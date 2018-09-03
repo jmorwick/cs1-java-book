@@ -4,13 +4,12 @@
         <title>While Loops</title>
     </info>
 
-    <para>While loops are the last piece of the puzzle for a <emphasis>real</emphasis> programming language (or what computer scientists call a <emphasis>Turing Complete</emphasis> language). What this means is that, technically, you can now write a program that is capable of doing whatever any other program written in any other language can do. 
-</para>
+  <para>
+While loops are a lot like if statements. In fact, they have a nearly identical syntax. </para>
     
     <!-- TODO: create while loop syntax diagram -->
-
-  <para>
-While loops are a lot like if statements. In fact, they have a nearly identical syntax. They start with the <code>while</code> keyword, and then a boolean expression in parentheses, and then a block of code (a series of statements surrounded by curly braces) or a single statement. The only difference is that when this block of code or single statement completes, program control returns to the beginning of the while loop. Think of it as an if statement that repeats itself indefinitely.
+    
+    <para>While loops start with the <code>while</code> keyword, and then a boolean expression in parentheses, and then a block of code (a series of statements surrounded by curly braces) or a single statement. The only difference is that when this block of code or single statement completes, program control returns to the beginning of the while loop. Think of it as an if statement that repeats itself indefinitely.
 </para><para>
     Now you may be concerned by the word <emphasis>indefinitely</emphasis>, and you should be -- it's a distinct possibility that a while loop can run <emphasis>forever</emphasis>. However, after each <firstterm>iteration</firstterm> of the loop (an iteration is complete after execution reaches the end of the code block), the boolean expression at the front of the while loop is evaluated again. If you wrote the loop correctly, that boolean expression should evaluate to <literal>false</literal> when you don't want the loop executing anymore. 
 </para>

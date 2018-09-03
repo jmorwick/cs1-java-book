@@ -1,13 +1,10 @@
-<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.booleans"
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.conditional"
     xmlns:xi="http://www.w3.org/2001/XInclude">
     <info>
-        <title>Advanced Conditional Statements</title>
+        <title>Conditional Statements</title>
     </info>
-   
-    <!-- TODO: add intro -->
+    
+    <para>This chapter has just a single section since it is a more complex topic than we have seen in prior weeks. All week we'll be looking at conditional statements and the critical use they have in writing methods and programs. In addition to variables and the statements that manipulate them we've learned in prior chapters, conditional statments make the second of three essential ingreedients of any imperative programming language. We'll see the third and final necessary ingreedient in the next chapter.</para>
     
     <xi:include href="../sections/statements/conditional/conditional-statements.xml"/>
-    <xi:include href="../sections/statements/conditional/else-statements.xml"/>
-    <xi:include href="../sections/statements/conditional/nested-if-statement.xml"/>
-    <xi:include href="../sections/statements/conditional/switch-statements.xml"/>
 </chapter>
