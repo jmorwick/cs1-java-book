@@ -15,7 +15,20 @@
     An if statement is a new kind of statement that will only execute when a certain boolean expression evaluates to true.
     </para>
     
-    <!-- TODO: create diagram for simple if statement -->
+    
+    <figure xml:id="fig.simple-if-statement">
+        <title>Anatomy of a Simple if Statement</title>
+        <mediaobject>
+            <imageobject condition="print">
+                <imagedata fileref="../../../fig/simple-if-statement.png"/>
+            </imageobject>
+            <imageobject condition="web">
+                <imagedata fileref="../../../fig/simple-if-statement.png"/>
+            </imageobject>
+            <textobject><phrase>Anatomy of a Simple if Statement</phrase></textobject>
+        </mediaobject>
+    </figure>
+    
     
     <para> If statements start with the keyword <code>if</code>, then a boolean expression (surrounded in parentheses -- the parentheses are necessary), then the statement we want to conditionally execute. For instance, consider the following statements:
     </para>
@@ -35,7 +48,20 @@
         More than one statement can be conditionally executed in an if statement. In fact, you can include as many as you like by opening up a <firstterm>block</firstterm> of code using curly braces surrounding each of the conditionally executed statements.
     </para>
     
-    <!-- TODO: create diagram for if statement with code block -->
+    
+    
+    <figure xml:id="fig.if-statement">
+        <title>Anatomy of an if Statement with a Block Body</title>
+        <mediaobject>
+            <imageobject condition="print">
+                <imagedata fileref="../../../fig/if-statement.png"/>
+            </imageobject>
+            <imageobject condition="web">
+                <imagedata fileref="../../../fig/if-statement.png"/>
+            </imageobject>
+            <textobject><phrase>Anatomy of an if Statement with a Block Body</phrase></textobject>
+        </mediaobject>
+    </figure>
     
     
     
@@ -62,7 +88,19 @@ if (x > y) {
         <para>Conditional expressions provided a value whether our boolean expression evaluated to <literal>true</literal> <emphasis>or</emphasis> <literal>false</literal>. We can similarly provide an alternative block of statements we want executed if the boolean expression used in our if statement evaluates to false by using an <code>else</code> statement. 
         </para>
         
-        <!-- TODO: create diagram for if / else statement -->
+        
+        <figure xml:id="fig.if-else-statement">
+            <title>Anatomy of an if / else Statement</title>
+            <mediaobject>
+                <imageobject condition="print">
+                    <imagedata fileref="../../../fig/if-else-statement.png"/>
+                </imageobject>
+                <imageobject condition="web">
+                    <imagedata fileref="../../../fig/if-else-statement.png"/>
+                </imageobject>
+                <textobject><phrase>Anatomy of an if / else Statement</phrase></textobject>
+            </mediaobject>
+        </figure>
         
         <para>
             Else statements look exactly like if statements but must immediately follow the end of the if statement. 
@@ -112,8 +150,6 @@ if (x > y) {
     <para>When a situation calls for one of two kinds of action, we could use a if statement with an else statement following it. However, if there are more than two actions we might take, we can nest a new if statement inside of each else statement, forming a chain of if / else statements (ending in an else statement with no nested if statement). This way, rather than just two choices in the conditional statment, this if/else structure allows us to have 3 or more choices.</para>
         <para>One issue with this level of nesting is that the code can become very complex if we're following the indentation conventions. For instance, if there were 10 different choices in an if/else chain (not unheard of), the last else statement would be indented at least 20 spaces! 
         </para>
-        
-        <!-- TODO: create diagram for if/else chain -->
         
         <para>
             To avoid this complexity in the code, there are coding conventions that dictate when you should use curly braces and how much you should indent to avoid very wide lines in your code, summarized in the figure above. Rather than opening a brace for each else statement, instead, when an else statement is followed by another if, no brace is opened and the if immediately follows the else on the same line. Then a brace is opened for the if statement and also the final trailing else statement.
@@ -169,7 +205,6 @@ if ( temperature > 80 ) {
         <para>If each of the <code>if</code> statements in an if/else chain are simply comparing some expression to one of several literal values, there is a special syntax in Java called a <firstterm>switch</firstterm> statement that can be used instead. In some of these cases, this will be a little easier to read and more efficient. 
         </para>
         
-        <!-- add switch statement diagram -->
         
         <para>
             The syntax for switch statements is a little tricker than the other conditional statements we've seen. Following the <code>switch</code> keyword is an expression in parantheses, but it won't be a boolean expression. Instead, it can be any other type of primitive or String value. This value will be compared against a number of literal values inside of the switch statement body, which follows.</para><para>
