@@ -1,0 +1,13 @@
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.booleans"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <info>
+        <title>Loops</title>
+    </info>
+   
+    <!-- TODO: add intro -->
+    
+    <xi:include href="../sections/statements/conditional/else-statements.xml"/>
+    <xi:include href="../sections/statements/conditional/nested-if-statement.xml"/>
+    <xi:include href="../sections/statements/conditional/switch-statements.xml"/>
+    <xi:include href="../sections/statements/loop/while-loops.xml"/>
+</chapter>
