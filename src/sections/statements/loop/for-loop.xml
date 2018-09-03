@@ -21,7 +21,18 @@
 Since nearly every while loop that we write contains these three components, and also because they play an important role in determining how the loop executes, Java provides a special syntax called a \textbf{for loop} that simply re-organizes these components to all reside at the front of the loop. 
 </para>
     
-    <!-- TODO: add for loop diagram -->
+    <figure xml:id="fig.for-loop">
+        <title>Anatomy of a For Loop</title>
+        <mediaobject>
+            <imageobject condition="print">
+                <imagedata fileref="../../../fig/for-loop.png"/>
+            </imageobject>
+            <imageobject condition="web">
+                <imagedata fileref="../../../fig/for-loop.png"/>
+            </imageobject>
+            <textobject><phrase>Anatomy of a For Loop</phrase></textobject>
+        </mediaobject>
+    </figure>
     
 <para><firstterm>for loops</firstterm> start with the <code>for</code> keyword and a pair of parentheses, just like a while loop, but inside the parentheses is first an expression (ending in a semicolon) that is executed before the loop starts, secondly a boolean expression (the same as the looping condition for the while loop), also ending in a semicolon, and finally a statement that is executed at the end of each loop (typically incrementing a variable). The last statement doesn't have a semicolon following it, but all three should be within the parentheses. The rest is identical to a while loop. </para>
 

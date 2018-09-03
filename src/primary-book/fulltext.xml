@@ -4,4 +4,8 @@
       <subtitle>Note that this is an incomplete preprint. Do not distribute. (c) 2018 Joseph Kendall-Morwick</subtitle>
       <xi:include href="chapter1.xml"/>
       <xi:include href="chapter2.xml"/>
+      <xi:include href="chapter3.xml"/>
+      <xi:include href="chapter4.xml"/>
+      <xi:include href="chapter5.xml"/>
+      <xi:include href="chapter6.xml"/>
 </book>

@@ -7,7 +7,20 @@
   <para>
 While loops are a lot like if statements. In fact, they have a nearly identical syntax. </para>
     
-    <!-- TODO: create while loop syntax diagram -->
+    
+    <figure xml:id="fig.while-loop">
+        <title>Anatomy of a While Loop</title>
+        <mediaobject>
+            <imageobject condition="print">
+                <imagedata fileref="../../../fig/while-loop.png"/>
+            </imageobject>
+            <imageobject condition="web">
+                <imagedata fileref="../../../fig/while-loop.png"/>
+            </imageobject>
+            <textobject><phrase>Anatomy of a While Loop</phrase></textobject>
+        </mediaobject>
+    </figure>
+    
     
     <para>While loops start with the <code>while</code> keyword, and then a boolean expression in parentheses, and then a block of code (a series of statements surrounded by curly braces) or a single statement. The only difference is that when this block of code or single statement completes, program control returns to the beginning of the while loop. Think of it as an if statement that repeats itself indefinitely.
 </para><para>
