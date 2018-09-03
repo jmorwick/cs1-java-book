@@ -1,0 +1,63 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.for-loops"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>For Loops</title>
+    </info>
+
+<para>When writing loops, three components are very commonly included: 
+    <itemizedlist>
+        <listitem>
+            <para>Some local variable is declared and initialized, for instance a varibale named \textit{counter} could be initialized to 1. </para>
+        </listitem>
+        <listitem>
+            <para>That variable is tested as part of the while condition, for instance looping while \textit{counter} is less than 10. 
+            </para>
+        </listitem>
+        <listitem>
+            <para>At the end of each iteration of the loop, the variable is altered in some way, for instance \textit{counter} could be incremented at the end of each iteration of the loop. </para>
+        </listitem>
+</itemizedlist>
+
+Since nearly every while loop that we write contains these three components, and also because they play an important role in determining how the loop executes, Java provides a special syntax called a \textbf{for loop} that simply re-organizes these components to all reside at the front of the loop. 
+</para>
+    
+    <!-- TODO: add for loop diagram -->
+    
+<para><firstterm>for loops</firstterm> start with the <code>for</code> keyword and a pair of parentheses, just like a while loop, but inside the parentheses is first an expression (ending in a semicolon) that is executed before the loop starts, secondly a boolean expression (the same as the looping condition for the while loop), also ending in a semicolon, and finally a statement that is executed at the end of each loop (typically incrementing a variable). The last statement doesn't have a semicolon following it, but all three should be within the parentheses. The rest is identical to a while loop. </para>
+
+<example><title>Totaling Numbers with a For Loop</title>
+<para>Consider the following while loop which adds the numbers between 1 and 10:
+</para>
+
+<programlisting>
+int total = 0;
+int count = 1;
+while(count &lt;= 10) {
+  total = total + count;
+  count++;
+}
+</programlisting>
+    
+    <para>Here is identical code written as a for loop:</para>
+    
+<programlisting>
+int total = 0;
+for(int count = 1; count &lt;= 10; count++) {  
+  total = total + count;
+}
+</programlisting></example>
+    
+    <para>Because code written with while loops and for loops perform the exact same task, we call for loops <firstterm>syntactic sugar</firstterm>, in that it is meant only to help with the look of your code, not the function of your code. Essentially, it is used to improve your coding \textit{style}.</para>
+    
+<example><title>Iterate Through a String</title>
+    <para>The following code will print each character of the string <varname>message</varname>, one character per line:
+    </para>
+<programlisting>
+String message = "hello";
+for(int i=0; i &lt; message.length(); i++) {
+  System.out.println(message.charAt(i));
+}
+</programlisting>
+</example>   
+    
+</section>
