@@ -32,8 +32,63 @@
     The method body consists of an open curly brace, 1 or more statements, and a closing curly brace. These statements can do anything you want with the restriction that your method must reach a special kind of statement called return statement when it is finished (with some exceptions -- but for now assume this is always true). The return statement must be the last statement executed in the method and it returns the value that a call to the method would evaluate to. 
     </para>
         
-        <!-- TODO: put in a 'square' example -->
-        <!-- TODO: put in a 'add' example -->
-        <!-- TODO: put in a 'ultimateAnswer' example -->
+        <example><title>Square a Number</title>
+        <para>Below is the definition of a method that will simply square the number passed in to it.</para>
+<programlisting>
+int square(int x) {
+  return x * x;
+}
+</programlisting>
+            <para>Note that it has only one parameter, <varname>x</varname>, and one statement in the method body, the return statement. Defining and then calling this method in jshell will look like this:</para>
+            
+<screen>
+jshell> int square(int x) {
+   ...>   return x * x;
+   ...> }
+|  created method square(int)
+
+jshell> square(4)
+$2 ==> 16
+
+jshell> square(10)
+$3 ==> 100
+
+jshell>     
+</screen>
+            
+            <para>Notice that jshell doesn't include the name of the parameter <varname>x</varname> in the message reporting that you successfully defined the method. That's because the name of the parameter is ultimately not important and is only to help make your code easier to read and understand. What's most important is that you've defined a method that can take an <type>int</type> type argument and that it will return another <type>int</type> type value to you. </para>
+        </example>
+        <example><title>Add Two Numbers</title>
+            <para>Below is an example of a method definition with more than one parameter. It might not be particularly useful, but it demonstrates how to work with more than one argument in your methods:</para>
+<programlisting>
+int add(int x, int y) {
+  return x + y;
+}
+</programlisting>     
+            <para>Calling this method in jshell would look like this:</para>
+<screen>
+jshell> add(4, 5)
+$2 ==> 9
+
+jshell> add (10, -2)
+$3 ==> 8
+</screen>
+        </example>
+        
+        <example><title>Ultimate Answer</title>
+        <para>Some methods don't have any parameters at all. For instance, below is the definition of a method that simply returns the value <literal>42</literal>:</para>
+<programlisting>
+int ultimateAnswer() { 
+  return 42;
+}
+</programlisting>  
+            <para>Calling this method in jshell would look like this:</para>
+            
+<screen>
+jshell> ultimateAnswer()
+$2 ==> 42    
+</screen>   
+            <para>This method clearly doesn't do much and there are better alternatives to storing a single value, but there will be many opportunities for writing a meaningful method with no parameters as long as it performs some useful side effect, like printing to the screen.</para>
+        </example>
     
 </section>
