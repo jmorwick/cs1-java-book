@@ -10,7 +10,20 @@
     <para>
         Method definitions are a bit more involved than our previous topics. Methods take data (arguments) as input (through <firstterm>parameters</firstterm>) and return data as output (called the <firstterm>return value</firstterm>). The data types for both a method's input and output must be specified (similar to how you could specify the data type when you create a variable, though in this case it's required). Below is a diagram of the syntax of a method definition.
     </para>
-        <!-- TODO: add anatomy of a method definition diagram -->
+  
+    <figure xml:id="fig.method-definition">
+        <title>Anatomy of a Method Definition</title>
+        <mediaobject>
+            <imageobject condition="print">
+                <imagedata fileref="../../../fig/method-definition.png"/>
+            </imageobject>
+            <imageobject condition="web">
+                <imagedata fileref="../../../fig/method-definition.png"/>
+            </imageobject>
+            <textobject><phrase>Anatomy of a Method Definition</phrase></textobject>
+        </mediaobject>
+    </figure>
+  
         <para>
             A method definition consists of a header (or signature) defining the input and output data types, and a method body. Let's first take a look at the contents of the signature. First is a data type for the data returned by the method. For instance, the <varname>abs</varname> method in the <varname>Math</varname> class returns a double, so it's return type would be <type>double</type>. Next is the name of the method. 
         </para><para>
