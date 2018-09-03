@@ -9,7 +9,7 @@
         is named <varname>sqrt</varname>).
         <programlisting>import static java.lang.Math.*;</programlisting> Note that
             <varname>Math</varname> must be capitalized and the line should end in a semicolon. Once
-        you've typed this in, you're allowed to make calls to the square root function and seceral
+        you've typed this in, you're allowed to make calls to the square root function and several
         others at will. For example: <programlisting>sqrt(4)</programlisting> This expression should
         yield the value <literal>2.0</literal>. Note that the method returns a double value, even
         though <literal>4</literal> is a perfect square. Try calling this method with some other,

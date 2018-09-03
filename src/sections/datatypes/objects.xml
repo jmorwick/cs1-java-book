@@ -115,7 +115,7 @@
     
     <section>
         <info>
-            <title>Instance Method Fields</title>
+            <title>Object Fields</title>
         </info>
         
         <para>Some classes will allow you to access the object's fields directly and <varname>Point</varname> is one of them. You can access a field just as you would an instance method. For example, to directly access the <varname>x</varname> coordinate of the <varname>Point</varname> object stored in <varname>homeLocation</varname>, you could use the following expression:
