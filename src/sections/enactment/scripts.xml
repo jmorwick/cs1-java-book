@@ -40,7 +40,7 @@
     	</para>
     	
     	<para>
-    		More often inline comments are used to explain what a significant or particularly complex snippet of code is intended to do (in plain english). It is often helpful to write these comments <emphasis>first</emphasis> and then write the code the comments are describing, but they can also be added to code later after a programmer realizes their code might not be so easy to follow. 
+    		More often inline comments are used to explain what a significant or particularly complex snippet of code is intended to do (in plain English). It is often helpful to write these comments <emphasis>first</emphasis> and then write the code the comments are describing, but they can also be added to code later after a programmer realizes their code might not be so easy to follow. 
     	</para>
     	<para>
     		There is a bit of an art to writing comments well, just as there is an art to writing programs well. Too few comments and it may not be clear what a program is doing. This can also make errors in the program harder to detect. Too many comments can make a program laborious to read and also wastes the programmer's time since writing comments takes careful thought. There are many rules of thumb, but some important ones are:

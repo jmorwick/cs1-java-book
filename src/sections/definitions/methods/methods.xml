@@ -29,7 +29,7 @@
         </para><para>
     So far, the definition looks a lot like a variable definition, but we're not quite finished. We also need to define parameters for the method. Parameters are variables that will hold the input values for the method (the input values are what we referred to as arguments in prior sections). Following the name of the method is a pair of parentheses with definitions of the parameters in between the parentheses. Each parameter definition consists of a data type followed by the name of the parameter (just like the variable definitions we saw previously but without the semicolon at the end). There may be zero or more parameter definitions, separated by commas. 
         </para><para>
-    The method body consists of an open curly brace, 1 or more statements, and a closing curly brace. These statements can do anything you want with the restriction that your method must reach a special kind of statement called return statement when it is finished (with some exceptions -- but for now assume this is always true). The return statement must be the last statement executed in the method and it returns the value that a call to the method would evaluate to. 
+    The method body consists of an open curly brace, 0 or more statements, and a closing curly brace. Unlike if statements, the method body must be contained within two curly braces (there is not option for a single-statement body with no curly braces). These statements can do anything you want with the restriction that your method must reach a special kind of statement called return statement when it is finished (with some exceptions -- but for now assume this is always true). The return statement must be the last statement executed in the method and it returns the value that a call to the method would evaluate to. 
     </para>
         
         <example><title>Square a Number</title>
@@ -56,7 +56,14 @@ $3 ==> 100
 jshell>     
 </screen>
             
-            <para>Notice that jshell doesn't include the name of the parameter <varname>x</varname> in the message reporting that you successfully defined the method. That's because the name of the parameter is ultimately not important and is only to help make your code easier to read and understand. What's most important is that you've defined a method that can take an <type>int</type> type argument and that it will return another <type>int</type> type value to you. </para>
+            <para>Notice that jshell doesn't include the name of the parameter <varname>x</varname>
+            in the message reporting that you successfully defined the method. That's because the
+            name of the parameter is ultimately not important. The parameter's name is meant to help
+            make the code defining your method easier to read and understand, and also to describe
+            the purpose of the parameter to the programmer writing code that calls it. What's most
+            important from a functional perspective is that you've defined a method that can take an
+                <type>int</type> type argument and that it will return another <type>int</type> type
+            value to you. </para>
         </example>
         <example><title>Add Two Numbers</title>
             <para>Below is an example of a method definition with more than one parameter. It might not be particularly useful, but it demonstrates how to work with more than one argument in your methods:</para>
@@ -76,7 +83,7 @@ $3 ==> 8
         </example>
         
         <example><title>Ultimate Answer</title>
-        <para>Some methods don't have any parameters at all. For instance, below is the definition of a method that simply returns the value <literal>42</literal>:</para>
+        <para>Some methods don't have any parameters at all. For example, below is the definition of a method that simply returns the value <literal>42</literal>:</para>
 <programlisting>
 int ultimateAnswer() { 
   return 42;

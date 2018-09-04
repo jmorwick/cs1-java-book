@@ -5,16 +5,15 @@
     </info>
     
     <para>   
-        This section will introduce a significant new primitive type: <firstterm>booleans</firstterm>.
-        The boolean type is actually the most simple type because they have only two possible values: 
-        <literal>true</literal> and <literal>false</literal>. Both <literal>true</literal> 
-        and <literal>false</literal> are also literal boolean values, and <varname>boolean</varname> 
-        is the name of the type. For instance, you can declare and initialize a boolean variable as follows:
-        <programlisting>
+        This section will introduce a significant new primitive type: <firstterm>booleans</firstterm>. The boolean type is actually the most simple type because it has only two possible values: <literal>true</literal> and <literal>false</literal>. Both <literal>true</literal> and <literal>false</literal> are also literal boolean values, and <varname>boolean</varname> is the name of the type. For example, you can declare and initialize a boolean variable as follows:
+        
+<programlisting>
 boolean mybool = true;
 </programlisting>
+        
         or simply
-        <programlisting>
+        
+<programlisting>
 var mybool = true;
 </programlisting>
         
@@ -25,9 +24,9 @@ var mybool = true;
             <title>Comparison Operators</title>
         </info>
         
-        <para>   
-            The boolean type is useful for answering <emphasis>yes</emphasis> or <emphasis>no</emphasis> quesions, such as "is 2 equal to 1 + 1?". We can ask these types of questions with comparison operators. 
-        </para><para>
+        <para> The boolean type is useful for answering <emphasis>yes</emphasis> or
+                <emphasis>no</emphasis> questions, such as <emphasis>is 2 equal to 1 + 1?</emphasis>
+            We can ask these types of questions with comparison operators. </para><para>
             The comparison operators are binary operators, just like the arithmetic operators from prior sections. However, they operate over values of any type (instead of numeric values), and the evaluate to a boolean value (instead of a numeric value). For example, <code>==</code> is the comparison operator. It determines whether two values are the same or not. So, to answer the question we posed in the last paragraph, we could use an expression like this:
             
 <programlisting>
@@ -54,10 +53,8 @@ var mybool = true;
                 </listitem>
             </itemizedlist>
         </para>
-        <para>
-            For example, the expression 
-            <programlisting>4 &lt; 3 + 3</programlisting> would evalute to <literal>true</literal>. 
-        </para>
+        <para> For example, the expression <programlisting>4 &lt; 3 + 3</programlisting> would
+            evaluate to <literal>true</literal>. </para>
     </section>
     
     
@@ -67,37 +64,31 @@ var mybool = true;
         </info>
         <para>
             There are also operators that work strictly over boolean values, just as the arithmetic operators we used last week worked strictly over numeric values. These are called <firstterm>boolean operators</firstterm>. They operate over one or two boolean values and evaluate to another boolean value.  These operations are quite simple but form the basis for what is known as <firstterm>boolean algebra</firstterm>. 
-        </para><para>
-            The first operator we'll consider is the and operator: <code>&amp;&amp;</code>. This is a boolean operator that evaluates to true only when both the left and right operands also evaluate to <literal>true</literal>. For instance:
-            
-<programlisting>
+        </para><para> The first operator we'll consider is the and operator: <code>&amp;&amp;</code>. This is a
+            boolean operator that evaluates to <literal>true</literal> only when both the left and
+            right operands also evaluate to <literal>true</literal>. For example:
+            <programlisting>
 true &amp;&amp; false
-</programlisting>    
-            
-            evaluates to <literal>false</literal>, since the right-hand operand is false. However:
-            
-<programlisting>
+</programlisting> evaluates to
+                <literal>false</literal>, since the right-hand operand is false. However:
+            <programlisting>
 true &amp;&amp; true
-</programlisting>
-            
-            evalutes to <literal>true</literal>, since both operands are true.
-        </para><para>
-            The next operator we'll consider is the or operator: <code>||</code> It is similar to the and operator, but it evaluates to true when either of the operands are true. Put another way, this operator will only evaluate to false when both of its operands evaluate to false. For example, if you replaced <code>&amp;&amp;</code> with <code>||</code> in both of the last two expressions, they would both evaluate to <literal>true</literal>.
-        </para><para>
-            The last boolean operator we'll consider is unique in that it's a unary operator. Recall that this means it has only one operand. It is called the not operator: <code>!</code>   This operator simply reverses the boolean value of its operand. For example:
-            
-<programlisting>
+</programlisting> evaluates to
+                <literal>true</literal>, since both operands are true. </para><para>
+            The next operator we'll consider is the or operator: <code>||</code> It is similar to the and operator, but it evaluates to <literal>true</literal> when either of the operands are true. Put another way, this operator will only evaluate to <literal>false</literal> when both of its operands evaluate to <literal>false</literal>. For example, if you replaced <code>&amp;&amp;</code> with <code>||</code> in both of the last two expressions, they would both evaluate to <literal>true</literal>.
+        </para><para> The last boolean operator we'll consider is unique in that it's a unary operator. Recall that
+            this means it has only one operand. It is called the not operator: <code>!</code> This
+            operator simply reverses the boolean value of its operand. For example:
+            <programlisting>
 !false
-</programlisting>
-            
-            evaluates to <literal>true</literal>. Note that all of these operators can be combined and nested in subexpressions. For instance, the following expression evaluates to true:
-            
-            
-<programlisting>
+</programlisting> evaluates to <literal>true</literal>. Note
+            that all of these operators can be combined and nested in sub expressions. For example,
+            the following expression evaluates to <literal>true</literal>:
+            <programlisting>
 !((false &amp;&amp; false) || false)
-</programlisting>
-            
-            These operators also have an oerder of precedence: <code>!</code>, <code>||</code>, <code>&amp;&amp;</code>
+</programlisting> These operators
+            also have an order of precedence: <code>!</code>, <code>||</code>,
+                <code>&amp;&amp;</code>
         </para>
     </section>
 </section>

@@ -13,8 +13,12 @@
         <para>Both of these problems are solved by a whole new category of data types: objects. Object types are fundamentally different from primitive types. Object data types can have multiple fields associated with them and also have <firstterm>instance methods</firstterm> that allow you to perform operations over the objects. 
         </para>
         
-        <para>Objects are a very important part of the Java programming language (and are the reason Java is referred to as an <firstterm>Object Oriented</firstterm> programming langauge). In Java, you are also able to create new object types if some of the standard ones that ship with the JDK are not what you need or what you want -- however creating new object types is a more advanced topic that will be covered in a future course. This section will show you how to work with some of the object types available to you with a standard JDK. 
-       </para>
+        <para>Objects are a very important part of the Java programming language (and are the reason
+        Java is referred to as an <firstterm>Object Oriented</firstterm> programming language). In
+        Java, you are also able to create new object types if some of the standard ones that ship
+        with the JDK are not what you need or what you want -- however creating new object types is
+        a more advanced topic that will be covered in a future course. This section will show you
+        how to work with some of the object types available to you with a standard JDK. </para>
     
     <section>
         <info>
@@ -23,19 +27,34 @@
         
         <para>Objects are also called <firstterm>instances</firstterm> of a <firstterm>class</firstterm> in Java. A class is essentially a definition of an object type that determines what fields an object will have and what methods you can use to interact with the object. For example, there might be an <varname>Employee</varname> class, but you could potentially have many instances of that class (objects) that represent individual employees with their own names, hire dates, etc. The <varname>Employee</varname> class is merely a data type that ensures each of the objects that are instances of it have these features in common. </para>
         
-        <para>Java provides literally thousands of classes with the JDK that you may use to create programs. Because there are so many classes, there was a need to keep them organized (it's possible two classes might even have the same name, such as a <varname>Deal</varname> class that might refer to a business deal or the cards laid down in a poker game). Java organizes classes by placing them in named <firstterm>packages</firstterm>. For example, Java has a class called <varname>Point</varname> that is used to represent a point in a 2 dimensional cartesian plane. However, to avoid possible name conflicts and to help keep things organized, this class is placed in a package named <varname>java.awt</varname>, along with several other classes that assist with computer graphics. Remember that each class represents a data type, and data types have names (such as int). In this case, the name of this data type, incluing its package name, is <varname>java.awt.Point</varname>.  
-        </para>
+        <para>Java provides literally thousands of classes with the JDK that you may use to create
+            programs. Because there are so many classes, there was a need to keep them organized
+            (it's possible two classes might even have the same name, such as a
+                <varname>Deal</varname> class that might refer to a business deal or the cards laid
+            down in a poker game). Java organizes classes by placing them in named
+                <firstterm>packages</firstterm>. For example, Java has a class called
+                <varname>Point</varname> that is used to represent a point in a 2 dimensional
+            Cartesian plane. However, to avoid possible name conflicts and to help keep things
+            organized, this class is placed in a package named <varname>java.awt</varname>, along
+            with several other classes that assist with computer graphics. Remember that each class
+            represents a data type, and data types have names (such as int). In this case, the name
+            of this data type, including its package name, is <varname>java.awt.Point</varname>. </para>
         
-        <para>It can be cumbersome to have to type in all of that every time you want to refer to a data type, so java provides <firstterm>import statements</firstterm> to allow you to shorten it to just the class name (in this case, <varname>Point</varname>). In order to use <varname>Point</varname> as the name of the data type rather than <varname>java.awt.Point</varname>, enter this import statement in the REPL:
-        
-<programlisting>import java.awt.Point;</programlisting>
-		
-		You can also import all of the classes in the <varname>java.awt</varname> package at the same time if you want to by using a <firstterm>wildcard</firstterm> in your import statement in place of the class name:
-
-<programlisting>import java.awt.*;</programlisting>
-		
-		This would allow you to use the short name for <varname>Point</varname>, but also <varname>Polygon</varname> (instead of <varname>java.awt.Polygon</varname> and many other classes in the <varname>java.awt</varname> package). Generally the use of wildcards is discouraged since you often will only need a handful of classes from a single package, and having each of them listed explicitly in an import statement makes it clear what classes you're using in your code. It also helps avoid the possibility of name conflicts.
-		</para>
+        <para>It can be cumbersome to have to type in all of that every time you want to refer to a
+            data type, so java provides <firstterm>import statements</firstterm> to allow you to
+            shorten it to just the class name (in this case, <varname>Point</varname>). In order to
+            use <varname>Point</varname> as the name of the data type rather than
+                <varname>java.awt.Point</varname>, enter this import statement in the REPL:
+            <programlisting>import java.awt.Point;</programlisting> You can also import all of the
+            classes in the <varname>java.awt</varname> package at the same time if you want to by
+            using a <firstterm>wildcard</firstterm> in your import statement in place of the class
+            name: <programlisting>import java.awt.*;</programlisting> This would allow you to use
+            the short name for <varname>Point</varname>, but also <varname>Polygon</varname>
+            (instead of <varname>java.awt.Polygon</varname> and many other classes in the
+                <varname>java.awt</varname> package). Generally the use of wild cards is discouraged
+            since you often will only need a handful of classes from a single package, and having
+            each of them listed explicitly in an import statement makes it clear what classes you're
+            using in your code. It also helps avoid the possibility of name conflicts. </para>
         
     </section>
     
@@ -106,9 +125,11 @@
         
         This method call moves the <varname>Point</varname> object forward <literal>2</literal> in the <varname>x</varname> direction and backward <literal>1</literal> in the <varname>y</varname> direction, meaning that the <varname>Point</varname> object will now be at location 6, 0 on the coordinate plane. Note that <emphasis>translation</emphasis> is an operation frequently applied to points in computer graphics, so it was developed as an instance method for the <varname>Point</varname> class. This is an example of how objects provide useful abstractions in object-oriented programming, just as static methods do. </para>
         
-        <para>The <varname>Point</varname> class has several other useful instance methods that can be called. Some of them have return values and some of them don't. You can find them all sumaraized here:ba
-            
-            <uri>https://docs.oracle.com/javase/10/docs/api/java/awt/Point.html</uri> </para>
+        <para>The <varname>Point</varname> class has several other useful instance methods that can
+            be called. Some of them have return values and some of them don't. You can find them all
+            summarized here:ba
+                <uri>https://docs.oracle.com/javase/10/docs/api/java/awt/Point.html</uri>
+        </para>
         
     </section>
     
@@ -122,7 +143,17 @@
         <programlisting>homeLocation.x</programlisting>
         </para>
         
-        <para>Most classes will prevent you from accessing the object's fields in this way as it's generally considered bad stylefo to write classes that expose their fields (though it's debatable whether it was a bad choice for the <varname>Point</varname> class, specifically). There are two primary reasons for this: is that it is expected that the designer of the class has already provided sufficiently powerful instance methods that serve as the proper means for manipulating the object, and more importantly also because it helps prevent errors that could occur when another programmer manipulates a field in a way that the designer of the class didn't anticipate (such as setting the balance of a bank account to a negative number). By only allowing objects to be manipulated through carefully designed instance methods, objects serve as more accurate abstractions of some real-world concept you're attempting to model in your program. </para>
+        <para>Most classes will prevent you from accessing the object's fields in this way as it's
+            generally considered bad style to write classes that expose their fields (though it's
+            debatable whether it was a bad choice for the <varname>Point</varname> class,
+            specifically). There are two primary reasons for this: is that it is expected that the
+            designer of the class has already provided sufficiently powerful instance methods that
+            serve as the proper means for manipulating the object, and more importantly also because
+            it helps prevent errors that could occur when another programmer manipulates a field in
+            a way that the designer of the class didn't anticipate (such as setting the balance of a
+            bank account to a negative number). By only allowing objects to be manipulated through
+            carefully designed instance methods, objects serve as more accurate abstractions of some
+            real-world concept you're attempting to model in your program. </para>
         
     </section>
     

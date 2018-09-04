@@ -7,7 +7,7 @@
         <termdef xml:id="term.statement">
             A <firstterm>statement</firstterm> is essentially a single instruction.
         </termdef>
-        This is a fairly abstract definition, but statements serve many purposes in imperative programming languages like Java and can embody simple or complex instructions. The main difference between a statement and what we've seen with expressions is that statements don't evaluate to some value. Instead, they <emphasis>do something</emphasis> to the state of the computing environemnt. For instance, they may alter the value of a variable or print something to the screen. These actions are refered to as <firstterm>side effects</firstterm> and are the heart of imperative programming. 
+        This is a fairly abstract definition, but statements serve many purposes in imperative programming languages like Java and can embody simple or complex instructions. The main difference between a statement and what we've seen with expressions is that statements don't evaluate to some value. Instead, they <emphasis>do something</emphasis> to the state of the computing environment. For instance, they may alter the value of a variable or print something to the screen. These actions are referred to as <firstterm>side effects</firstterm> and are the heart of imperative programming. 
     </para>
     <para>
         Syntactically, statements will vary, but for the most part end with a semicolon (similar to the period at the end of a sentence in English).  A very simple statement consists of an expression followed by semicolon. For example, the hello world example we started with mostly fits this pattern:

@@ -3,8 +3,13 @@
     <info>
         <title>Strings</title>
     </info>
-    <para>A single character by itself doesn't convey much. The kind of data we more often want to work with is a sequence of multiple characters, like a name or address field, or even something longer and more complex like a news article or even a computer program. Java has a datatype that fits this role: the <type>String</type>. While a character literal only holds a single value, such as <literal>'h'</literal>, a string can hold 0 or more character values. Thus, strings can represent more complex data like names, sentences, or even this entire book! You can create a variable of type <type>String</type> as follows:
-    </para>
+    <para>A single character by itself doesn't convey much. The kind of data we more often want to
+        work with is a sequence of multiple characters, like a name or address field, or even
+        something longer and more complex like a news article or even a computer program. Java has a
+        data type that fits this role: the <type>String</type>. While a character literal only holds
+        a single value, such as <literal>'h'</literal>, a string can hold 0 or more character
+        values. Thus, strings can represent more complex data like names, sentences, or even this
+        entire book! You can create a variable of type <type>String</type> as follows: </para>
     <programlisting>String name;</programlisting>
 <para>
     Note that the type in that variable declaration is capitalized. That's because, unlike <type>char</type>'s and <type>int</type>'s, the string type is an object type (not a primitive type). Thus, when we use the string type in Java code (such as the example above), it must be capitalized. However, unlike <type>Point</type>s and other objects we've played with, strings are a special object type in Java.
@@ -12,8 +17,13 @@
 <section>
     <title>String Literals</title>
     
-    <para>Unlike <type>Point</type>s and other objects we've played with, strings are a special object type in Java in that they have their own special format for literal values. Character literals are a single character surrounded by single quotes, such as <literal>'a'</literal>. String literals are simmilar, but as noted, there may be more than one character in the string, and we use double quotes to surround them. For instance, the following code initializes the name variable from the previous example with my name as a value:
-    </para>
+    <para>Unlike <type>Point</type>s and other objects we've played with, strings are a special
+            object type in Java in that they have their own special format for literal values.
+            Character literals are a single character surrounded by single quotes, such as
+                <literal>'a'</literal>. String literals are similar, but as noted, there may be more
+            than one character in the string, and we use double quotes to surround them. For
+            instance, the following code initializes the name variable from the previous example
+            with my name as a value: </para>
     <programlisting>name = "Joesph Kendall-Morwick";</programlisting>
     
     <para>Note that string literals can contain all sorts of characters, including spaces and dashes. Strings also distinguish between upper and lower case characters. Character literals work just the same way, but character literals hold exactly one character.
@@ -36,8 +46,13 @@
     <section>
         <title>String Concatenation</title>
     
-        <para>Two string values may be joined together with the concatenation operator. Unfortunately, you've technically already seen the concatentation operator because it uses the same symbol as the addition operator (+). However, they are considered distinct operators since they take distinct actions on their operands. You will end up with addition or concatentation depending on the data types of the operands. Allowing an operator to take on multiple meanings depending on the types of the operands is more generally referred to as <firstterm>operator overloading</firstterm>. 
-    </para>
+        <para>Two string values may be joined together with the concatenation operator.
+            Unfortunately, you've technically already seen the concatenation operator because it
+            uses the same symbol as the addition operator (+). However, they are considered distinct
+            operators since they take distinct actions on their operands. You will end up with
+            addition or concatenation depending on the data types of the operands. Allowing an
+            operator to take on multiple meanings depending on the types of the operands is more
+            generally referred to as <firstterm>operator overloading</firstterm>. </para>
     
 <example><title>Basic Concatenation</title>
     <para>The following code:</para>

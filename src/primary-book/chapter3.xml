@@ -4,7 +4,7 @@
         <title>Object Data Types and Strings</title>
     </info>
     
-    <para>So far you've seen several examples of what are called <firstterm>primitive</firstterm> datatypes that represent very simple data. This chapter will introduce a whole new category of datatypes: object types. One particularly important object type we'll expore is the <varname>String</varname> type. </para>
+    <para>So far you've seen several examples of what are called <firstterm>primitive</firstterm> data types that represent very simple data. This chapter will introduce a whole new category of data types: object types. One particularly important object type we'll explore is the <varname>String</varname> type. </para>
     <para> Object types are more flexible and useful in complex tasks. We'll also explore such a task in this chapter: communicating with the user of your program through input and output streams. Being able to communicate with the user is necessary to write a useful program, so this chapter will get you off the ground to creating your own programs that do something useful!
     </para>
     

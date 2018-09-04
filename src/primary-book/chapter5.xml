@@ -4,7 +4,7 @@
         <title>Conditional Statements</title>
     </info>
     
-    <para>This chapter has just a single section since it is a more complex topic than we have seen in prior weeks. All week we'll be looking at conditional statements and the critical use they have in writing methods and programs. In addition to variables and the statements that manipulate them we've learned in prior chapters, conditional statments make the second of three essential ingreedients of any imperative programming language. We'll see the third and final necessary ingreedient in the next chapter.</para>
+    <para>This chapter has just a single section since it is a more complex topic than we have seen in prior chapters. Throughout this chapter we'll be looking at conditional statements and the critical use they have in writing methods and programs. In addition to variables (and some of the statements that manipulate variables), conditional statements make the second of three essential ingredients of any imperative programming language. We'll see the third and final necessary ingredient in the next chapter.</para>
     
     <xi:include href="../sections/statements/conditional/conditional-statements.xml"/>
 </chapter>

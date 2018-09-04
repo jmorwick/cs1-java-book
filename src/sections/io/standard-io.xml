@@ -6,7 +6,7 @@
     
 <para>The programs you write will need to be able to interact with a user and thus require some sort of <firstterm>user interface</firstterm>. A text-based user interface (or command-line interface) is a very simple and straight forward way to start interacting with the users of your programs by printing information to the screen for the user in text format and taking in data when the user types something at the keyboard. JShell is an excellent example of a program that uses a text-based user interface. This was a very popular style of application on older computer systems in the 90's and earlier but has remained relevant and has perhaps even gained popularity more recently. 
 </para>
-    <para>Now that you've had experience with characters and strings, you can use these datatypes to send messages back and forth with the user.
+    <para>Now that you've had experience with characters and strings, you can use these data types to send messages back and forth with the user.
     </para>
     
     <section>
@@ -45,7 +45,7 @@ in.close();
             <para> Scanners have many instance methods you can use to read in data other than strings. For example, you can call the <varname>nextInt</varname> or <varname>nextDouble</varname> methods to read in numeric data as an <type>int</type> or <type>double</type>, respectively. However, there is a problem with using these methods: They don't necessarily read an entire line of input, they only read the next value stored in an input buffer for the scanner. What this means is that if the user types in two different numbers separated by a space in one line, such as 
 <code>
 23 54
-</code>, calling <varname>nextInt</varname> once will return the value <literal>23</literal> and calling it a second time will return the value <literal>54</literal> without blocking and waiting for the user to enter another line of input. Sometimes this is exactly the behavoir you want from your scanner, but more often when writing text-based applications, this will create a confusing and error-prone experience for your users.
+</code>, calling <varname>nextInt</varname> once will return the value <literal>23</literal> and calling it a second time will return the value <literal>54</literal> without blocking and waiting for the user to enter another line of input. Sometimes this is exactly the behaviour you want from your scanner, but more often when writing text-based applications, this will create a confusing and error-prone experience for your users.
         </para>
         
         <para>In a text-based application, a better approach is to always use <varname>nextLine</varname> to read in an entire line of input. Once you've read this line in, if you want to perform arithmetic with it, you can convert it from a string in to an integer with the static method <varname>parseInt</varname>. It's available for use after entering the following import statement:

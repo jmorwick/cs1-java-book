@@ -25,7 +25,7 @@
     </para>
     
     <para>
-        Internally, these values are stored in the same way you would use scientific notation. Each floating point value consists of two components: an exponent and a mantissa. The value is determined by multiplying the mantissa by 10 to the power of the exponent. In addition to writing out floating point literals with a decimal point, you can also format them by identifying these two components explicitly. Literal values that use the scientific notation format place a letter E between the mantisa and the exponent. For instance, <literal>5E3</literal> is the same as <literal>5000.0</literal>.
+        Internally, these values are stored in the same way you would use scientific notation. Each floating point value consists of two components: an exponent and a mantissa. The value is determined by multiplying the mantissa by 10 to the power of the exponent. In addition to writing out floating point literals with a decimal point, you can also format them by identifying these two components explicitly. Literal values that use the scientific notation format place a letter E between the mantissa and the exponent. For instance, <literal>5E3</literal> is the same as <literal>5000.0</literal>.
     </para>
     </section>
     <section><title>Casting</title>
