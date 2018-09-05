@@ -42,14 +42,14 @@ jshell> pointsInGame1
 pointsInGame1 ==> 12
 
 jshell> averagePoints
-averagePoints ==> 9.333333333333334
+averagePoints ==> 9
 
 jshell> /vars
 |    int pointsInGame1 = 12
 |    int pointsInGame2 = 8
 |    int pointsInGame3 = 8
 |    int totalPoints = 28
-|    double averagePoints = 9.333333333333334
+|    int averagePoints = 9
 
 jshell> 
 </screen>        
