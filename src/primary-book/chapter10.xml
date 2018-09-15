@@ -1,0 +1,9 @@
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.parameters"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <info>
+        <title>Advanced Arrays</title>
+    </info>
+    
+    <!-- TODO: array methods (shallow vs deep copy, Arrays class) -->
+    <!-- TODO: 2d arrays -->
+</chapter>

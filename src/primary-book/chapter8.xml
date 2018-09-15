@@ -1,0 +1,12 @@
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.applications"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <info>
+        <title>Applications</title>
+    </info>
+   
+    
+    
+    <xi:include href="../sections/classes/classes.xml"/>
+    <xi:include href="../sections/enactment/applications.xml"/>
+    <xi:include href="../sections/enactment/command-line-args.xml"/>
+</chapter>

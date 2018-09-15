@@ -1,0 +1,10 @@
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.parameters"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <info>
+        <title>Odds and Ends</title>
+    </info>
+    <xi:include href="../sections/definitions/methods/overloading.xml"/>
+    <xi:include href="../sections/definitions/methods/varargs.xml"/>
+    <xi:include href="../sections/statements/assignment-shortcuts.xml"/>
+    <xi:include href="../sections/expressions/conditional-expressions.xml"/>
+</chapter>

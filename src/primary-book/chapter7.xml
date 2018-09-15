@@ -1,0 +1,11 @@
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.collections"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <info>
+        <title>Basic Collections of Data</title>
+    </info>
+   
+    
+    <xi:include href="../sections/datatypes/collections/arrays.xml"/>
+    <xi:include href="../sections/statements/loop/for-each-loops.xml"/>
+    <xi:include href="../sections/datatypes/object-references.xml"/>
+</chapter>
