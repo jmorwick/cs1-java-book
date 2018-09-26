@@ -7,7 +7,7 @@
     <para>
         In the last unit you explored several different kinds of expressions and statements that could be combined to form programs. You also saw how methods can hide a lot of the details of a complicated operation and make your programs cleaner. Although Java makes many methods available to you, you might not have always had a method that did exactly what you wanted or even worked exactly the way you wanted it to. 
     </para>
-    <para>Starting this unit, you'll begin developing your own methods. Writing methods make for good programming exercises for the same reason that they are good abstractions: you get to write a very complete. free standing piece of a program that can be re-used over and over in many programs you write! This chapter will begin with developing some methods similar to the ones you used last week. 
+    <para>Starting this unit, you'll begin developing your own methods. Writing methods make for good programming exercises for the same reason that they are good abstractions: you get to write a very complete, free standing piece of a program that can be re-used over and over in many programs you write! This chapter will begin with developing some methods similar to the ones you used last week. 
     </para>
     
     <para>
