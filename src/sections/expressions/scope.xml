@@ -3,10 +3,11 @@
     <info>
         <title>Scope</title>
     </info>
-    When writing larger programs, you will find that some variable definitions will only work as you expect them to in some parts of the program. This is because variable definitions are bound to a <firstterm>scope</firstterm> within the program. </para>
+    <para>
+      When writing larger programs, you will find that some variable definitions will only work as you expect them to in some parts of the program. This is because variable definitions are bound to a <firstterm>scope</firstterm> within the program. </para>
 
     <para>
-      In Java, variable scopes are limited to the code blocks they're defined in. This also includes if/else/switch statement bodies, the bodies of loops, and the body of method definitions. Variables defined at the beginning of a for loop are constrained to the scope of the body of that for loop.
+      In Java, variable scopes are limited to the code blocks they're defined in. The extent of a code block is everything in between the block's opening and closing curly braces. Once a variable is defined inside the scope of a code block, it can be referenced on any succeeding line, including those in nested code blocks (additional code blocks defined inside of the code block in question).
     </para>
 
 
@@ -21,15 +22,34 @@
     var y = x + 5;
   }
   System.out.println(x);
-  // System.out.println(y);
+  System.out.println(y);  // error, y is not defined in this scope
 }
-// System.out.println(x);
+System.out.println(x);  // error, x is not defined in this scope
 </programlisting>
 
       Both of the commented-out print statements would be errors since the variables they reference are defined in a different scope. Note that the first print statement is valid because <varname>x</varname> is defined in the same scope as that statement.
         </para>
         <para>
           Another important thing to note is that the statement in the inner-most scope can legally access the variable x. If a block of code is opened inside another block of code, it will inherit all the variable definitions of its enclosing scope.
+        </para>
+    </example>
+
+
+    <para>
+      Blocks of code comprising the bodies of conditional statements, loops, and method definitions. Variables defined in the header of a for loop are constrained to the scope of the body of the for loop.
+    </para>
+
+
+    <example xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="ex.for-loop-error"
+        xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Common Scope Error with For Loops</title>
+        <para>Considering the following code:
+<programlisting>
+for(int x = 1; x &lt;= 10; x = x + 1);
+    System.out.println(x);
+</programlisting>
+
+      At first glance, it appears this code will print out the numbers <literal>1</literal> through <literal>10</literal>, however, there is a semi-colon at the end of the first line. When ommitting curly braces, the body of a for loop will consist of a statement immediately following the loop header. Since a semicolon follows the loop header, it counts as the single statement, meaning the print statment on the second line is not part of the for loop's body. Thus, the reference to the variable <varname>x</varname> is not in the correct scope and will be caught as a syntax error.
         </para>
     </example>
 </section>
