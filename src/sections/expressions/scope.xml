@@ -1,0 +1,35 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.scope"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>Scope</title>
+    </info>
+    When writing larger programs, you will find that some variable definitions will only work as you expect them to in some parts of the program. This is because variable definitions are bound to a <firstterm>scope</firstterm> within the program. </para>
+
+    <para>
+      In Java, variable scopes are limited to the code blocks they're defined in. This also includes if/else/switch statement bodies, the bodies of loops, and the body of method definitions. Variables defined at the beginning of a for loop are constrained to the scope of the body of that for loop.
+    </para>
+
+
+    <example xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="ex.basic-scope"
+        xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Basic Scope Example</title>
+        <para>Considering the following code:
+<programlisting>
+{
+  var x = 5;
+  {
+    var y = x + 5;
+  }
+  System.out.println(x);
+  // System.out.println(y);
+}
+// System.out.println(x);
+</programlisting>
+
+      Both of the commented-out print statements would be errors since the variables they reference are defined in a different scope. Note that the first print statement is valid because <varname>x</varname> is defined in the same scope as that statement.
+        </para>
+        <para>
+          Another important thing to note is that the statement in the inner-most scope can legally access the variable x. If a block of code is opened inside another block of code, it will inherit all the variable definitions of its enclosing scope.
+        </para>
+    </example>
+</section>
