@@ -1,54 +1,59 @@
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="ex.assignment-and-declaration-statement"
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="ex.classes"
     xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Basic Class Definitions</title>
-    
-    <para>Every object type has a class definition associated with it, but classes in Java are also used for other special purposes, such as creating a collection of static methods (for example, the Math class) or for creating a Java application. 
+
+    <para>Every object type has a class definition associated with it, but classes in Java are also used for other special purposes, such as creating a collection of static methods (for example, the Math class) or for creating a Java application.
     </para>
     <section>
         <title>Class and Static Method Definition Syntax</title>
         <para>A class definition begins with the keyword \textbf{class}, followed by the class name, and then a pair of curly braces. For example, here is a very simple class definition:
         </para>
 <programlisting>
-<xi:include href="../../examples/code/simple-class.jsh" parse="text/plain"/>
+<xi:include href="../../examples/code/simple-class.jsh" parse="text"/>
 </programlisting>
-        <para>A Java file must contain one class designated as public using the \textbf{public} keyword before the class definition. It's also important to note that the filename must match the name of the public class, with \textit{.java} at the end (similar to how an HTML file has \textit{.html} at the end). For example, if we were to produce a Java file called \textit{Lab9.java}, it could have the following as its contents:
+        <para>A Java file must contain one class designated as public using the \textbf{public} keyword before the class definition. It's also important to note that the filename must match the name of the public class, with <emphasis>.java</emphasis> at the end (similar to how an HTML file has <emphasis>.html</emphasis> at the end). For example, if we were to produce a Java file called <emphasis>ExampleClass.java</emphasis>, it could have the following as its contents:
         </para>
-        
-        <programlisting><xi:include href="../../examples/code/ExampleClass.java" parse="text/plain"/></programlisting>
-        <para>Inside of these curly braces is the class body in which its \textbf{members} are defined. Class members include method definitions, so we can include any the method definitions we've been developing. If we make these methods static by including the \textit{static} keyword before the method definition, we can use them like any other static method (such as Math.max). For instance, consider the following modification of the Lab9 class definition:
+
+        <programlisting><xi:include href="../../examples/code/ExampleClass.java" parse="text"/></programlisting>
+        <para>Inside of these curly braces is the class body in which its <firstterm>members</firstterm> are defined. Class members include method definitions, so we can include any the method definitions we've been developing. If we make these methods static by including the <code>static</code> keyword before the method definition, we can use them like any other static method (such as <varname>max</varname> in the <varname>Math</varname> class). For instance, consider the following modification of the class definition above:
         </para>
-      <programlisting><xi:include href="../../examples/code/ExampleClassWithStaticMethod.java" parse="text/plain"/></programlisting>
+      <programlisting><xi:include href="../../examples/code/ExampleClassWithStaticMethod.java" parse="text"/></programlisting>
         <para>Any other Java code we write, even in another file, could access this method as follows:
         </para>
 <programlisting>
-Lab9.sayHello();
-</programlisting>        
+ExampleClassWithStaticMethod.sayHello();
+</programlisting>
     </section>
     <section>
         <title>Static Fields</title>
-        <para>Methods aren't the only members we can add to a class. Variables can also be members, in which case they are called \textbf{fields}. For example, we can create a variable called \textit{greeting} to hold the message we use in the sayHello() method. This allows us to more easily maintain consistency with other methods that greet the user in other ways. \textit{greeting} must also be declared static to be used in Lab9's static methods: 
+        <para>Methods aren't the only members we can add to a class. Variables can also be members, in which case they are called <firstterm>fields</firstterm>. For example, we can create a variable called <varname>greeting</varname> to hold the message we use in the <varname>sayHello</varname> method. This allows us to more easily maintain consistency with other methods that greet the user in other ways. <varname>greeting</varname> must also be declared static to be used as a general purpose method:
         </para>
-        <programlisting><xi:include href="../../examples/code/ClassWithMultipleStaticMethods.java" parse="text/plain"/></programlisting>
+        <programlisting><xi:include href="../../examples/code/ClassWithMultipleStaticMethods.java" parse="text"/></programlisting>
     </section>
     <section>
         <title>Scope of Fields</title>
-        <para>Note that the variable \textit{greeting} in the previous example is accessible in both of the static methods in the class Lab9. That is because the \textbf{scope} of the variable (that is, the part of the code where the variable is accessible) is the entire class. For the most part, the scope of a variable is limited to all parts of the code within the curly braces it's defined in (or just before, such as with method parameters and for loops). 
+        <para>Note that the variable <varname>greeting</varname> in the previous example is accessible in both of the static methods in the class. That is because the <firstterm>scope</firstterm> of the variable is the entire class. Note that unlike other scope-limited variables, we can access the static scope of a class by giving the class name and following it with the dot operator:
+
+<programlisting>
+ClassWithMultipleStaticMethods.sayHello();
+ClassWithMultipleStaticMethods.sayHelloEmphatically();
+</programlisting>
         </para>
-        
+
         <section>
             <title>Constants</title>
-            <para>Because \textit{greeting} is a member of the class, just like the sayHello() method, it can be accessed from outside of the class as well. That means that the greeting could be modified from outside the class, such as in the following example:
+            <para>Because <varname>greeting</varname> is a member of the class, just like the <varname>sayHello</varname> method, it can be accessed from outside of the class as well. That means that the greeting could be modified from outside the class, such as in the following example:
             </para>
-            
-            <programlisting>Lab9.greeting = "Hey Jerk";</programlisting>
-            
-            <para>If a field is never meant to be altered, it should be made in to a \textbf{constant} by using the \textbf{final} keyword in its definition. Here is the updated definition of the Lab9 class that prevents any changes to the greeting field:
+
+<programlisting>
+ClassWithMultipleStaticMethods.greeting = "Hey Jerk";
+</programlisting>
+
+            <para>If a field is never meant to be altered, it should be made in to a <firstterm>constant</firstterm> by using the <code>final</code> keyword in its definition. Here is the updated definition of the running example that prevents any changes to the greeting field:
             </para>
-            
-          <programlisting><xi:include href="../../examples/code/ClassWithConstant.java" parse="text/plain"/></programlisting>
-          
+
+          <programlisting><xi:include href="../../examples/code/ClassWithConstant.java" parse="text"/></programlisting>
+
         </section>
     </section>
 </section>
-
-

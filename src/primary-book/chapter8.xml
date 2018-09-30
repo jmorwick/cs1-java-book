@@ -5,8 +5,8 @@
     </info>
 
     <xi:include href="../sections/expressions/scope.xml"/>
-    <!--
     <xi:include href="../sections/classes/classes.xml"/>
+    <!--
     <xi:include href="../sections/enactment/applications.xml"/>
     <xi:include href="../sections/enactment/command-line-args.xml"/>
     /-->
