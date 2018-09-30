@@ -12,10 +12,10 @@ While loops are a lot like if statements. In fact, they have a nearly identical 
         <title>Anatomy of a While Loop</title>
         <mediaobject>
             <imageobject condition="print">
-                <imagedata fileref="../../../fig/while-loop.png"/>
+                <imagedata fileref="../../../tmp/while-loop.png"/>
             </imageobject>
             <imageobject condition="web">
-                <imagedata fileref="../../../fig/while-loop.png"/>
+                <imagedata fileref="../../../tmp/while-loop.png"/>
             </imageobject>
             <textobject><phrase>Anatomy of a While Loop</phrase></textobject>
         </mediaobject>
@@ -32,7 +32,7 @@ While loops are a lot like if statements. In fact, they have a nearly identical 
 The following code will add up the numbers 1 through 10:
 </para>
 <programlisting>
-<xi:include href="../../../examples/code/count-to-ten.jsh" parse="text/plain"/>
+<xi:include href="../../../examples/code/count-to-ten.jsh" parse="text"/>
 </programlisting>
 <para>
 After the first iteration of the loop, count will increase by 1 and total will increase by 1. Thus, when the boolean expression is evaluated the second time, count will be 1 (and not 0). However, 1 is still less than 10, so the loop will run a second time. After the second iteration, count will increase to 2 and total will increase to 3. Now you might see where this is going. The loop will run 8 more times until count is equal to 11. At that point, count will be greater than 10, so the boolean expression will be false, and the statements inside the block will be skipped. 

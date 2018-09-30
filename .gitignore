@@ -18,3 +18,11 @@ newProject.xpr
 .idea
 
 *~
+
+*.pdf
+
+src/primary-book/book.html
+
+src/primary-book/out.xml
+
+src/primary-book/tmp.fo

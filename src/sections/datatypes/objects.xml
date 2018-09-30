@@ -71,10 +71,10 @@
             <title>Anatomy of a Constructor Method Call</title>
             <mediaobject>
                 <imageobject condition="print">
-                    <imagedata fileref="../../fig/constructor-call.png"/>
+                    <imagedata fileref="../../tmp/constructor-call.png"/>
                 </imageobject>
                 <imageobject condition="web">
-                    <imagedata fileref="../../fig/constructor-call.png"/>
+                    <imagedata fileref="../../tmp/constructor-call.png"/>
                 </imageobject>
                 <textobject><phrase>Anatomy of a Constructor Method Call</phrase></textobject>
             </mediaobject>
@@ -113,10 +113,10 @@
                 <title>Anatomy of an Instance Method Call</title>
                 <mediaobject>
                     <imageobject condition="print">
-                        <imagedata fileref="../../fig/instance-method-call.png"/>
+                        <imagedata fileref="../../tmp/instance-method-call.png"/>
                     </imageobject>
                     <imageobject condition="web">
-                        <imagedata fileref="../../fig/instance-method-call.png"/>
+                        <imagedata fileref="../../tmp/instance-method-call.png"/>
                     </imageobject>
                     <textobject><phrase>Anatomy of an Instance Method Call</phrase></textobject>
                 </mediaobject>

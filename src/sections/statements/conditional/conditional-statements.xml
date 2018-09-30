@@ -20,10 +20,10 @@
         <title>Anatomy of a Simple if Statement</title>
         <mediaobject>
             <imageobject condition="print">
-                <imagedata fileref="../../../fig/simple-if-statement.png"/>
+                <imagedata fileref="../../../tmp/simple-if-statement.png"/>
             </imageobject>
             <imageobject condition="web">
-                <imagedata fileref="../../../fig/simple-if-statement.png"/>
+                <imagedata fileref="../../../tmp/simple-if-statement.png"/>
             </imageobject>
             <textobject><phrase>Anatomy of a Simple if Statement</phrase></textobject>
         </mediaobject>
@@ -54,10 +54,10 @@
         <title>Anatomy of an if Statement with a Block Body</title>
         <mediaobject>
             <imageobject condition="print">
-                <imagedata fileref="../../../fig/if-statement.png"/>
+                <imagedata fileref="../../../tmp/if-statement.png"/>
             </imageobject>
             <imageobject condition="web">
-                <imagedata fileref="../../../fig/if-statement.png"/>
+                <imagedata fileref="../../../tmp/if-statement.png"/>
             </imageobject>
             <textobject><phrase>Anatomy of an if Statement with a Block Body</phrase></textobject>
         </mediaobject>
@@ -93,10 +93,10 @@ if (x > y) {
             <title>Anatomy of an if / else Statement</title>
             <mediaobject>
                 <imageobject condition="print">
-                    <imagedata fileref="../../../fig/if-else-statement.png"/>
+                    <imagedata fileref="../../../tmp/if-else-statement.png"/>
                 </imageobject>
                 <imageobject condition="web">
-                    <imagedata fileref="../../../fig/if-else-statement.png"/>
+                    <imagedata fileref="../../../tmp/if-else-statement.png"/>
                 </imageobject>
                 <textobject><phrase>Anatomy of an if / else Statement</phrase></textobject>
             </mediaobject>
@@ -112,7 +112,7 @@ if (x > y) {
             <para>Recall the <varname>abs</varname> method from the <varname>Math</varname> class that determined the absolute value of a number. In this example, we'll write our own absolute valued method that does the exact same thing using an <code>if</code> and an <code>else</code> statement. We'll name this method <varname>myAbs</varname> to make it distinct:
             </para>
             <programlisting>
-<xi:include href="../../../examples/code/myAbs.jsh" parse="text/plain"/>
+<xi:include href="../../../examples/code/myAbs.jsh" parse="text"/>
         </programlisting>
             <para>If <varname>x</varname> is greater than <literal>0</literal>, the first if statement will execute, meaning that the value stored in <varname>x</varname> will be returned. If <varname>x</varname> is not greater than zero, the return statement inside the <code>else</code> block will execute instead, meaning that the negation of the value stored in <varname>x</varname> will be returned. Note that <literal>-0</literal> is returned when <varname>x</varname> is stores the value <literal>0</literal>, but since these two values are equivalent, it doesn't make a difference. Also note that the return statement is still always the last statement executed, no matter what the value of <varname>x</varname> is. </para>
         </example>
@@ -133,7 +133,7 @@ if (x > y) {
             
             
             <programlisting>
-<xi:include href="../../../examples/code/justRight.jsh" parse="text/plain"/>
+<xi:include href="../../../examples/code/justRight.jsh" parse="text"/>
 </programlisting>
             <para>One thing to note about this example is that there are no <code>else</code> statements. There could be, but they aren't necessary since in all cases they would return <literal>false</literal>, which is also what the last statement of the method does.
             </para>

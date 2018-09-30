@@ -19,10 +19,10 @@ jshell> /exit
     
         <mediaobject>
             <imageobject condition="print">
-                <imagedata fileref="../fig/editing-bballscores.png" width="5in"/>
+                <imagedata fileref="../tmp/editing-bballscores.png" width="5in"/>
             </imageobject>
             <imageobject condition="web">
-                <imagedata fileref="../fig/editing-bballscores.png"/>
+                <imagedata fileref="../tmp/editing-bballscores.png"/>
             </imageobject>
             <textobject><phrase>Editing a JShell Script</phrase></textobject>
         </mediaobject>

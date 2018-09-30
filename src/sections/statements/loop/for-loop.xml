@@ -25,10 +25,10 @@ Since nearly every while loop that we write contains these three components, and
         <title>Anatomy of a For Loop</title>
         <mediaobject>
             <imageobject condition="print">
-                <imagedata fileref="../../../fig/for-loop.png"/>
+                <imagedata fileref="../../../tmp/for-loop.png"/>
             </imageobject>
             <imageobject condition="web">
-                <imagedata fileref="../../../fig/for-loop.png"/>
+                <imagedata fileref="../../../tmp/for-loop.png"/>
             </imageobject>
             <textobject><phrase>Anatomy of a For Loop</phrase></textobject>
         </mediaobject>

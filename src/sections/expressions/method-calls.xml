@@ -32,10 +32,10 @@
         <title>Anatomy of a Method Call</title>
         <mediaobject>
             <imageobject condition="print">
-                <imagedata fileref="../../fig/method-call.png"/>
+                <imagedata fileref="../../tmp/method-call.png"/>
             </imageobject>
             <imageobject condition="web">
-                <imagedata fileref="../../fig/method-call.png"/>
+                <imagedata fileref="../../tmp/method-call.png"/>
             </imageobject>
             <textobject><phrase>Anatomy of a Method Call</phrase></textobject>
         </mediaobject>

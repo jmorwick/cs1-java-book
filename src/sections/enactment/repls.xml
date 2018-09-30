@@ -24,10 +24,10 @@
         <title>Using the JShell REPL</title>
         <mediaobject>
             <imageobject condition="print">
-                <imagedata fileref="../../fig/jshell.png"/>
+                <imagedata fileref="../../tmp/jshell.png"/>
             </imageobject>
             <imageobject condition="web">
-                <imagedata fileref="../../fig/jshell.png"/>
+                <imagedata fileref="../../tmp/jshell.png"/>
                 </imageobject>
             <textobject><phrase>The Hello World! example with the JShell REPL</phrase></textobject>
         </mediaobject>

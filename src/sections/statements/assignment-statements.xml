@@ -15,10 +15,10 @@
             <title>Anatomy of an Assignment Statement</title>
             <mediaobject>
                 <imageobject condition="print">
-                    <imagedata fileref="../../fig/assignment-statement.png"/>
+                    <imagedata fileref="../../tmp/assignment-statement.png"/>
                 </imageobject>
                 <imageobject condition="web">
-                    <imagedata fileref="../../fig/assignment-statement.png"/>
+                    <imagedata fileref="../../tmp/assignment-statement.png"/>
                 </imageobject>
                 <textobject><phrase>Anatomy of an Assignment Statement</phrase></textobject>
             </mediaobject>
@@ -46,10 +46,10 @@
             <title>Anatomy of an Initialization Statement</title>
             <mediaobject>
                 <imageobject condition="print">
-                    <imagedata fileref="../../fig/initialization-statement.png"/>
+                    <imagedata fileref="../../tmp/initialization-statement.png"/>
                 </imageobject>
                 <imageobject condition="web">
-                    <imagedata fileref="../../fig/initialization-statement.png"/>
+                    <imagedata fileref="../../tmp/initialization-statement.png"/>
                 </imageobject>
                 <textobject><phrase>Anatomy of an Initialization Statement</phrase></textobject>
             </mediaobject>
@@ -62,10 +62,10 @@
                 <title>Anatomy of an Initialization Statement with Type Inference</title>
                 <mediaobject>
                     <imageobject condition="print">
-                        <imagedata fileref="../../fig/initialization-statement-type-inference.png"/>
+                        <imagedata fileref="../../tmp/initialization-statement-type-inference.png"/>
                     </imageobject>
                     <imageobject condition="web">
-                        <imagedata fileref="../../fig/initialization-statement-type-inference.png"/>
+                        <imagedata fileref="../../tmp/initialization-statement-type-inference.png"/>
                     </imageobject>
                     <textobject><phrase>Anatomy of an Initialization Statement with Type Inference</phrase></textobject>
                 </mediaobject>
