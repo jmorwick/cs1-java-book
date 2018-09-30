@@ -7,5 +7,5 @@
 
     <xi:include href="../sections/datatypes/collections/arrays.xml"/>
     <xi:include href="../sections/statements/loop/for-each-loops.xml"/>
-    <!--    <xi:include href="../sections/datatypes/object-references.xml"/> -->
+    <xi:include href="../sections/datatypes/object-references.xml"/>
 </chapter>
