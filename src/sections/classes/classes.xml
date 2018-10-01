@@ -6,22 +6,39 @@
     </para>
     <section>
         <title>Class and Static Method Definition Syntax</title>
-        <para>A class definition begins with the keyword \textbf{class}, followed by the class name, and then a pair of curly braces. For example, here is a very simple class definition:
+        <para>A class definition begins with the keyword <code>class</code>, followed by the class name, and then a pair of curly braces. For example, here is a very simple class definition:
         </para>
 <programlisting>
 <xi:include href="../../examples/code/simple-class.jsh" parse="text"/>
 </programlisting>
-        <para>A Java file must contain one class designated as public using the \textbf{public} keyword before the class definition. It's also important to note that the filename must match the name of the public class, with <emphasis>.java</emphasis> at the end (similar to how an HTML file has <emphasis>.html</emphasis> at the end). For example, if we were to produce a Java file called <emphasis>ExampleClass.java</emphasis>, it could have the following as its contents:
+        <para>A Java file must contain one class designated as public using the <code>public</code> keyword before the class definition. It's also important to note that the filename must match the name of the public class, with <emphasis>.java</emphasis> at the end (similar to how an HTML file has <emphasis>.html</emphasis> at the end). For example, if we were to produce a Java file called <emphasis>ExampleClass.java</emphasis>, it could have the following as its contents:
         </para>
 
         <programlisting><xi:include href="../../examples/code/ExampleClass.java" parse="text"/></programlisting>
-        <para>Inside of these curly braces is the class body in which its <firstterm>members</firstterm> are defined. Class members include method definitions, so we can include any the method definitions we've been developing. If we make these methods static by including the <code>static</code> keyword before the method definition, we can use them like any other static method (such as <varname>max</varname> in the <varname>Math</varname> class). For instance, consider the following modification of the class definition above:
+        <para>Inside of these curly braces is the class body in which its <firstterm>members</firstterm> are defined. Class members include method definitions, so we can include any of the method definitions we've been developing. If we make these methods static by including the <code>static</code> keyword before the method definition, we can use them like any other static method (such as <varname>max</varname> in the <varname>Math</varname> class). For instance, consider the following modification of the class definition above:
         </para>
       <programlisting><xi:include href="../../examples/code/ExampleClassWithStaticMethod.java" parse="text"/></programlisting>
         <para>Any other Java code we write, even in another file, could access this method as follows:
         </para>
 <programlisting>
 ExampleClassWithStaticMethod.sayHello();
+</programlisting>
+  <para>And in JShell, we could first use an import and then omit the class name when calling the method:
+  </para>
+<programlisting>
+import static ExampleClassWithStaticMethod.sayHello;
+sayHello();
+</programlisting>
+<para>If we want to use import statements in a Java file, they must all come before the class definitions (unlike JShell, where we could use import statements at any time). For example, if we want to use the <varname>min</varname> from the <varname>Math</varname> class in a method inside a class we define, we could import it at the top of the file:
+</para>
+<programlisting>
+import static java.lang.Math.min;
+
+public class ExampleClassWithImport {
+  public int getValidGrade(int rawGrade) {
+    return min(100, rawGrade);
+  }
+}
 </programlisting>
     </section>
     <section>
@@ -32,7 +49,7 @@ ExampleClassWithStaticMethod.sayHello();
     </section>
     <section>
         <title>Scope of Fields</title>
-        <para>Note that the variable <varname>greeting</varname> in the previous example is accessible in both of the static methods in the class. That is because the <firstterm>scope</firstterm> of the variable is the entire class. Note that unlike other scope-limited variables, we can access the static scope of a class by giving the class name and following it with the dot operator:
+        <para>Note that the variable <varname>greeting</varname> in the previous example is accessible in both of the static methods in the class. That is because the <firstterm>scope</firstterm> of the variable is the entire class definition body. Note that unlike other scope-limited variables, we can access the static scope of a class by giving the class name and following it with the dot operator:
 
 <programlisting>
 ClassWithMultipleStaticMethods.sayHello();

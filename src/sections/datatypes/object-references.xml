@@ -3,7 +3,7 @@
     xmlns:xi="http://www.w3.org/2001/XInclude">
         <title>Object References</title>
         <para>
-            An important and subtle distinction in dealing with object type variables is that the values they hold are not the objects themselves, but rather <firstterm>references</firstterm> to the objects. In this sense, the <code>null</code> value indicates that a variable is not referencing any value.
+            An important and subtle distinction in dealing with object type variables is that the values they hold are not the objects themselves, but rather <firstterm>references</firstterm> to the objects. In this sense, the <code>null</code> value indicates that a variable is not referencing any object value.
         </para>
         <para>
             This doesn't have particularly important implications when dealing with <firstterm>immutable</firstterm> objects like strings (immutable meaning that the values within the object cannot be changed). However, when we use a <firstterm>mutable</firstterm> object like an array, we need to be careful.
@@ -19,14 +19,14 @@ int y = x;
 x = 10;
 </programlisting>
 
-                Tracing through this example, the value 5 was first assigned to x, then copied from x to y. Thus, when the value 10 is assigned to x on the last line, the copy of the value 5 held by y remains intact. Evaluating y would still yield the value 5.
+                Tracing through this example, the value 5 was first assigned to x, then copied from x to y. Thus, when the value 10 is assigned to x on the last line, the copy of the value 5 held by y remains. Evaluating y would still yield the value 5.
 
                 However, consider the following code:
 
 <programlisting>
-                int[] x = new int[] {5};
-                int[] y = x;
-                x[0] = 10;
+int[] x = new int[] {5};
+int[] y = x;
+x[0] = 10;
 </programlisting>
 
                 What would y[0] be? In this case, it would also be 10. Tracing through this example, in the first line, an array is created holding just one value, 5, and a reference to this array object is stored in the variable x. Next, the reference to this object is copied from x and stored in y. That is, both x and y are holding references to the same object! The third line changes the value inside of this array, meaning that both x and y are now referencing an array that contains the value 10!
@@ -62,7 +62,7 @@ void clearArray(int[] arr) {
 }
 </programlisting>
 
-                    Note that the method above has no return value. It modifies the state of an array value that is passed in. This is anotehr example of a potentially useful side effect. Clearly not all side effects are bad, but inadvertent or unexpected side effects are the source of many confusing and troublesome bugs in more complex programs.
+                    Note that the method above has no return value. It modifies the state of an array value that is passed in. This is another example of a potentially useful side effect. Clearly not all side effects are bad, but inadvertent or unexpected side effects are the source of many confusing and troublesome bugs in more complex programs.
             </para>
         </section>
     </section>

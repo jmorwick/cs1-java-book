@@ -49,7 +49,7 @@ for(int x = 1; x &lt;= 10; x = x + 1);
     System.out.println(x);
 </programlisting>
 
-      At first glance, it appears this code will print out the numbers <literal>1</literal> through <literal>10</literal>, however, there is a semi-colon at the end of the first line. When ommitting curly braces, the body of a for loop will consist of a statement immediately following the loop header. Since a semicolon follows the loop header, it counts as the single statement, meaning the print statment on the second line is not part of the for loop's body. Thus, the reference to the variable <varname>x</varname> is not in the correct scope and will be caught as a syntax error.
+      At first glance, it appears this code will print out the numbers <literal>1</literal> through <literal>10</literal>, however, there is a semi-colon at the end of the first line. When omitting curly braces, the body of a for loop will consist of a statement immediately following the loop header. Since a semicolon follows the loop header, it counts as the single statement, meaning the print statement on the second line is not part of the for loop's body. Thus, the reference to the variable <varname>x</varname> is not in the correct scope and will be caught as a syntax error.
         </para>
     </example>
 </section>

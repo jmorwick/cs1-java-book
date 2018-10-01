@@ -16,31 +16,23 @@ Strings are a collection of characters, but we haven't yet seen a way to handle 
         <para>
             A variable named <varname>arr</varname> that could hold an array of integers is defined as follows:
 
-            <programlisting>
-            int[] arr;
-          </programlisting>
+            <programlisting>int[] arr;</programlisting>
         </para>
     </section>
     <section>
         <title>Creating Array Values</title>
         <para>Like strings, arrays are object types. Thus, variables with array types can be null:
 
-          <programlisting>
-            int[] arr = null;
-          </programlisting>
+          <programlisting>int[] arr = null;</programlisting>
 
             We also create array objects with the <code>new</code> keyword, although the syntax is a little different than for other constructor calls. Square brackets are used instead of parentheses and the size of the array is provided within the square brackets. The size is constant and cannot be changed over the lifetime of the array object you create. For example, the following code initializes <varname>arr</varname> to contain an array of 5 integers:
 
-          <programlisting>
-            int[] arr = new int[5];
-          </programlisting>
+          <programlisting>int[] arr = new int[5];</programlisting>
 
             Each of the integers in the array <varname>arr</varname> are initialized to zero in the previous example. However, we can initialize them to hold arbitrary values by enumerating those values within curly braces instead of providing the length of the array. For example, the following code initializes <varname>arr</varname> to hold the values 1 through 10:
 
 
-          <programlisting>
-            int[] arr = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-          </programlisting>
+          <programlisting>int[] arr = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};</programlisting>
         </para>
     </section>
     <section>
@@ -48,7 +40,7 @@ Strings are a collection of characters, but we haven't yet seen a way to handle 
         <section>
             <title>Length of an Array</title>
             <para>
-                The first operation to consider on arrays is how to determine the length of an array. This is similar to determining the length of a string, but instead of calling a method, the <varname>length</varname> field is accessed instead. For example, assuming the most recent defitinition of <varname>arr</varname>, the following expression will evaluate to $10$:
+                The first operation to consider on arrays is how to determine the length of an array. This is similar to determining the length of a string, but instead of calling a method, the <varname>length</varname> field is accessed instead. For example, assuming the most recent definition of <varname>arr</varname>, the following expression will evaluate to <literal>10</literal>:
 
           <programlisting>
                 arr.length
@@ -61,11 +53,9 @@ Strings are a collection of characters, but we haven't yet seen a way to handle 
             <title>Accessing an Array</title>
             <para>
 
-                The most important operation on arrays is retrieving a value from an array. This is very similar to the <varname>charAt</varname>instance method we used with strings, but instead of calling a method, square brackets following an array value indicate the index of the value to be retrieved. For example, assuming the most recent defitinition of <varname>arr</varname>, the following expression will evaluate to $1$:
+                The most important operation on arrays is retrieving a value from an array. This is very similar to the <varname>charAt</varname> instance method we used with strings, but instead of calling a method, square brackets following an array value indicate the index of the value to be retrieved. For example, assuming the most recent definition of <varname>arr</varname>, the following expression will evaluate to <literal>1</literal>:
 
-          <programlisting>
-                arr[0]
-          </programlisting>
+<programlisting>arr[0]</programlisting>
 
                 Note that the first index of an array is 0, just as with strings.</para>
         </section>
@@ -74,29 +64,24 @@ Strings are a collection of characters, but we haven't yet seen a way to handle 
             <para>
 
                 Though the size of an array can't change, the values it contains can. Think of an indexed array (an array value with an index following it in square brackets) as any other variable. In addition to evaluating it like a variable expression (above), we can also use it in an assignment statement. For example, the following statement will assign the value <literal>100</literal> to the first position in the array <varname>arr</varname>:
-
-          <programlisting>
-                arr[0] = 100;
-          </programlisting>
+<programlisting>arr[0] = 100;</programlisting>
                 Following this assignment statement, the following expression will evaluate to <literal>100</literal>:
 
-          <programlisting>
-                arr[0]
-          </programlisting>
+          <programlisting>arr[0]</programlisting>
                       </para>
         </section>
         <section>
             <title>Iterating through an Array</title>
             <para>
-                For loops are a very convient way to process each element of an array. For example, the following code initializes arr to the values 1 through 10, but can be easily modified to have any upper limit:
+                For loops are a very convenient way to process each element of an array. For example, the following code initializes <varname>arr</varname> to the values 1 through 10, but can be easily modified to have any upper limit:
 
-          <programlisting>
-                int size = 10;
-                int[] arr = new int[size];
-                for(int i=0; i&lt;arr.length; i++) {
-                    arr[i] = (i + 1);
-                    }
-          </programlisting>
+<programlisting>
+int size = 10;
+int[] arr = new int[size];
+for(int i=0; i&lt;arr.length; i++) {
+    arr[i] = (i + 1);
+}
+</programlisting>
         </para>
         </section>
     </section>

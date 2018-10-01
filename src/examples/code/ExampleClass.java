@@ -1,2 +1,2 @@
-public ExampleClass {
+public class ExampleClass {
 }
