@@ -95,5 +95,16 @@ true &amp;&amp; true
 </programlisting> These operators
             also have an order of precedence: <code>!</code>, <code>&amp;&amp;</code>, <code>||</code>
         </para>
+
+        <para>
+          Another feature of boolean operators that you should be mindful of is called <firstterm>short circuiting</firstterm>. The operands of <code>&amp;&amp;</code> and <code>||</code> are evaluated in order from left to right. If the left operand evaluates to <literal>false</literal> for  <code>&amp;&amp;</code>  or if the left operand evaluates to <literal>true</literal> for  <code>||</code>, the right operand is never evaluated. This is because it doesn't matter what value this operand evaluates to --  a <code>&amp;&amp;</code> expression would evaluate to <literal>false</literal> and a <code>||</code> expression would evaluate to <literal>true</literal> in these scenarios regardless of what value the right operand evalutes to.
+        </para>
+        <para>
+          For the most part, this just means that your programs will run a bit more efficiently, since only have of the work needs to be done to evaluate these expressions at times. However, if an error or a side effect occurs while evaluating the right operand, it is important for the programmer to know that it will not occur when the left operand is not evaluated due to short circuiting. The programmer can also take advantage of this. For example, consider a scenario where the variable <varname>students</varname> is the number of students in a class and the variable <varname>cupcakes</varname> is the number of cupcakes the instructor brought with them. If we want to determine whether there are enough cupcakes for each student to have at least 2, we could use the following boolean expression:
+          <programlisting>cupcakes / students &gt;= 2</programlisting>
+          However, if by some mistake we used this expression for a class with no students in it, we would get a division by zero error instead of <literal>true</literal>. The latter would be preferred if we simply wanted to know whether the enough cupcakes were baked. Thus, we could instead use the following expression:
+          <programlisting>students > 0 &amp;&amp; cupcakes / students &gt;= 2</programlisting>
+          In this case, if <varname>students</varname> is zero, the left operand to <code>&amp;&amp;</code> would evaluate to false, and the right operand would be ignored, avoiding the division by zero error.
+        </para>
     </section>
 </section>
