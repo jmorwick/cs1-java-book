@@ -3,38 +3,38 @@
     <info>
         <title>Booleans</title>
     </info>
-    
-    <para>   
+
+    <para>
         This section will introduce a significant new primitive type: <firstterm>booleans</firstterm>. The boolean type is actually the most simple type because it has only two possible values: <literal>true</literal> and <literal>false</literal>. Both <literal>true</literal> and <literal>false</literal> are also literal boolean values, and <varname>boolean</varname> is the name of the type. For example, you can declare and initialize a boolean variable as follows:
-        
+
 <programlisting>
 boolean mybool = true;
 </programlisting>
-        
+
         or simply
-        
+
 <programlisting>
 var mybool = true;
 </programlisting>
-        
+
     </para>
 
     <section>
         <info>
             <title>Comparison Operators</title>
         </info>
-        
+
         <para> The boolean type is useful for answering <emphasis>yes</emphasis> or
                 <emphasis>no</emphasis> questions, such as <emphasis>is 2 equal to 1 + 1?</emphasis>
             We can ask these types of questions with comparison operators. </para><para>
             The comparison operators are binary operators, just like the arithmetic operators from prior sections. However, they operate over values of any type (instead of numeric values), and the evaluate to a boolean value (instead of a numeric value). For example, <code>==</code> is the comparison operator. It determines whether two values are the same or not. So, to answer the question we posed in the last paragraph, we could use an expression like this:
-            
+
 <programlisting>
 (1 + 1) == 2
 </programlisting>
-            
+
             If you type this in to the REPL, it will evaluate to <literal>true</literal>. Note that the parentheses are not necessary, either. <code>+</code> will be evaluated before any comparison operators will be. There are several other comparison operators that will be useful to us, summarized below:
-            
+
             <itemizedlist>
                 <listitem>
                     <para><code>!=</code> Not equal to</para>
@@ -55,15 +55,21 @@ var mybool = true;
         </para>
         <para> For example, the expression <programlisting>4 &lt; 3 + 3</programlisting> would
             evaluate to <literal>true</literal>. </para>
+
+            <para>
+              Note that the <code>==</code> operator can not be used to compare the contents of two objects. THe <code>==</code> operator will determine if two object references are equal (references are covered in more detail in another section). If you wish to compare the contents of two objects (such as to determine if two strings contain the same characters), use the <varname>equals</varname> instance method of one of the objects and pass the other in as an argument.
+            </para>
+            <para>
+              For example, to check if an object stored in the variable <varname>message1</varname> has the same content as the object stored in the variable <varname>message2</varname>, the following expression would work: <programlisting>message1.equals(message2)</programlisting> Reversing the order would also work (assuming that neither variable holds the <code>null</code> value).
+          </para>
     </section>
-    
-    
+
     <section>
         <info>
             <title>Boolean Operators</title>
         </info>
         <para>
-            There are also operators that work strictly over boolean values, just as the arithmetic operators we used last week worked strictly over numeric values. These are called <firstterm>boolean operators</firstterm>. They operate over one or two boolean values and evaluate to another boolean value.  These operations are quite simple but form the basis for what is known as <firstterm>boolean algebra</firstterm>. 
+            There are also operators that work strictly over boolean values, just as the arithmetic operators we used last week worked strictly over numeric values. These are called <firstterm>boolean operators</firstterm>. They operate over one or two boolean values and evaluate to another boolean value.  These operations are quite simple but form the basis for what is known as <firstterm>boolean algebra</firstterm>.
         </para><para> The first operator we'll consider is the and operator: <code>&amp;&amp;</code>. This is a
             boolean operator that evaluates to <literal>true</literal> only when both the left and
             right operands also evaluate to <literal>true</literal>. For example:
@@ -87,8 +93,7 @@ true &amp;&amp; true
             <programlisting>
 !((false &amp;&amp; false) || false)
 </programlisting> These operators
-            also have an order of precedence: <code>!</code>, <code>||</code>,
-                <code>&amp;&amp;</code>
+            also have an order of precedence: <code>!</code>, <code>&amp;&amp;</code>, <code>||</code>
         </para>
     </section>
 </section>
