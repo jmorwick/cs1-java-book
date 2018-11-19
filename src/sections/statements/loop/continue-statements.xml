@@ -1,0 +1,61 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.continue-statements"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>Continue Statements</title>
+    </info>
+
+        <para>
+          <firstterm>continue statements</firstterm> can be used within a loop when the remainder of the loop should not be executed, but the loop should not be terminated as it would be with a <code>break</code> statement. When a <code>continue</code> statement is executed, the enclosing loop will cease executing its current iteration and then resume execution with the next iteration of the loop. Note that, if a <code>continue</code> statement is encountered in a <code>for</code> loop, the update statement will still execute before the next iteration of the loop begins.
+        </para>
+
+        <para><code>continue</code> statements are very simple in their syntax. They consist of just a single keyword (<code>continue</code>) followed by a semicolon:
+      </para>
+      <programlisting>
+        continue;
+      </programlisting>
+        <para>You will use <code>continue</code> statements within an <code>if</code> statement since you will only want to skip the remainder of an iteration of a loop because some other condition that arises. Perhaps the task of the current iteration of the loop is completed early or perhaps an error was encountered that should end the current iteration of the loop but not the entire task the loop is handling. </para>
+
+
+      <example><title>Validating User Input</title>
+        <para>
+          Assume there is a method called <varname>getUserResponse</varname> that allows the user to enter in a numeric value. The following code will request a positive even integer from the user and validate the user's response. If the user provides such a value, it will be added to a running total of these numbers.
+        </para>
+        <programlisting>
+    int total = 0;
+    while(true) {
+      // get a number from the user
+      System.out.print("provide a positive, even number: ");
+      x = getUserResponse();
+
+      if(x &lt;= 0) { // ensure user provided a positive number
+        System.out.println("Error: enter a positive number.");
+        continue;
+      }
+
+      if(x % 2 != 0) { // ensure user provided an even number
+        System.out.println("Error: enter an even number.");
+        continue;
+      }
+
+      // add the number to the total
+      total = total + x;
+      System.out.println("Total is currently " + total);
+    }
+        </programlisting>
+          <para>
+            There are two <code>continue</code> statements used in this snippet of code. The first is used when it is detected that the user provided a number that is not positive. The <code>continue</code> statement forces the loop to restart and the user is once again prompted for a valid response. The second <code>continue</code> statement is executed if an odd number is provided by the user. In both cases, the statement that adds the number to the total is skipped if the user breaks either of the rules for proper input. Sample interaction with this snippet of code may look like the example below:
+          </para>
+
+<screen>
+provide a positive, even number: 4
+Total is currently 4
+provide a positive, even number: 93
+Error: enter an even number.
+provide a positive, even number: 8
+Total is currently 12
+provide a positive, even number: -2
+Error: enter a positive number.
+provide a positive, even number:
+</screen>
+      </example>
+</section>
