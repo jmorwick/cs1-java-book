@@ -7,18 +7,18 @@
 <para>When writing loops, three components are very commonly included:
     <itemizedlist>
         <listitem>
-            <para>Some local variable is declared and initialized, for instance a varibale named \textit{counter} could be initialized to 1. </para>
+            <para>Some local variable is declared and initialized, for instance a variable named <varname>counter</varname> could be initialized to <literal>1</literal>. </para>
         </listitem>
         <listitem>
-            <para>That variable is tested as part of the while condition, for instance looping while \textit{counter} is less than 10.
+            <para>That variable is tested as part of the while condition, for instance looping while <varname>counter</varname> is less than <literal>10</literal>.
             </para>
         </listitem>
         <listitem>
-            <para>At the end of each iteration of the loop, the variable is altered in some way, for instance \textit{counter} could be incremented at the end of each iteration of the loop. </para>
+            <para>At the end of each iteration of the loop, the variable is altered in some way, for instance <varname>counter</varname> could be incremented at the end of each iteration of the loop. </para>
         </listitem>
 </itemizedlist>
 
-Since nearly every while loop that we write contains these three components, and also because they play an important role in determining how the loop executes, Java provides a special syntax called a \textbf{for loop} that simply re-organizes these components to all reside at the front of the loop.
+Since nearly every while loop that we write contains these three components, and also because they play an important role in determining how the loop executes, Java provides a special syntax called a <code>for</code> loop that simply re-organizes these components to all reside at the front of the loop.
 </para>
 
     <figure xml:id="fig.for-loop">
@@ -58,7 +58,7 @@ for(int count = 1; count &lt;= 10; count = count + 1) {
 }
 </programlisting></example>
 
-    <para>Because code written with while loops and for loops perform the exact same task, we call for loops <firstterm>syntactic sugar</firstterm>, in that it is meant only to help with the look of your code, not the function of your code. Essentially, it is used to improve your coding \textit{style}.</para>
+    <para>Because code written with while loops and for loops perform the exact same task, we call for loops <firstterm>syntactic sugar</firstterm>, in that it is meant only to help with the look of your code, not the function of your code. Essentially, it is used to improve your coding style.</para>
 
 <example><title>Iterate Through a String</title>
     <para>The following code will print each character of the string <varname>message</varname>, one character per line:
