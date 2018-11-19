@@ -2,28 +2,44 @@
     xmlns:xi="http://www.w3.org/2001/XInclude" >
     <info>
         <title>Conditional Expressions</title>
+        <remark>Prerequisites: expressions</remark>
     </info>
-    
-    <remark>Prerequisites: expressions</remark>
-    
+
+
     <para>
-    You can also create expressions that evaluate conditionally. These expressions use two operators in conjunction: a question mark (?) and a colon (:). Conditional expressions consist of 3 parts: a boolean expression, followed by a question mark, followed by an expression that wll be evaluated if the initial  boolean expression is true, followed by a colon, followed by an expression that will be evaluated if the initial boolean expression is false.
-    For example, consider the following expression:
-    </para>  
+    In addition to conditional statements, there are also expressions that evaluate conditionally. That is, the value they evaluate to is dependent on some boolean expression.</para>
+
+    <figure xml:id="fig.conditional-expression">
+        <title>Anatomy of a Conditional Expression</title>
+        <mediaobject>
+            <imageobject condition="print">
+                <imagedata fileref="../../tmp/conditional-expression.png"/>
+            </imageobject>
+            <imageobject condition="web">
+              <imagedata fileref="../../tmp/conditional-expression.png"/>
+            </imageobject>
+            <textobject><phrase>Anatomy of a Conditional Expression</phrase></textobject>
+        </mediaobject>
+    </figure>
+
+    <para> Conditional expressions use two operators in conjunction: a question mark (?) and a colon (:). These operators sit between three other expressions. These five parts of a conditional expression come in this order: a boolean expression, followed by a question mark, followed by an expression that will be evaluated if the initial boolean expression is true, followed by a colon, followed by an expression that will be evaluated if the initial boolean expression is false.
+    For example, consider the following conditional expression:
+    </para>
 <programlisting>
     5 > 10 ? 30 : 40
 </programlisting>
 <para>
-    This expression evaluates to the value 40 since the initial boolean expression evaluates 
-    to false, the expression following the colon is evaluated. The middle expression is ignored 
-    in this case. If we changed the comparison operator to &lt; 
-    the conditional expression would have evaluated to 30. 
-    
-    Here's another example that would evaluate to the maximum of x and y:
-</para>    
+    This expression evaluates to the value 40. Since the initial boolean expression evaluates
+    to false, the expression following the colon is evaluated. The middle expression is ignored
+    in this case. If we changed the comparison operator to &lt;
+    the whole conditional expression would have evaluated to 30 instead.
+</para>
+<para>
+    Here's another example that would evaluate to the maximum of two integer variables x and y:
+</para>
 
 <programlisting>
     x > y ? x : y
 </programlisting>
-    
+
 </section>
