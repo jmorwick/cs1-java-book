@@ -10,4 +10,5 @@
       <xi:include href="chapter6.xml"/>
       <xi:include href="chapter7.xml"/>
       <xi:include href="chapter8.xml"/>
+      <xi:include href="chapter9.xml"/>
 </book>
