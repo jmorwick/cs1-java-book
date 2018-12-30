@@ -1,15 +1,12 @@
 <chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.loops"
     xmlns:xi="http://www.w3.org/2001/XInclude">
     <info>
-        <title>Loops</title>
+        <title>Basic Loops</title>
     </info>
-    
-    
-    <para>Loops are the last piece of the puzzle for a <emphasis>real</emphasis> programming language (or what computer scientists call a <emphasis>Turing Complete</emphasis> language). What this means is that, technically, you can now write a program that is capable of doing whatever any other program written in any other language can do. 
+
+    <para>
+      Loops are the last piece of the puzzle for a <emphasis>real</emphasis> programming language (or what computer scientists call a <emphasis>Turing Complete</emphasis> language). What this means is that, technically, you can now write a program that is capable of doing whatever any other program written in any other language can do.
     </para>
-    
-    <para>You won't see as much new syntax in this chapter as you have in prior chapters. Loops look a lot like conditional statements. However, they add a level of complexity to programs that takes a lot of practice to master. Take your time with this material and read through it multiple times if necessary after going through examples, demos, and attempting practice problems.</para>
 
     <xi:include href="../sections/statements/loop/while-loops.xml"/>
-    <xi:include href="../sections/statements/loop/for-loop.xml"/>
 </chapter>

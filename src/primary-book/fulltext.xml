@@ -1,7 +1,7 @@
 <book xmlns="http://docbook.org/ns/docbook"
       xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
       <title>Modern Computer Programming -- An Expressions First Approach with Java (working title)</title>
-      <subtitle>Note that this is an incomplete preprint. Do not distribute. (c) 2018 Joseph Kendall-Morwick</subtitle>
+      <subtitle>Note that this is an incomplete preprint. Do not distribute. (c) 2019 Joseph Kendall-Morwick</subtitle>
       <xi:include href="chapter1.xml"/>
       <xi:include href="chapter2.xml"/>
       <xi:include href="chapter3.xml"/>
@@ -9,6 +9,12 @@
       <xi:include href="chapter5.xml"/>
       <xi:include href="chapter6.xml"/>
       <xi:include href="chapter7.xml"/>
+<!--
       <xi:include href="chapter8.xml"/>
       <xi:include href="chapter9.xml"/>
+      <xi:include href="chapter10.xml"/>
+      <xi:include href="chapter11.xml"/>
+      <xi:include href="chapter12.xml"/>
+      <xi:include href="chapter13.xml"/>
+      /-->
 </book>

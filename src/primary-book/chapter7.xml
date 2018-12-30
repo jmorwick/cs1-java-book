@@ -1,11 +1,13 @@
-<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.collections"
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.advancedloops"
     xmlns:xi="http://www.w3.org/2001/XInclude">
     <info>
-        <title>Basic Collections of Data</title>
+        <title>Advanced Loops</title>
     </info>
 
+    <para>
+      You won't see as much new syntax in this chapter as you have in prior chapters. Loops look a lot like conditional statements. However, they add a level of complexity to programs that takes a lot of practice to master. Take your time with this material and read through it multiple times if necessary after going through examples, demos, and attempting practice problems.
+    </para>
 
-    <xi:include href="../sections/datatypes/collections/arrays.xml"/>
-    <xi:include href="../sections/statements/loop/for-each-loops.xml"/>
-    <xi:include href="../sections/datatypes/object-references.xml"/>
+    <xi:include href="../sections/statements/loop/for-loop.xml"/>
+    <!-- TODO: add nested loop section /-->
 </chapter>
