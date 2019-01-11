@@ -98,6 +98,18 @@ String message = "my favorite number is " + 5;
     </example>
     </section>
 
+    <section><title>boolean String.equals(String)</title>
+
+        <para>The <varname>equals</varname> instance method takes another String as input and returns a boolean value (<literal>true</literal> or <literal>false</literal>) indicating whether the two strings (the argument and the string from which the method is being called) have the exact same contents or not. Boolean values are described in more detail in another section. </para>
+        <example>
+            <title>String.equals(String)</title>
+            <programlisting>"hello".equals("hello") </programlisting>
+            <para>evaluates to the value <literal>true</literal> whereas</para>
+            <programlisting>"hello".charAt("Hello") </programlisting>
+            <para>evaluates to the value <literal>false</literal></para>
+        </example>
+    </section>
+
     <section><title>char String.charAt(int)</title>
 
         <para>The <varname>charAt</varname> instance method takes the location (called the index or offset) of a character in the string and returns just that character (as a character-type value). The tricky part of working with string indexes is that the first index is zero (not one). </para>
