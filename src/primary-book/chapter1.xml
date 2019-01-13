@@ -16,5 +16,6 @@
   <xi:include href="../sections/expressions/expressions.xml"/>
   <xi:include href="../sections/expressions/arithmetic-expressions.xml"/>
   <xi:include href="../sections/expressions/variable-expressions.xml"/>
+  <xi:include href="../sections/definitions/code-organization.xml"/>
   <xi:include href="../sections/expressions/method-calls.xml"/>
 </chapter>
