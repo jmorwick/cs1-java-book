@@ -3,44 +3,37 @@
     <info>
         <title>The Character Primitive Data Type</title>
     </info>
-<para>
-A character is essentially another type of numeric primitive, but with a special purpose. In order to work with textual data on a computer (such as the letters you're reading right now, which were printed off by a computer), each letter (and also other symbols such as punctuation, numbers, etc) are each given a special code number. 
-</para>
-    <para>
-        Characters are a primitive type in Java, and the name of the type is <type>char</type>. Thus, just like <type>int</type> and <type>double</type>, you can create a variable of type <type>char</type>:
+    <para>A character is essentially another type of numeric primitive, but with a special purpose. In order to work with textual data on a computer (such as the letters you're reading right now, which were printed off by a computer), each letter (and also other symbols such as punctuation, numbers, etc) are each given a special code number.</para>
+    <para>Characters are a primitive type in Java, and the name of the type is <type>char</type>. Thus, just like <type>int</type> and <type>double</type>, you can create a variable of type <type>char</type>:
     </para>
-    
+
 <programlisting>
 char letterGrade;
 </programlisting>
 
-<para>
-There is also a special format for character literals. You can surround a character with single-quotes and Java will interpret that as a literal character value. For instance:
-</para>
-    
+  <para>There is also a special format for character literals. You can surround a character with single-quotes and Java will interpret that as a literal character value. For instance:</para>
+
 <programlisting>
 letterGrade = 'A';
 </programlisting>
 
-<para>
-Since Java was designed to work on any available computing platform, naturally it should also support any language as well. Thus, the standard used for the characters in Java include codes not only for the letters used in English, but also all other natural languages (including those with many characters, such as Chinese)! This system is called Unicode:
+<para>Since Java was designed to work on any available computing platform, naturally it should also support any language as well. Thus, the standard used for the characters in Java include codes not only for the letters used in English, but also all other natural languages (including those with many characters, such as Japanese)! This system is called Unicode:
     <uri>https://unicode.org/</uri></para>
-   
 
-<para>
-    The actual codes used for each character in Java can be looked up on the UTF-8 chart here: <uri>https://www.unicode.org/charts/</uri>
-</para>
-    
+
+<para>The actual codes used for each character in Java can be looked up on the UTF-8 chart here: <uri>https://www.unicode.org/charts/</uri>  Note that you can convert between the character codes and character literals by casting them back and forth to other integer types. For example, the following expression: <programlisting>(int)'a'</programlisting> will evaluate to the integer value <literal>97</literal>, which was designated for this character in unicode. The rest of the lower-case characters in the basic latin alphabet are assigned to each of the following integers, so similarly evaluating the expression: <programlisting>(int)'b'</programlisting> will evaluate to <literal>98</literal></para>
+
+
     <section>
         <title>Methods for Characters</title>
         <para>Just as with mathematical functions, there are also some <emphasis>built in</emphasis> methods for working with characters. You can make them available in the REPL by typing in the following statement:
-            
+
 <programlisting>
-import static java.lang.Character.*;    
-</programlisting>            
-            
+import static java.lang.Character.*;
+</programlisting>
+
             A couple important ones are summarized below:
-    
+
         <itemizedlist>
             <!-- these will need to be covered after booleans are
             <listitem>
@@ -66,17 +59,17 @@ import static java.lang.Character.*;
     </para>
         <!-- this will need to be covered after booleans are
         -        <para>Executing the following code:</para>
--        
+-
 -    <programlisting>
 -char c = 'A';
 -if(Character.isUpperCase(c)) {
 -  c = 'a';
 -}
 -    </programlisting>
--    
+-
 -    <para>would result in textit{c} holding the value 'a' at the end.  The following code would also produce the same result:
 -    </para>
--    
+-
 -    <programlisting>
 -char c = 'A';
 -c = Character.toLowerCase(c);
