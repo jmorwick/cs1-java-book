@@ -1,6 +1,6 @@
 <example xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="ex.call-round"
     xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Revisiting Averaging Several Integers</title>
-    
-    <para>Another method available from the import in Example 1.2 <!-- TODO: link to proper example --> is the <varname>round</varname> method that rounds a floating point value to the nearest integer value. This method abstracts away some of the details of averaging we implemented in Example 1.1. <!-- TODO: link to proper example --> For example, evaluating the expression <programlisting>average(5.9)</programlisting> yeilds the value <literal>6</literal> whereas evaluating the expression <programlisting>average(5.2)</programlisting> yields the value <literal>5</literal>. Note that this is much easier to underestand for a programmer than deciphering <programlisting>(int)(5.9 + 0.5)</programlisting> or <programlisting>(int)(5.2 + 0.5)</programlisting> which both perform the same rounding operation.</para>
+
+    <para>Another method available from the <code>Math</code> class is the <varname>round</varname> method that rounds a floating point value to the nearest integer value. This method abstracts away some of the details of averaging we implemented in another example. Evaluating the expression <programlisting>average(5.9)</programlisting> yields the value <literal>6</literal> whereas evaluating the expression <programlisting>average(5.2)</programlisting> yields the value <literal>5</literal>. Note that this is much easier to understand for a programmer than deciphering <programlisting>(int)(5.9 + 0.5)</programlisting> or <programlisting>(int)(5.2 + 0.5)</programlisting> which both perform the same rounding operation.</para>
 </example>

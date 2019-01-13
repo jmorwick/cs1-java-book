@@ -10,10 +10,9 @@
     <section><title>Method Call Expressions</title>
 
 
-    <para>Now that we have some methods available for use, we can make calls to them. Here is an example of a simple function call:</para>
-        <xi:include href="../../examples/call-sqrt.xml"/>
+    <para>You can use a method call expression to cause a method to execute. Method call expressions will evaluate to the method's <firstterm>return value</firstterm>, which can be seen as the result of the operation the method is performing. </para>
 
-    <para>To call a method, first give the name of the method you wish to call. Following the name should be a pair of parenthesis, within which is a comma-separated list of expressions for each argument. In the last example, there was only one argument, but a method could take more than one argument, or could even take zero arguments.</para>
+    <para>To call a method, first provide the name of the method you wish to call. Following the name should be a pair of parenthesis, within which is a comma-separated list of expressions for each argument. In the last example, there was only one argument, but a method could take more than one argument, or could even take zero arguments.</para>
 
     <figure xml:id="fig.method-call">
         <title>Anatomy of a Method Call</title>
@@ -28,8 +27,9 @@
         </mediaobject>
     </figure>
 
-    <para>In the diagram above, we're calling a method named <varname>pow</varname> which takes two arguments: the base and the power. The method returns the result of raising the specified base to the specified power (that is to say, this expression evaluates to the value 100).</para>
+    <para>In the diagram above, a method named <varname>pow</varname> is being called. This method takes two arguments: the base and the power (both <type>double</type> values). The return value of this method is the result of raising the specified base to the specified power (that is to say, this expression evaluates to the value 100).</para>
 
+    <xi:include href="../../examples/call-sqrt.xml"/>
     <xi:include href="../../examples/call-round.xml"/>
     </section>
 </section>
