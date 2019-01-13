@@ -145,7 +145,7 @@ String message = "my favorite number is " + 5;
     <section><title>String Escapes</title>
         <para>There are also some special values that strings (and characters) can hold, such as new lines (a character representing that the cursor drops to the next line), tabs (a character represeting that the tab key was pressed), and so on. These are insterted in to string (and character) literals by including a backslash (called an escape) before a special code. These special characters are interpreted when we print out strings. For example, consider the following print statement:
         </para>
-        <programlisting>System.out.println("A tab is \n\ta quite simple way \n\t\tto advance");</programlisting>
+        <programlisting>print("A tab is \n\ta quite simple way \n\t\tto advance");</programlisting>
 
         <para>...prints the following haiku to the console:</para>
 
@@ -157,7 +157,7 @@ to advance
         <para>It is important to note that because back slashes are interpreted as escapes, they can not be used as any other character would be in a string. However, you can include them by escaping them! For instance, the following code:
         </para>
 
-        <programlisting>System.out.println("here's a backslash: \\");</programlisting>
+        <programlisting>print("here's a backslash: \\");</programlisting>
         <para>prints the following to the standard output:</para>
         <screen>here's a backslash: \</screen>
     </section>
