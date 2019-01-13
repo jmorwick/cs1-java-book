@@ -22,5 +22,6 @@
     <xi:include href="../sections/statements/assignment-statements.xml"/>
     <xi:include href="../sections/statements/assignment-shortcuts.xml"/>
     <xi:include href="../sections/datatypes/characters.xml"/>
+    <xi:include href="../sections/statements/method-call-statements.xml"/>
     <xi:include href="../sections/enactment/scripts.xml"/>
 </chapter>

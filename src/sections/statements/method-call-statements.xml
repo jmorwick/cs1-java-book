@@ -1,0 +1,26 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.method-call-statements"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>Method Call Statements</title>
+    </info>
+
+
+    <para>Not every method will need to return a value. Some methods simply perform some side effects (that is, they alter the global state of the program in some way), and exit, yielding no return value. These methods are called <firstterm>void methods</firstterm> in that their return value is void (that is, there is no value at all). </para>
+
+    <para>Method call statements are very similar to method call expressions. The only difference is that they are the entire statement and end in a semicolon. For more information about how to make a method call, refer to the method call expression section</para>
+
+    <example>
+      <title>Printing a Message to the Screen</title>
+      <para>Thus far, we've received messages back from the REPL each time we evaluate an expression, but perhaps we would like a message to be delivered somewhere during the execution of our program. Many <emphasis>text-based applications</emphasis> interact with their users solely through messages printed to a console (such as the REPL itself). In the case of jshell, standard output is simply the jshell screen, so any messages you print while using jshell will show up there.</para>
+
+      <para>The method we will use to print to standard output is unfortunately (and infamously) somewhat complicated looking, but JShell does allow to access it in a more simple way. If you start up JShell with the <code>-startup PRINTING</code> argument, the print method will be available to you to call to print a message to the screen. Below is an example of how you could start JShell from a system command prompt with this option and use the print method to send a greeting:</para>
+<screen>
+bash-3.2$ jshell -startup PRINTING
+|  Welcome to JShell -- Version 10.0.1
+|  For an introduction type: /help intro
+
+jshell> print("Hello World!")
+Hello World!
+</screen>
+    </example>
+</section>
