@@ -1,0 +1,45 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.comparison-operators"
+    xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <info>
+        <title>Comparison Operators</title>
+    </info>
+
+        <para> The boolean type is useful for answering <emphasis>yes</emphasis> or
+                <emphasis>no</emphasis> questions, such as <emphasis>is 2 equal to 1 + 1?</emphasis>
+            We can ask these types of questions with comparison operators. </para><para>
+            The comparison operators are binary operators, just like the arithmetic operators from prior sections. However, they operate over values of any type (instead of numeric values), and the evaluate to a boolean value (instead of a numeric value). For example, <code>==</code> is the comparison operator. It determines whether two values are the same or not. So, to answer the question we posed in the last paragraph, we could use an expression like this:
+
+<programlisting>
+(1 + 1) == 2
+</programlisting>
+
+            If you type this in to the REPL, it will evaluate to <literal>true</literal>. Note that the parentheses are not necessary, either. <code>+</code> will be evaluated before any comparison operators will be. There are several other comparison operators that will be useful to us, summarized below:
+
+            <itemizedlist>
+                <listitem>
+                    <para><code>!=</code> Not equal to</para>
+                </listitem>
+                <listitem>
+                    <para><code>&gt;</code> greater than</para>
+                </listitem>
+                <listitem>
+                    <para><code>&lt;</code> less than</para>
+                </listitem>
+                <listitem>
+                    <para><code>&gt;=</code> greater than or equal to</para>
+                </listitem>
+                <listitem>
+                    <para><code>&lt;=</code> less than or equal to</para>
+                </listitem>
+            </itemizedlist>
+        </para>
+        <para> For example, the expression <programlisting>4 &lt; 3 + 3</programlisting> would
+            evaluate to <literal>true</literal>. </para>
+
+            <para>
+              Note that the <code>==</code> operator can not be used to compare the contents of two objects. The <code>==</code> operator will determine if two object references are equal (references are covered in more detail in another section). If you wish to compare the contents of two objects (such as to determine if two strings contain the same characters), use the <varname>equals</varname> instance method of one of the objects and pass the other in as an argument.
+            </para>
+            <para>
+              For example, to check if an object stored in the variable <varname>message1</varname> has the same content as the object stored in the variable <varname>message2</varname>, the following expression would work: <programlisting>message1.equals(message2)</programlisting> Reversing the order would also work (assuming that neither variable holds the <code>null</code> value).
+          </para>
+</section>

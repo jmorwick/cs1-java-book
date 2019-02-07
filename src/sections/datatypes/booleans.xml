@@ -5,7 +5,7 @@
     </info>
 
     <para>
-        This section will introduce a significant new primitive type: <firstterm>booleans</firstterm>. The boolean type is actually the most simple type because it has only two possible values: <literal>true</literal> and <literal>false</literal>. Both <literal>true</literal> and <literal>false</literal> are also literal boolean values, and <varname>boolean</varname> is the name of the type. For example, you can declare and initialize a boolean variable as follows:
+        The boolean type is a primitive data type and actually the most simple type because it has only two possible values: <literal>true</literal> and <literal>false</literal>. Both <literal>true</literal> and <literal>false</literal> are also literal boolean values, and <varname>boolean</varname> is the name of the type. For example, you can declare and initialize a boolean variable as follows:
 
 <programlisting>
 boolean mybool = true;
@@ -19,92 +19,4 @@ var mybool = true;
 
     </para>
 
-    <section>
-        <info>
-            <title>Comparison Operators</title>
-        </info>
-
-        <para> The boolean type is useful for answering <emphasis>yes</emphasis> or
-                <emphasis>no</emphasis> questions, such as <emphasis>is 2 equal to 1 + 1?</emphasis>
-            We can ask these types of questions with comparison operators. </para><para>
-            The comparison operators are binary operators, just like the arithmetic operators from prior sections. However, they operate over values of any type (instead of numeric values), and the evaluate to a boolean value (instead of a numeric value). For example, <code>==</code> is the comparison operator. It determines whether two values are the same or not. So, to answer the question we posed in the last paragraph, we could use an expression like this:
-
-<programlisting>
-(1 + 1) == 2
-</programlisting>
-
-            If you type this in to the REPL, it will evaluate to <literal>true</literal>. Note that the parentheses are not necessary, either. <code>+</code> will be evaluated before any comparison operators will be. There are several other comparison operators that will be useful to us, summarized below:
-
-            <itemizedlist>
-                <listitem>
-                    <para><code>!=</code> Not equal to</para>
-                </listitem>
-                <listitem>
-                    <para><code>&gt;</code> greater than</para>
-                </listitem>
-                <listitem>
-                    <para><code>&lt;</code> less than</para>
-                </listitem>
-                <listitem>
-                    <para><code>&gt;=</code> greater than or equal to</para>
-                </listitem>
-                <listitem>
-                    <para><code>&lt;=</code> less than or equal to</para>
-                </listitem>
-            </itemizedlist>
-        </para>
-        <para> For example, the expression <programlisting>4 &lt; 3 + 3</programlisting> would
-            evaluate to <literal>true</literal>. </para>
-
-            <para>
-              Note that the <code>==</code> operator can not be used to compare the contents of two objects. The <code>==</code> operator will determine if two object references are equal (references are covered in more detail in another section). If you wish to compare the contents of two objects (such as to determine if two strings contain the same characters), use the <varname>equals</varname> instance method of one of the objects and pass the other in as an argument.
-            </para>
-            <para>
-              For example, to check if an object stored in the variable <varname>message1</varname> has the same content as the object stored in the variable <varname>message2</varname>, the following expression would work: <programlisting>message1.equals(message2)</programlisting> Reversing the order would also work (assuming that neither variable holds the <code>null</code> value).
-          </para>
-    </section>
-
-    <section>
-        <info>
-            <title>Boolean Operators</title>
-        </info>
-        <para>
-            There are also operators that work strictly over boolean values, just as the arithmetic operators we used last week worked strictly over numeric values. These are called <firstterm>boolean operators</firstterm>. They operate over one or two boolean values and evaluate to another boolean value.  These operations are quite simple but form the basis for what is known as <firstterm>boolean algebra</firstterm>.
-        </para><para> The first operator we'll consider is the and operator: <code>&amp;&amp;</code>. This is a
-            boolean operator that evaluates to <literal>true</literal> only when both the left and
-            right operands also evaluate to <literal>true</literal>. For example:
-            <programlisting>
-true &amp;&amp; false
-</programlisting> evaluates to
-                <literal>false</literal>, since the right-hand operand is false. However:
-            <programlisting>
-true &amp;&amp; true
-</programlisting> evaluates to
-                <literal>true</literal>, since both operands are true. </para><para>
-            The next operator we'll consider is the or operator: <code>||</code> It is similar to the and operator, but it evaluates to <literal>true</literal> when either of the operands are true. Put another way, this operator will only evaluate to <literal>false</literal> when both of its operands evaluate to <literal>false</literal>. For example, if you replaced <code>&amp;&amp;</code> with <code>||</code> in both of the last two expressions, they would both evaluate to <literal>true</literal>.
-        </para><para> The last boolean operator we'll consider is unique in that it's a unary operator. Recall that
-            this means it has only one operand. It is called the not operator: <code>!</code> This
-            operator simply reverses the boolean value of its operand. For example:
-            <programlisting>
-!false
-</programlisting> evaluates to <literal>true</literal>. Note
-            that all of these operators can be combined and nested in sub expressions. For example,
-            the following expression evaluates to <literal>true</literal>:
-            <programlisting>
-!((false &amp;&amp; false) || false)
-</programlisting> These operators
-            also have an order of precedence: <code>!</code>, <code>&amp;&amp;</code>, <code>||</code>
-        </para>
-
-        <para>
-          Another feature of boolean operators that you should be mindful of is called <firstterm>short circuiting</firstterm>. The operands of <code>&amp;&amp;</code> and <code>||</code> are evaluated in order from left to right. If the left operand evaluates to <literal>false</literal> for  <code>&amp;&amp;</code>  or if the left operand evaluates to <literal>true</literal> for  <code>||</code>, the right operand is never evaluated. This is because it doesn't matter what value this operand evaluates to --  a <code>&amp;&amp;</code> expression would evaluate to <literal>false</literal> and a <code>||</code> expression would evaluate to <literal>true</literal> in these scenarios regardless of what value the right operand evalutes to.
-        </para>
-        <para>
-          For the most part, this just means that your programs will run a bit more efficiently, since only have of the work needs to be done to evaluate these expressions at times. However, if an error or a side effect occurs while evaluating the right operand, it is important for the programmer to know that it will not occur when the left operand is not evaluated due to short circuiting. The programmer can also take advantage of this. For example, consider a scenario where the variable <varname>students</varname> is the number of students in a class and the variable <varname>cupcakes</varname> is the number of cupcakes the instructor brought with them. If we want to determine whether there are enough cupcakes for each student to have at least 2, we could use the following boolean expression:
-          <programlisting>cupcakes / students &gt;= 2</programlisting>
-          However, if by some mistake we used this expression for a class with no students in it, we would get a division by zero error instead of <literal>true</literal>. The latter would be preferred if we simply wanted to know whether the enough cupcakes were baked. Thus, we could instead use the following expression:
-          <programlisting>students > 0 &amp;&amp; cupcakes / students &gt;= 2</programlisting>
-          In this case, if <varname>students</varname> is zero, the left operand to <code>&amp;&amp;</code> would evaluate to false, and the right operand would be ignored, avoiding the division by zero error.
-        </para>
-    </section>
 </section>
