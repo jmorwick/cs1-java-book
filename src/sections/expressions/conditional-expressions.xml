@@ -5,9 +5,9 @@
         <remark>Prerequisites: expressions</remark>
     </info>
 
-
     <para>
-    In addition to conditional statements, there are also expressions that evaluate conditionally. That is, the value they evaluate to is dependent on some boolean expression.</para>
+      Boolean expressions evaluate to one of two values: <literal>true</literal> or <literal>false</literal>. What if the programmer wanted an expression like this to evaluate to one of two other values? For example, what if the program was answering a question about whether it was hot outside and the user expected <literal>"yes"</literal> or <literal>"no"</literal> to be printed? A <firstterm>conditional expression</firstterm> builds on a boolean expression to provide this flexibility.
+    </para>
 
     <figure xml:id="fig.conditional-expression">
         <title>Anatomy of a Conditional Expression</title>
