@@ -35,5 +35,14 @@ for(String name : names) {
     System.out.println(name);
 }
 </programlisting>
+
+<para>This makes it easier to use arbitrary expressions that yield arrays. For example, the following code snippet also does the same thing as the previous two, but doesn't require the initial variable definition:
+</para>
+
+<programlisting>
+for(String name : new String[] { "Jane", "Billy", "Susie" }) {
+    System.out.println(name);
+}
+</programlisting>
 </example>
 </section>

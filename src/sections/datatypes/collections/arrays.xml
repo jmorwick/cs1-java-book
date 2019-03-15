@@ -11,7 +11,10 @@ Strings are a collection of characters, but we haven't yet seen a way to handle 
     <section>
         <title>The Array Type</title>
         <para>
-            Values in an array can have any type, but they must all have the <emphasis>same type</emphasis>. Arrays themselves are a type of data, but are parameterized by the type of data they hold. Thus an array type has two parts: the type of data held by the array, and a pair of square brackets indicating an array type. For example, the type <emphasis>array of integers</emphasis> would be written: <type>int[]</type>
+            Arrays themselves are a type of data, but are parameterized by the type of data they hold (that is to say, there are many 'array types' and each is distinguished by the type of data held by an array of that type). Values in an array can have any type, but they must all have the <emphasis>same type</emphasis> as each other.
+        </para>
+        <para>
+            The syntax for an array type has two parts: the type of data held by the array, and a pair of square brackets indicating an array type. For example, the type <emphasis>array of integers</emphasis> would be written: <type>int[]</type>
         </para>
         <para>
             A variable named <varname>arr</varname> that could hold an array of integers is defined as follows:
@@ -25,7 +28,7 @@ Strings are a collection of characters, but we haven't yet seen a way to handle 
 
           <programlisting>int[] arr = null;</programlisting>
 
-            We also create array objects with the <code>new</code> keyword, although the syntax is a little different than for other constructor calls. Square brackets are used instead of parentheses and the size of the array is provided within the square brackets. The size is constant and cannot be changed over the lifetime of the array object you create. For example, the following code initializes <varname>arr</varname> to contain an array of 5 integers:
+            We also create array objects with the <code>new</code> keyword, although the syntax is a little different than it is for other constructor calls. Square brackets are used instead of parentheses and the size of the array is provided within the square brackets. The size is constant and cannot be changed over the lifetime of the array object you create. For example, the following code initializes <varname>arr</varname> to contain an array of 5 integers:
 
           <programlisting>int[] arr = new int[5];</programlisting>
 

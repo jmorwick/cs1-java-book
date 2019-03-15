@@ -4,18 +4,7 @@
         <title>Basic Collections of Data</title>
     </info>
 
-<!-- TODO: create 6 new chapters from these sections (and by adding a few more) for unit 2 /-->
-
     <xi:include href="../sections/datatypes/collections/arrays.xml"/>
     <xi:include href="../sections/statements/loop/for-each-loops.xml"/>
-    <xi:include href="../sections/classes/classes.xml"/>
-    <xi:include href="../sections/expressions/scope.xml"/>
-    <xi:include href="../sections/enactment/applications.xml"/>
-    <xi:include href="../sections/enactment/command-line-args.xml"/>
-    <xi:include href="../sections/statements/loop/break-statements.xml"/>
-    <xi:include href="../sections/statements/loop/continue-statements.xml"/>
-    <xi:include href="../sections/definitions/methods/varargs.xml"/>
-    <xi:include href="../sections/datatypes/object-references.xml"/>
-
 
 </chapter>
