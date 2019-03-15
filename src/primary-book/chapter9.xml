@@ -1,8 +1,14 @@
 <chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.applications"
     xmlns:xi="http://www.w3.org/2001/XInclude">
     <info>
-        <title>Applications</title>
+        <title>Advanced Loops and Arrays</title>
     </info>
 
+    <para>Working with loops and arrays can become tedious some times. A lot of code might be required to handle a fairly intuitive task. This chapter will introduce some new syntax that helps you clean up your code and make it more efficient, particularly when working with loops and arrays.
+    </para>
+
+    <xi:include href="../sections/statements/loop/break-statements.xml"/>
+    <xi:include href="../sections/statements/loop/continue-statements.xml"/>
+    <xi:include href="../sections/definitions/methods/varargs.xml"/>
 
 </chapter>

@@ -4,37 +4,38 @@
         <title>Variable Number of Arguments</title>
     </info>
 
-<para>All the method definitions we've examined thus far have required the programmer to be explicit about the \textbf{number of parameters} for the method and their types. Thus the programmer can't define a method that could take either 1, 2, or 3 arguments -- the number of arguments would always need to be the same. 
+<para>All the method definitions we've examined thus far have required the programmer to be explicit about the number of parameters for the method and their types. Thus the programmer can't define a method that could take either 1, 2, or 3 arguments -- the number of arguments would always need to be the same.
 </para>
-    
+
+
     <para>
 There is a way around this limitation. We could define a method that has an array-type parameter. The array argument we pass in to this method could be of any length, so we could package our arguments inside of it.
 </para>
-    
+
 <example>
     <title>Sum an Array of Integers</title>
 <para>If we wanted to write a method that would add several numbers together, we could package all those numbers in an array before we pass them to the method:
 </para>
 <programlisting>
-int sum(int[] numbers) {
-int total = 0;
-for(int number : numbers) {
-total += number;
-}
-return total;
-}
+  int sum(int[] numbers) {
+    int total = 0;
+    for(int number : numbers) {
+      total += number;
+    }
+    return total;
+  }
 </programlisting>
 
 <para>If we had three integer variables we wanted to add together, we could then pass them in within a literal array:
 </para>
-    
+
 <programlisting>
-sum(new int[] {a, b, c})
+  sum(new int[] {a, b, c})
 </programlisting>
 
 </example>
 <para>
-Since Java 5, variable number of arguments has been supported in Java, allowing us to perform the same task as the method above, but with a cleaner looking syntax. Instead of declaring that the method accepts an array, an ellipsis is included in between the type of the arguments being passed in and a variable name for an array that will hold all of the values. 
+Since Java 5, variable number of arguments has been supported in Java, allowing us to perform the same task as the method above, but with a cleaner looking syntax. Using the varargs syntax, we'll declare that our method accepts an integer instead of an array. The difference will be that we'll include an ellipsis in between the type (<type>int</type>) and the variable name. The variable will still hold an array of integers in this case, not a single integer. This syntax can be used for any type (not just integers). You could write a varargs method that takes an arbitrary number of <type>String</type> parameters, for example. 
 </para>
 
 <example>
@@ -42,20 +43,20 @@ Since Java 5, variable number of arguments has been supported in Java, allowing 
 <para>We could rewrite the example above using variable arguments as follows:
 </para>
 <programlisting>
-int sum(int ... numbers) {
-int total = 0;
-for(int number : numbers) {
-total += number;
-}
-return total;
-}
+  int sum(int ... numbers) {
+    int total = 0;
+    for(int number : numbers) {
+      total += number;
+    }
+    return total;
+  }
 </programlisting>
 
 <para>There is very little difference in the method definition, but now we don't need to create a literal array when we pass in a variable number of arguments. This version of sum can be called as follows:
 </para>
-    
+
 <programlisting>
-sum(a, b, c)
+  sum(a, b, c)
 </programlisting>
 </example>
 </section>
