@@ -4,6 +4,10 @@
         <title>Basic Collections of Data</title>
     </info>
 
+    <para>
+      The only collection of data with arbitrary size we've worked with so far is String. However, instead of characters, what if you wanted to store a collection of integers, or even a collection of Strings? The array data type allows a Java programmer to do just this. This chapter will introduce arrays as well as how to work with them using loops. 
+    </para>
+
     <xi:include href="../sections/datatypes/collections/arrays.xml"/>
     <xi:include href="../sections/statements/loop/for-each-loops.xml"/>
 
