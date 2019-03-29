@@ -61,7 +61,6 @@ void clearArray(int[] arr) {
     }
 }
 </programlisting>
-
                     Note that the method above has no return value. It modifies the state of an array value that is passed in. This is another example of a potentially useful side effect. Clearly not all side effects are bad, but inadvertent or unexpected side effects are the source of many confusing and troublesome bugs in more complex programs.
             </para>
         </section>

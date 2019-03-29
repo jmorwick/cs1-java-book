@@ -2,7 +2,7 @@
     xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Basic Class Definitions</title>
 
-    <para>Every object type has a class definition associated with it, but classes in Java are also used for other special purposes, such as creating a collection of static methods (for example, the Math class) or for creating a Java application.
+    <para>Every object type has a class definition associated with it, but classes in Java are also used for other special purposes, such as creating a collection of static methods (for example, the Math class) or for creating a Java application. Classes are the primary definition you'll find in a typical Java source-code file. These files end with the extension .java (rather than .txt or .jsh). 
     </para>
     <section>
         <title>Class and Static Method Definition Syntax</title>

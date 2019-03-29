@@ -1,0 +1,12 @@
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.references"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <info>
+        <title>Object References</title>
+    </info>
+
+    <para>
+      In Java there is a fundamental difference between primitive types and object types. Variables that hold primitive type data (such as integers or booleans) work intuitively -- they hold the actual values you're working with. Object type variables are different. They hold a reference to the location of the object, somewhere else in memory. This has some important but subtle implications that will be explored in this chapter.
+    </para>
+
+    <xi:include href="../sections/datatypes/object-references.xml"/>
+</chapter>

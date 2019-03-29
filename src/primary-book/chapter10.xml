@@ -1,9 +1,15 @@
-<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.parameters"
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chapter.applications"
     xmlns:xi="http://www.w3.org/2001/XInclude">
     <info>
-        <title>Advanced Arrays</title>
+        <title>Java Applications</title>
     </info>
-    
-    <!-- TODO: array methods (shallow vs deep copy, Arrays class) -->
-    <!-- TODO: 2d arrays -->
+
+    <para>This book has taken an incremental approach to teach you Java by starting small and using the Java REPL (JShell) to focus on individual programming concepts. This chapter will introduce the last few concepts you'll need to understand in order to write a full-fledged Java application that can stand on its own.
+    </para>
+
+    <xi:include href="../sections/expressions/scope.xml"/>
+    <xi:include href="../sections/classes/classes.xml"/>
+    <xi:include href="../sections/enactment/applications.xml"/>
+    <xi:include href="../sections/enactment/command-line-args.xml"/>
+
 </chapter>

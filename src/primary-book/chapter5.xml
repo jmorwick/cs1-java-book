@@ -9,8 +9,7 @@
     </para>
 
     <xi:include href="../sections/datatypes/booleans.xml"/>
-    <xi:include href="../sections/expressions/comparison-operators.xml"/> 
-    <xi:include href="../sections/expressions/boolean-operators.xml"/>
+    <xi:include href="../sections/expressions/comparison-operators.xml"/>
     <xi:include href="../sections/expressions/conditional-expressions.xml"/>
     <xi:include href="../sections/statements/conditional/conditional-statements.xml"/>
 

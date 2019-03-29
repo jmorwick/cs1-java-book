@@ -5,7 +5,7 @@
     </info>
 
     <para>
-        The last section explained how Java classes can be used to hold collections of static methods. They are also used as the entry points in to stand-alone Java applications.
+        Previous sections explained how Java classes can be used to hold collections of static methods. They are also used as the entry points in to stand-alone Java applications.
     </para>
     <section>
         <title>Main Methods</title>
@@ -13,7 +13,7 @@
         To run a java application, you must provide the Java runtime environment (JRE) with the name of a class representing a Java application. The JRE will then search for one particular static method called <code>main</code> and execute it. This is called the <firstterm>entry point</firstterm> to the application.
       </para>
       <para>
-        The JRE is very picky about how main should be defined. Firstly, the name must be exact -- <code>main</code> must not be capitalized or otherwise misspelled. Next, the method (like the class definition) must be declared to be public. It also must be a static method, so both of these keywords need to preceed the rest of the method definition (typically public comes first, but the order is more of a style issue). Next, the return type of the method must be void. Finally, the method must have one parameter. The parameter can be named anything you want, though by convention it is given the name <varname>args</varname>. What is important is that the type of this parameter is an array of strings:  <type>String[]</type>.
+        The JRE is very picky about how <code>main</code> should be defined. Firstly, the name must be exact -- <code>main</code> must not be capitalized or otherwise misspelled. Next, the method (like the class definition) must be declared to be public. It also must be a static method, so both of these keywords need to preceed the rest of the method definition (typically public comes first, but the order is more of a style issue). Next, the return type of the method must be void. Finally, the method must have one parameter. The parameter can be named anything you want, though by convention it is given the name <varname>args</varname>. What is important is that the type of this parameter is an array of strings:  <type>String[]</type>.
 
         Putting this all together, the following serves as an example of a complete Java application:
         </para>
@@ -30,10 +30,18 @@
         <title>Compiling and Running Java Programs</title>
 
         <para>
-          If you develop a java file such as <code>Hello.java</code>, you must first compile it before you run it. Recall that typing <emphasis>jshell</emphasis> at the command prompt started up the jshell REPL. Similarly, you can compile this Java program at the command prompt by typing <screen>javac Hello.java</screen>. If the command was successful, you should see a file in your directory called <code>Hello.class</code>. If it was unsuccessful, you will recieve an error message. Generally, you can compile any other Java file by including its file name in the place of <code>Hello.java</code>.
+          If you develop a java file such as <code>Hello.java</code>, you must first compile it before you run it. Recall that typing <emphasis>jshell</emphasis> at the command prompt started up the jshell REPL. Similarly, you can compile this Java program at the command prompt by typing:
+       </para>
+       <screen>javac Hello.java</screen>
+       <para>
+          If the command was successful, you should see a file in your directory called <code>Hello.class</code>. If it was unsuccessful, you will recieve an error message. Generally, you can compile any other Java file by including its file name in the place of <code>Hello.java</code>.
         </para>
         <para>
-          Once your program is compiled successfully, you can run it by typing the command: <screen>java Hello</screen> This starts up the JRE and tells it to look for a main method in the class <code>Hello</code>. If you did not properly define your main method, you may receive an error message at this point. Otherwise, you will see the welcome message printed in the console.
+          Once your program is compiled successfully, you can run it by typing the command:
+        </para>
+        <screen>java Hello</screen>
+        <para>
+          This starts up the JRE and tells it to look for a main method in the class <code>Hello</code>. If you did not properly define your main method, you may receive an error message at this point. Otherwise, you will see the welcome message printed in the console.
         </para>
 
     </section>
