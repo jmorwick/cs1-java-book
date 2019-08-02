@@ -1,6 +1,6 @@
 <book xmlns="http://docbook.org/ns/docbook"
       xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
-      <title>Modern Computer Programming -- An Expressions First Approach with Java (working title)</title>
+      <title>An Expressions First Approach to Learning Programming with Java and JShell</title>
       <subtitle>Note that this is an incomplete preprint. Do not distribute. (c) 2019 Joseph Kendall-Morwick</subtitle>
       <xi:include href="chapter1.xml"/>
       <xi:include href="chapter2.xml"/>
