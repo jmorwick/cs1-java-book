@@ -1,0 +1,25 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.nesting-if-statements"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+        <info>
+            <title>Nested If Statements</title>
+        </info>
+
+        <para>Any statement can be included in the body of an if statement, which means you can include an if statement inside an if statement! This is called a nested if statement.
+        </para>
+        <example>
+            <title>Nested if Statements to Determine Best Temperature</title>
+            <para>
+                The following method will return <literal>true</literal> <emphasis>if</emphasis> the <varname>tempaerature</varname> (an integer type variable) is between <literal>68</literal> and <literal>72</literal>:</para>
+
+
+            <programlisting>
+<xi:include href="../../../examples/code/justRight.jsh" parse="text"/>
+</programlisting>
+            <para>One thing to note about this example is that there are no <code>else</code> statements. There could be, but they aren't necessary since in all cases they would return <literal>false</literal>, which is also what the last statement of the method does.
+            </para>
+            <para>
+                Also notice that the nested if block is indented further than the block it is nested in. This is an important style convention that you should follow whenever opening nested blocks of code, not just with nested if statements.
+            </para>
+        </example>
+    </section>
+

@@ -9,5 +9,4 @@
     </para>
 
     <xi:include href="../sections/statements/loop/for-loop.xml"/>
-    <!-- TODO: add nested loop section /-->
 </chapter>

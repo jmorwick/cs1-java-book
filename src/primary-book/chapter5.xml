@@ -4,14 +4,11 @@
         <title>Decision Making in Imperative Programs</title>
     </info>
 
-    <para>
-        In the GCD algorithm exercise, you had to manually work through the algorithm in jshell because, this far, you have not seen a way to handle the portions of the algorithm where a decision had to be made. In particular, you had to check if a value was greater than zero or not and repeat some of the code if it was. In this chapter, we'll begin looking at conditional statements which allow you to take one of several actions depending on the state of your program. This is only half of the issue for the GCD algorithm, but later in this unit you'll also learn how to have a snippet of code repeat multiple times as well.
+    <para>In the GCD algorithm exercise, you had to manually work through the algorithm in jshell because, this far, you have not seen a way to handle the portions of the algorithm where a decision had to be made. In particular, you had to check if a value was greater than zero or not and repeat some of the code if it was. In this chapter, we'll begin looking at conditional statements which allow you to take one of several actions depending on the state of your program. This is only half of the issue for the GCD algorithm, but in subsequent chapters you'll also learn how to have a snippet of code repeat multiple times, as the GCD algorithm does.
     </para>
 
     <xi:include href="../sections/datatypes/booleans.xml"/>
     <xi:include href="../sections/expressions/comparison-operators.xml"/>
     <xi:include href="../sections/expressions/conditional-expressions.xml"/>
-    <xi:include href="../sections/statements/conditional/conditional-statements.xml"/>
-
-
+    <xi:include href="../sections/statements/conditional/if-statements.xml"/>
 </chapter>

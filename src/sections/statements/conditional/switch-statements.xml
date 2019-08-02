@@ -1,0 +1,64 @@
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="section.switch-statements"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+        <info>
+            <title>Switch Statements</title>
+        </info>
+
+        <para>If each of the <code>if</code> statements in an if/else chain are simply comparing some expression to one of several literal values, there is a special syntax in Java called a <firstterm>switch</firstterm> statement that can be used instead. In some of these cases, this will be a little easier to read and more efficient.
+        </para>
+
+
+        <para>
+            The syntax for switch statements is a little trickier than the other conditional statements we've seen. Following the <code>switch</code> keyword is an expression in parentheses, but it won't be a boolean expression. Instead, it can be any other type of primitive or String value. This value will be compared against a number of literal values inside of the switch statement body, which follows.</para><para>
+            The body is contained within a pair of curly braces and consists of a series of <firstterm>case statements</firstterm>. Each case statement begins with the <code>case</code> keyword, followed by the literal value that the resulting value from the original expression at the head of the switch statement will be compared to, and then a colon. Following that will be a series of statements. Curly braces are not necessary.
+        </para><para>
+            Note that after a case statement is complete, the next case statement will be executed! Unless this is intentional, you must explicitly end the switch statement using a <firstterm>break statement</firstterm>. This is simply the keyword <code>break</code> followed by a semicolon. Break statements are not needed if a return statement is used, since execution of the enclosing method will end at that point anyway.
+        </para><para>
+            One last important feature of the switch statement syntax is the <firstterm>default case</firstterm> which can handle the case where the value we get back from the initial expression doesn't match any of the literal values in the cases. A switch statement without a default case will simply do nothing. </para>
+        <para>There is a special syntax for defining the default case. Default cases look like the other case statements, but they use the keyword <code>default</code> instead of <code>case</code> and are immediately followed by a colon instead of some literal value to compare with.
+        </para>
+
+        <example>
+            <title>Switching Over Letter-Grade Characters</title>
+            <para>A grade book application needs to determine the minimum grade needed for each letter grade. Letter grades will be represented with capital letter characters. This functionality could be developed using an if/else chain:
+                </para>
+
+<programlisting>
+int getMinimumGrade(char letterGrade) {
+  if ( letterGrade == 'A' ) {
+    return 90;
+  } else if ( letterGrade == 'B' ) {
+    return 80;
+  } else if ( letterGrade == 'C' ) {
+    return 70;
+  } else if ( letterGrade == 'D' ) {
+    return 60;
+  } else {
+    return 0;
+  }
+}
+</programlisting>
+
+            <para> However, this is a good opportunity to use a switch statement. The switch statement below takes equivalent action, but will run a little more efficiently and may be a little easier to read and modify:
+            </para>
+
+<programlisting>
+int getMinimumGrade(char letterGrade) {
+  switch(letterGrade) {
+    case 'A':
+      return 90;
+    case 'B':
+      return 80;
+    case 'C':
+      return 70;
+    case 'D':
+      return 60;
+    default:
+      return 0;
+  }
+}
+</programlisting>
+<para>Note that no break statements are needed in this example since return statements are used in each case.</para>
+</example>
+    </section>
+

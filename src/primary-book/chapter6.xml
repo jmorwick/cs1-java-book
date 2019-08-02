@@ -8,6 +8,10 @@
       Loops are the last piece of the puzzle for a <emphasis>real</emphasis> programming language (or what computer scientists call a <emphasis>Turing Complete</emphasis> language). What this means is that, technically, you can now write a program that is capable of doing whatever any other program written in any other language can do. This chapter will first look at some more advanced topics in decision making and then introduce the concept of a loop.
     </para>
 
+    <xi:include href="../sections/statements/conditional/else-statements.xml"/>
+    <xi:include href="../sections/statements/conditional/if-else-chains.xml"/>
+    <xi:include href="../sections/statements/conditional/nesting-if-statements.xml"/>
     <xi:include href="../sections/expressions/boolean-operators.xml"/>
+    <xi:include href="../sections/statements/conditional/switch-statements.xml"/>
     <xi:include href="../sections/statements/loop/while-loops.xml"/>
 </chapter>
