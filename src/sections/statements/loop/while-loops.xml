@@ -6,8 +6,7 @@
 
   <para>
 While loops are a lot like if statements. In fact, they have a nearly identical syntax. </para>
-    
-    
+
     <figure xml:id="fig.while-loop">
         <title>Anatomy of a While Loop</title>
         <mediaobject>

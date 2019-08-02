@@ -8,19 +8,14 @@
         <termdef xml:id="term.algorithm">
             An <firstterm>Algorithm</firstterm> is a list of abstract instructions for solving a problem.
         </termdef>
-        These instructions need not be computer codes -- an algorithm, as a concept, 
-        transcends any one particular programming language.</para>
+        These instructions need not be computer codes -- an algorithm, as a concept, transcends any one particular programming language.</para>
     
     <para>Algorithms are often used to describe how to perform a complex mathematical operation by breaking it down in to a number of smaller steps. Though algorithms are not limited to manipulating numbers, some simple numerical examples work well to get the idea across.
     </para>
     
     <xi:include href="../../examples/average-algorithm.xml" parse="xml"/>
     
-    <para>
-        In this course you will write many computer programs in Java that implement algorithms.
-        However, before we make that leap, we'll first learn about the basic building
-        blocks of a Java program and weave them together to implement the steps in abstract
-        algorithms.
+    <para>In this course you will write many computer programs in Java that implement algorithms. However, before we make that leap, we'll first learn about the basic building blocks of a Java program and weave them together to implement the steps in abstract algorithms.
     </para>
     
 </section>

@@ -10,15 +10,11 @@ Strings are a collection of characters, but we haven't yet seen a way to handle 
 
     <section>
         <title>The Array Type</title>
-        <para>
-            Arrays themselves are a type of data, but are parameterized by the type of data they hold (that is to say, there are many 'array types' and each is distinguished by the type of data held by an array of that type). Values in an array can have any type, but they must all have the <emphasis>same type</emphasis> as each other.
+        <para> Arrays themselves are a type of data, but are parameterized by the type of data they hold (that is to say, there are many 'array types' and each is distinguished by the type of data held by an array of that type). Values in an array can have any type, but they must all have the <emphasis>same type</emphasis> as each other.
         </para>
-        <para>
-            The syntax for an array type has two parts: the type of data held by the array, and a pair of square brackets indicating an array type. For example, the type <emphasis>array of integers</emphasis> would be written: <type>int[]</type>
+        <para> The syntax for an array type has two parts: the type of data held by the array, and a pair of square brackets indicating an array type. For example, the type <emphasis>array of integers</emphasis> would be written: <type>int[]</type>
         </para>
-        <para>
-            A variable named <varname>arr</varname> that could hold an array of integers is defined as follows:
-
+        <para> A variable named <varname>arr</varname> that could hold an array of integers is defined as follows:
             <programlisting>int[] arr;</programlisting>
         </para>
     </section>
@@ -54,9 +50,7 @@ Strings are a collection of characters, but we haven't yet seen a way to handle 
         </section>
         <section>
             <title>Accessing an Array</title>
-            <para>
-
-                The most important operation on arrays is retrieving a value from an array. This is very similar to the <varname>charAt</varname> instance method we used with strings, but instead of calling a method, square brackets following an array value indicate the index of the value to be retrieved. For example, assuming the most recent definition of <varname>arr</varname>, the following expression will evaluate to <literal>1</literal>:
+            <para> The most important operation on arrays is retrieving a value from an array. This is very similar to the <varname>charAt</varname> instance method we used with strings, but instead of calling a method, square brackets following an array value indicate the index of the value to be retrieved. For example, assuming the most recent definition of <varname>arr</varname>, the following expression will evaluate to <literal>1</literal>:
 
 <programlisting>arr[0]</programlisting>
 
@@ -64,9 +58,7 @@ Strings are a collection of characters, but we haven't yet seen a way to handle 
         </section>
         <section>
             <title>Modifying an Array</title>
-            <para>
-
-                Though the size of an array can't change, the values it contains can. Think of an indexed array (an array value with an index following it in square brackets) as any other variable. In addition to evaluating it like a variable expression (above), we can also use it in an assignment statement. For example, the following statement will assign the value <literal>100</literal> to the first position in the array <varname>arr</varname>:
+            <para>Though the size of an array can't change, the values it contains can. Think of an indexed array (an array value with an index following it in square brackets) as any other variable. In addition to evaluating it like a variable expression (above), we can also use it in an assignment statement. For example, the following statement will assign the value <literal>100</literal> to the first position in the array <varname>arr</varname>:
 <programlisting>arr[0] = 100;</programlisting>
                 Following this assignment statement, the following expression will evaluate to <literal>100</literal>:
 

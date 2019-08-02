@@ -9,7 +9,7 @@
   </para>
 
   <para>
-    That last sentence may have taken you a moment to understand, but I expect that you did. This is the principal difference between a natural language and a programming language: the latter doesn't make any sense at all to the computer unless it is well-formed (strictly follows all rules of syntax). Thus, it's important to have a good foundation of understanding for what these rules are in Java before diving in to writing complex programs. The good news is that some of the more simple syntax in Java, namely expressions, are also considerably powerful, especially when used with a REPL (such as the recently release Java REPL JShell). We'll dive in to what a REPL is, how to use a REPL, and several types of expressions in this first chapter.
+    That last sentence may have taken you a moment to understand, but I expect that you did. This is the principal difference between a natural language and a programming language: the latter doesn't make any sense at all to the computer unless it is well-formed (strictly follows all rules of syntax). Thus, it's important to have a good foundation of understanding for what these rules are in Java before diving in to writing complex programs. The good news is that some of the more simple syntax in Java, namely expressions, are also considerably powerful, especially when used with a REPL (such as the recently released Java REPL JShell). We'll dive in to what a REPL is, how to use a REPL, and several types of expressions in this first chapter.
   </para>
 
   <xi:include href="../sections/enactment/repls.xml"/>

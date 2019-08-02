@@ -4,8 +4,7 @@
         <title>Break Statements</title>
     </info>
 
-    <para>
-      Loops don't need to be terminated only when the loop condition becomes false. A loop can be terminated early by using a <firstterm>break statement</firstterm> inside of the loop. When a <code>break</code> statement is encountered, the enclosing loop will immediately terminate and execution will resume just after the closing brace of the
+    <para>Loops don't need to be terminated only when the loop condition becomes false. A loop can be terminated early by using a <firstterm>break statement</firstterm> inside of the loop. When a <code>break</code> statement is encountered, the enclosing loop will immediately terminate and execution will resume just after the closing brace of the
       loop.
     </para>
 
@@ -29,8 +28,7 @@ for(; i&lt; arr.length; i++) {
   }
 }
     </programlisting>
-      <para>
-        When this snippet of code completes executing, <varname>i</varname> will be the index for <varname>arr</varname> where the value <literal>13</literal> is located (or it will be <code>arr.length</code> if <literal>13</literal> doesn't appear in <varname>arr</varname>).
+      <para>When this snippet of code completes executing, <varname>i</varname> will be the index for <varname>arr</varname> where the value <literal>13</literal> is located (or it will be <code>arr.length</code> if <literal>13</literal> doesn't appear in <varname>arr</varname>).
       </para>
   </example>
 

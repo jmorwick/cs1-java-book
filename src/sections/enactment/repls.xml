@@ -7,18 +7,9 @@
     <para>
         There are many ways to categorize programming languages. For instance, some programming languages are called <emphasis>object-oriented</emphasis>, <emphasis>functional</emphasis>, or <emphasis>statically typed</emphasis>, to name a few, and many of these categories overlap. An important category, as it relates to teaching Java to a beginning programmer, is that of <firstterm>scripting languages</firstterm>. This is important because Java has never in the past been considered one <footnote><para>Do not confuse Java with Javascript, which is an entirely different language and is indeed a scripting language.</para></footnote>, and this has led to problems when introducing it to someone who has never programmed before.
     </para>
-    <para> A scripting language is one that is intended for quickly writing short, ad-hoc programs
-        that perform a simple task, possibly only once. An important tool for working with a
-        scripting language is a <acronym>REPL</acronym> (Read Evaluate Print Loop). A REPL allows
-        you to run small snippets of a program, one at a time, and observe what the computer does in
-        real time. This way the programmer can quickly react, correct errors, and experiment. This
-        functionality is of obvious importance to a new programmer learning how to use the language. </para>
-    <para> Java, for a very long time, was infamous for its <emphasis>wordiness</emphasis>. That is,
-        it took a lot of typing to say anything meaningful. For example, the first program most
-        introductory programming books show the reader is <emphasis>Hello World!</emphasis> -- a
-        program that simply prints these words to the screen. In Java, this required the programmer
-        to write 5 lines of code. This level of wordiness is essentially the opposite of the goal of
-        a scripting language. </para>
+    <para> A scripting language is one that is intended for quickly writing short, ad-hoc programs that perform a simple task, possibly only once. An important tool for working with a scripting language is a <acronym>REPL</acronym> (Read Evaluate Print Loop). A REPL allows you to run small snippets of a program, one at a time, and observe what the computer does in real time. This way the programmer can quickly react, correct errors, and experiment. This functionality is of obvious importance to a new programmer learning how to use the language. </para>
+    <para> Java, for a very long time, was infamous for its <emphasis>wordiness</emphasis>. That is, it took a lot of typing to say anything meaningful. For example, the first program most introductory programming books show the reader is <emphasis>Hello World!</emphasis> -- a program that simply prints these words to the screen. In Java, this required the programmer to write 5 lines of code. This level of wordiness is essentially the opposite of the goal of a scripting language.
+    </para>
     <para>This changed somewhat in September 2017 when an official REPL was added to Java, called JShell. In JShell, <emphasis>Hello World!</emphasis> is just one line:
     <figure xml:id="fig.repls.jshell">
         <title>Using the JShell REPL</title>

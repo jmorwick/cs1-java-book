@@ -13,8 +13,7 @@ i = i + 1;
 </programlisting>
 
 <para>
-This happens so frequently in Java that there are several built-in shortcuts for such statements.
-For instance, if we simply want to add a value to a variable (rather than replace a value in a variable), we could do so using the <code>+=</code> operator. Thus, an equivalent version of the code above is the following:
+This happens so frequently in Java that there are several built-in shortcuts for such statements. For instance, if we simply want to add a value to a variable (rather than replace a value in a variable), we could do so using the <code>+=</code> operator. Thus, an equivalent version of the code above is the following:
 </para>
 
 <programlisting>
