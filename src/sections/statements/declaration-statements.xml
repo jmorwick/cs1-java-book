@@ -6,9 +6,20 @@
     
     <para>Declaration statements are used to define new variables. In contrast to the automatically generated variables we saw when evaluating expressions with the REPL, declaration statements allow us to create variables with any legal name we wish. Variable names must be legal <firstterm>Java identifiers</firstterm>. 
     </para>
-    <para>A legal Java identifier must start with a letter, a dollar sign, or an underscore. Identifiers can contain digits, but they cannot begin with one. Thus <varname>x</varname> is a legal variable name, but so is <varname>x5</varname> or even something like  <varname>reallylongvariablename</varname>.</para>
-    <para>Note that the last variable name is somewhat difficult to read. For this reason, there are <firstterm>conventions</firstterm> in Java that dictate the proper way to name variables. <varname>reallylongvariablename</varname> is not an error, but it does break a variable naming convention in Java known as called <firstterm>camel case</firstterm>. In camel case, you don't include spaces between words, but you capitalize each successive word. We must do this for identifiers consisting of multiple words since spaces are not allowed in identifiers. Furthermore, for variable names in Java, by convention the first word is not capitalized. Considering these conventions, a proper identifier we could use as a variable name would be <varname>reallyLongVariableName</varname>. Notice that this is a bit easier to read? 
+    <para>There are several places you'll see identifiers in Java. Identifiers can simply be thought of as the names of things in a Java program. There are some rules about which names are legal, since some names might be interpreted as instructions or other parts of the program if they're not written properly. Here are the Java identifier rules:</para>
+
+    <itemizedlist>
+        <listitem><para>Every Java identifier must begin with either a letter, a dollar sign, or an underscore.</para></listitem>
+        <listitem><para>Java identifiers cannot contain white space (spaces, new lines, tabs), but can contain any other characters.</para> </listitem>
+        <listitem><para>Java identifiers cannot be a reserved word (you can find a list of these online or in the textbook)</para>.</listitem>
+    </itemizedlist>
+
+        <para>If you deviate from those rules, you end up with an error. For example, Identifiers can contain digits, but they cannot begin with one. Thus <varname>x5</varname> is a legal variable name, <varname>5x</varname> is not. </para>
+
+        <para>Note that the variable <varname>reallylongvariablename</varname> is legal, but is also somewhat difficult to read. The same identifier might appear dozens of times in a program and a long one such as this will become tedious for the programmer to read and type! For this reason, there are <firstterm>conventions</firstterm> in Java that dictate the proper way to name variables. <varname>reallylongvariablename</varname> is not an error, but it does break a variable naming convention in Java known as called <firstterm>camel case</firstterm>. In camel case, you don't include spaces between words, but you capitalize each successive word. We must do this for identifiers consisting of multiple words since spaces are not allowed in identifiers. Furthermore, for variable names in Java, by convention the first word is not capitalized. Considering these conventions, a proper identifier we could use as a variable name would be <varname>reallyLongVariableName</varname>. Notice that this is a bit easier to read?
 </para>
+     <para>All conscientious programmers also try to use identifiers that are meaningful and help explain the purpose of a definition. For example, if you want to average the values of three exam scores, you might call each of the variables holding the exam scores <varname>exam1</varname>, <varname>exam2</varname>, and <varname>exam3</varname> instead of <varname>x</varname>, <varname>y</varname>, and <varname>z</varname>, and you might call the variable holding the average <varname>averageExamScore</varname> or perhaps simply <varname>average</varname>.
+        </para>
 
     <para>
       In order to use a variable in Java, you must declare that it exists using a <firstterm>declaration statement</firstterm>. 

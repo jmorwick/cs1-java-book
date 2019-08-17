@@ -33,10 +33,6 @@ int addStuff(int x, int y)
         </para>
     </section>
 
-    <section><title>Identifier Choice</title>
-        <para>In the section on variable declarations the rules for identifiers (the names of variables and methods) were discussed. If you deviate from those rules, you end up with an error (for example, you can't have a variable named <varname>10x</varname>). However, by convention we try to use variable names that are meaningful and help explain the purpose of a variable. For example, if you want to average the values of three exam scores, you might call each of the variables holding the exam scores <varname>exam1</varname>, <varname>exam2</varname>, and <varname>exam3</varname> instead of <varname>x</varname>, <varname>y</varname>, and <varname>z</varname>, and you might call the variable holding the average <varname>averageExamScore</varname> or perhaps simply <varname>average</varname>.
-        </para>
-    </section>
 
     <section>
         <title>Block Comments</title>

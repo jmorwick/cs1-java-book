@@ -26,7 +26,7 @@
         </para>
 
         <para>
-          Note that JShell was not officially meant to make Java in to a scripting language, and as such it has some frustrating limitations when it comes to using it this way. In particular, reading input from the user may not work as expected when running JShell instructions as a script. There are some workarounds available for this shortcoming, however. 
+          Note that JShell was not officially meant to make Java in to a scripting language, and as such it has some frustrating limitations for this purpose. In particular, reading input from the user may not work as expected when running JShell instructions as a script. There are some workarounds available for this shortcoming, however.
         </para>
     </section>
 
