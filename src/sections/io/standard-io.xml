@@ -59,9 +59,9 @@ import static java.lang.Integer.parseInt;
 
 var in = new Scanner(System.in);
 print("Enter a number: ");
-var firstNumber = parseInt(in.readLine());
+var firstNumber = parseInt(in.nextLine());
 print("Enter another number: ");
-var secondNumber = parseInt(in.readLine());
+var secondNumber = parseInt(in.nextLine());
 println("Their sum is: " + (firstNumber + secondNumber));
 </programlisting>
 		</para>
