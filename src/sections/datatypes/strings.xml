@@ -143,10 +143,10 @@ String message = "my favorite number is " + 5;
         <title>Find the name that starts with a capital J</title>
 <programlisting>var names = "Mary. Sam. Joey. Abigail.";
 var namesStartingAtJ = names.substring(names.indexOf('J'));
-var nameStartingWithJ = namesStartingAtJ.substring(0,
-                            namesStartingAtJ.indexOf('.'));
+var endOfName = namesStartingAtJ.indexOf('.');
+var nameStartingWithJ = namesStartingAtJ.substring(0, endOfName);
 </programlisting>
-        <para>In a String listing several capitalized names ending in periods, this code locates and isolates the first name that begins with a J.</para>
+        <para>In a String listing several capitalized names ending in periods, this code locates and isolates the first name that begins with a J. After each of the four statements are executed, the variable <varname>nameStartingWithJ</varname> will contain the value <literal>"Joey"</literal>.</para>
     </example>
 
 </section>
