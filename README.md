@@ -1,6 +1,4 @@
-# cs1-java-book
-A Customizable and Open-Source CS1 Textbook / Lab Manual
+# CS1 in Java
+A collection of OER Components for building a Java-based CS1 Textbook with a focus on the small things
 
-This book will eventually be an introduction to programming in Java beginning with [jshell scripting](https://docs.oracle.com/javase/10/jshell/introduction-jshell.htm) (no 5-line "hello world"s in chapter 1). I will initially be writing to Java 10 but hope to keep this book as up to date as possible with any language features that make teaching CS1 / CS2 easier.
-
-The book and [accompanying software](https://github.com/jmorwick/codecafe) are currently a work in progress. Collaborators welcome. See the Issues tab to see where I'm at. 
+The content in this repository has evolved from a lab manual used to teach Java using JShell (see the commit history for this material) but is now being updated primarily to develop OER for CM111 (CS1) at Washburn University with the intent to produce reusable OER components for a variety of pedagogical purposes. There will still be a focus on statements and expressions and the goal is still to integrade code cafe (a work in progress for interctive Java exercises in the book). Collaborators welcome. See the Issues tab to see where I'm at. 
